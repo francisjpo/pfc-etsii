@@ -1,0 +1,30 @@
+*Árido tipo 5/7 -> aggregate, sand and gravel, crushed stone, slag, ballast*Arena tipo 0/5 -> sand*Cemento Portland CEM I 52.5N gris -> Binders*Agua -> Tap waterDosif. arena -> doser, dosing machine
+Dosif. áridos -> doser, dosing machine
+*Cinta arena y áridos -> conveyor belt
+Skip -> concrete skip
+Dosif. agua -> doser, dosing machine
+Dosif. cemento -> doser, dosing machine
+Tornillo sin fin cemento -> spiral/screw conveyor
+Mezcladora -> mixer
+Cinta hormigón -> conveyor belt
+Tolva hormigón 1/2 -> hopper/chute
+Prensado 1/2 -> press
+Cinta piezas frescas 1/2 -> conveyor belt
+Ascensor 1/2 -> elevator, lift (shelf type)
+Tolva hormigón 2/2 -> hopper/chute
+Prensado 2/2 -> press
+Cinta piezas frescas 2/2 -> conveyor belt
+Ascensor 2/2 -> elevator, lift (shelf type)
+Multiforca ida -> rack transporter
+Multiforca vuelta -> rack transporter
+Descensor 1/2 -> elevator, lift
+Descensor 2/2 -> elevator, lift
+Transp. bandejas -> roller conveyor
+Cepill.+Volt.+Lubric. -> rotating brush, turned over, lubricating oil/lube/lubricant
+Paletizadora -> palletizer
+Transp. palet -> roller conveyor
+Flejadora -> strapping machine/tool
+Transp. rodillos -> roller conveyor
+Toro almacén -> fork lift
+Control informatizado 
+Iluminación
