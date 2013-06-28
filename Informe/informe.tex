@@ -227,59 +227,38 @@ Las secciones tipo según la base y el uso previsto del área vistas en la secci
 \chapter{Objetivos y alcance}
 \section{Introducción}
 
-Prueba normal de \LaTeX\ y el modelo estándard \TeX\ para paquetes gráficos. 1 a $\alpha=1-x^2$. $sqrt{2}=\frac{1}{x}$.
+Prueba normal de \LaTeX\ y el modelo\cite{mlgceballos} estándard \TeX\ para paquetes gráficos. 1 a $\alpha=1-x^2$. $sqrt{2}=\frac{1}{x}$.
 
 \lipsum
 
-% \begin{figure}[!htb]
-% \centering
-% \includegraphics{enunciado.1}
-% \caption{Diagrama de fuerzas del conjunto.} \label{enunc}
-% \end{figure}
+\newpage
+\appendix
+\chapter{Planos}\label{aped.A}
+En este apéndice se incluyen los planos de la planta de fabricación de materiales prefabricados y los modelos de fabricación del adoquín y su molde.
 
-% \begin{figure}[!htb]
-% \centering
-% \subfigure[$\sum \vec{F}_5=0$]{
-% \label{tens1}
-% \psfrag{a}{$\vec{F}_{53}$} \psfrag{b}{{\scriptsize 5}}
-% \psfrag{c}{$\alpha_5$} \psfrag{d}{$h_5$}
-% \psfrag{e}{$\vec{F}_{i5}$} \psfrag{f}{$\vec{F}_{65}$}
-% \psfrag{g}{e}
-% \includegraphics[width=3cm]{tens1.eps}}
-% \hspace{1in}
-% \subfigure[$\sum \vec{F}_6=0$]{
-% \label{tens2}
-% \psfrag{a}{a} \psfrag{b}{$\vec{F}_{16}$} \psfrag{c}{$O_6$}
-% \psfrag{d}{{\scriptsize 6}} \psfrag{e}{{\scriptsize $G_6$}}
-% \psfrag{f}{$\vec{F}_{i6}$} \psfrag{g}{c} \psfrag{h}{c+e}
-% \psfrag{i}{e} \psfrag{j}{$\vec{F}_{56}$}
-% \psfrag{k}{$\mbox{par}_{56}=I_{g5}\cdot \alpha_5$}
-% \psfrag{l}{a=15.2 cm} \psfrag{m}{c=50.17 cm}
-% \includegraphics[width=7cm]{tens2.eps}}
-% \caption{Tensiones en las barras 5--6}
-% \end{figure}
-
-% \newpage
-% \appendix
-% \chapter{Esquemas}\label{aped.A}
-% En este apéndice se incluirá dos trazados del eje. En un primer trazado se
-% realizará una visión general del eje con los diferentes cambios de sección y
-% sus respectivas dimensiones. En un segundo se introducirán sobre el anterior
-% todos los elementos mecánicos que se han tenido en cuenta durante el diseño
-% (chavetas, casquillos, engranajes, cojinetes, etc.), así como sus
-% dimensiones y normativas.
-%
-\clearpage \newpage
-\thispagestyle{empty}
-\vspace*{0.76\textheight}
-\hspace*{-16pt}\rule{14.6cm}{1.45pt}\\
-{\footnotesize \noindent Este documento ha sido tipografiado con el
-paquete de macros \XeLaTeX, los diagramas han sido generados
-con el lenguaje de programación MetaPost, ambos en una plataforma x86$\_$64 con sistema operativo OS X de Apple Inc. El estudio y análisis de impactos medioambientales ha sido realizado con la herramienta SimaPro de Pré Consultants. Los planos han sido diseñados con AutoCad de Autodesk Inc.
-
-% \cleardoublepage
-% \addcontentsline{toc}{chapter}{Bibliografía}
-% \bibliographystyle{acm} % estilo de la bibliografía.
-% \bibliography{texto} % texto.bib es el fichero donde está salvada la bibliografía.
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliografía}
+% \bibliographystyle{alpha} % BibTeX
+% \bibliography{informe}
+\begin{thebibliography}{100}
+\bibitem[PFULL97]{pfullana}
+Fullana, P. y Puig, R., \emph{Análisis de Ciclo de Vida}, Editorial Rubens, Barcelona (España), 1997.
+\bibitem[MLGAR13]{mlgceballos}
+García Ceballos, M. L., \emph{Tésis Doctoral. Análisis de Ciclo de Vida de Puntos de Luz de Alumbrado Exterior}, Universidad de Málaga, Málaga (España), 2013, pp.56.
+\bibitem[MGOED10]{mgoedkoop}
+Goedkoop, M. et al., \emph{SimaPro 7 Tutorial}, Pré Consultants, Amersfoort (Holanda), 2010, disponible en \url{http://http://www.pre-sustainability.com/manuals}.
+\bibitem[NJUNG11]{mnjungbluth}
+Jungbluth, N. et al., \emph{Environmetal Impacts of Swiss Consumption and Production}. Federal Office for the Environment, Ginebra (Suiza), 2011.
+\bibitem[JSJUN05]{jsjunnesson}
+Sjunnesson, J., \emph{Life Cycle Assessment of Concrete Master Thesis}, Environmental and Energy Systems Studies, Lund University, Lund (Suecia), 2005.
+\bibitem[ISO14040]{iso14040}
+International Organization for Standardization, \emph{UNE-EN-ISO 14040:2006, Gestión Ambiental. Análisis de ciclo de vida. Principios y marco de referencia}, AENOR, Madrid (España), 2006.
+\bibitem[ISO14440]{iso14440}
+International Organization for Standardization, \emph{UNE-EN-ISO 14440:2006, Gestión ambiental. Análisis de ciclo de vida. Requisitos y Directrices}, AENOR, Madrid (España), 2006.
+\bibitem[ISO150041]{iso150041}
+International Organization for Standardization, \emph{UNE-EN-ISO 150041EX:1998, Análisis de ciclo de vida simplificado}, AENOR, Madrid (España), 2006.
+\bibitem[MTCE04]{mtce04}
+Asociación Española para la Investigación y Desarrollo del Adoquín de Hormigón, \emph{Manual Técnico para la correcta colocación de los Euroadoquines, MTCE-04}, Madrid (España), 2004.
+\end{thebibliography}
 
 \end{document}
