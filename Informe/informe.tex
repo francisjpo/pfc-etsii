@@ -1,3 +1,4 @@
+%!TEX program = xelatex
 \documentclass[12pt,titlepage,openright]{report}
 \usepackage{geometry}
 \geometry{a4paper}
@@ -11,7 +12,6 @@
 \usepackage{listings}
 \usepackage{multirow}
 \usepackage[caption=false]{subfig}
-\usepackage{lipsum}
 \frenchspacing
 \linespread{1.3}
 \usepackage{ifxetex}
@@ -19,7 +19,7 @@
   \usepackage{fontspec,xltxtra,xunicode,unicode-math}
   \usepackage{polyglossia}
   \setmainlanguage{spanish}
-  \setmainfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Minion Pro}
+  \setmainfont[Mapping={tex-text},Numbers={Lining},Ligatures={Common}]{Minion Pro}
   \setsansfont[Mapping={tex-text},Colour={AA0000}]{Myriad Pro}
   \setmonofont[Mapping={tex-text},Scale={0.9}]{Inconsolata-g}
   \setmathfont[Mapping={tex-text},Numbers={Lining},Ligatures={Common}]{Minion Pro}
@@ -35,230 +35,29 @@
 \renewcommand\listtablename{Índice de tablas}
 \renewcommand\tablename{Tabla}
 
-\begin{titlepage}
-\begin{center}
-{\centering \includegraphics{portada.png}}
-\vfill
-{\LARGE UNIVERSIDAD DE MÁLAGA\\
-ESCUELA TÉCNICA SUPERIOR DE\\[10pt]
-INGENIEROS INDUSTRIALES}\\[25pt]
-{\large DTO. DE EXPRESIÓN GRÁFICA, DISEÑO Y PROYECTOS\\
-ÁREA DE EXPRESIÓN GRÁFICA EN LA INGENIERÍA}
-\vfill
-{\Large PROYECTO FINAL DE CARRERA\\[10pt]
-ANÁLISIS DE CICLO DE VIDA DE UN ADOQUÍN}
-\end{center}
-\vfill
-\begin{flushright}
-Alumno: Francisco Pinto Oliver\\
-Directora: María Luz García Ceballos\\
-Ponente: José Ramón de Andrés Díaz\\
-Titulación: Ingeniero Industrial
-\end{flushright}
-\end{titlepage}
+\include{portada}
 
 \pagenumbering{roman} \tableofcontents \newpage \listoffigures
-\newpage \listoftables
+\newpage \listoftables \newpage \pagenumbering{arabic}
 
-\newpage
-\pagenumbering{arabic}
-
-\chapter*{Agradecimientos}
-\begin{flushright}
-A la directora de este proyecto,\\por su inestimable ayuda.\\[10pt]
-A mi familia y amigos,\\por esos buenos momentos.\\[10pt]
-A María y Daniel,\\por tantos ``Guten Abend, gute Nacht\ldots'' juntos.
-\end{flushright}
-\vfill
-
-\newpage
-\chapter*{Resumen}
-
+\include{agradecimientos}
 \cleardoublepage
+
 \part*{Memoria}
-
-\chapter{Instalación del adoquín}
-\section{Capas componentes}
-
-(Fuente: Manual Técnico para la correcta colocación de los Euroadoquines (MTCE 04))
-
-\begin{itemize}
-\item Explanada: Terreno natural adecuadamente compactado hasta alcanzar una capacidad portante mínima.
-\item Subbase: Conjunto de capas naturales, de material granular seleccionado, estabilizado y compactado, situadas directamente sobre la explanada.
-\item Base: Principal elemento portante de la estructura, situada sobre la subbase. Puede ser realizada con material granular, zahorra artificial, con un mayor grado de compactación que el alcanzado en la subbase (Base Flexible), o estar realizada con hormigón magro (Base Rígida).
-\item Lecho de árido: Base de apoyo de los adoquines, destinada a absorber sus diferencias de espesor debidas a la tolerancia de fabricación, de manera que estos una vez compactados formen una superficie homogénea.
-\item Adoquines: Elementos prefabricados de hormigón, cuya cara exterior, una vez colocados, forman la capa de rodadura de la superficie a pavimentar.
-\item Relleno final: Una vez encastrados en el lecho de árido, sus juntas precisan un relleno final para transferir a los elementos contiguos las cargas a las que sean sometidos por acción del tráfico.
-\end{itemize}
-
-\section{Determinación de la sección tipo}\label{sec:secciontipo}
-
-Se consideran los siguientes casos:
-
-\begin{enumerate}
-\item Viales y zonas de aparcamiento\footnote{No suelen existir zonas peatonales puras (paso eventual de vehículos de mantenimiento, limpieza y servicios).}.
-\item Zonas industriales.
-\end{enumerate}
-
-
-Para cada caso, viales o zonas industriales, la sección puede obtenerse de forma abreviada en función de dos variables:
-\begin{itemize}
-\item Tipo de explanadas.
-\item Categoría de tráfico.
-\end{itemize}
-
-\subsection{Tipo de explanada}
-
-Se utiliza un sistema de clasificación de su capacidad portante mediante el índice CBR (California Bearing Ratio), indicando el tanto por ciento de la presión ejercida por un pistón sobre el suelo para alcanzar una determinada penetración baremado según un juego de muestras normalizados (ver tabla \ref{indicecbr}.
-
-\begin{table}[!htb]
-\centering
-\begin{tabular}{|c|c|}
-\hline
-Calidad de la explanada & Índice CBR\\ \hline
-E1 & 5 \leq CBR = 10\\ \hline
-E2 & 10 \leq CBR = 20\\ \hline
-E3 & 20 \leq CBR\\ \hline
-\end{tabular}
-\caption{Índice CBR.}
-\label{indicecbr}
-\end{table}
-
-
-\subsection{Categoría de tráfico}
-
-\begin{table}[!htb]
-\centering
-\begin{tabular}{|c|c|}
-\hline
-Tipo & Categoría de tráfico\\ \hline
-Viales y zonas de aparcamiento & C0 \ldots C4\\ \hline
-Zonas industriales & A \ldots D\\ \hline
-\end{tabular}
-\caption{Categoría de tráfico.}
-\label{categoriadetrafico}
-\end{table}
-
-\subsubsection{Categorías de tráfico en viales y zonas de aparcamiento}
-
-Si en un área limitada existen diversos usos, a efectos de unificación se debería emplear para toda la zona la carga de cálculo más exigente.
-
-\begin{table}[!htb]
-\centering
-\begin{tabular}{|p{7cm}|c|}
-\hline
-\centering{Uso previsto} & Categoría de tráfico\\ \hline
-Arterias principales con gran afluencia de tráfico, paradas de bus, estaciones de servicio, etc. (50 a 149 v.p.d.) & C0\\ \hline
-Arterias principales (25 a 49 v.p.d.) & C1\\ \hline
-Calles comerciales con gran actividad (16 a 24 v.p.d.) & C2\\ \hline
-Calles comerciales cone escasa actividad (15 v.p.d.) & C3\\ \hline
-Áreas peatonales, calles residenciales & C4\\ \hline
-\end{tabular}
-\caption{Categoría de tráfico en viales y zonas de aparcamiento.}
-\label{categoriadetraficoenviales}
-\end{table}
-
-
-\subsubsection{Categorías de tráfico en zonas industriales}
-
-\begin{table}[!htb]
-\centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-\multicolumn{2}{|c|}{Área} & Uso & Intensidad de uso\\ \hline
-\multirow{7}{*}{Comercial} & De operación &  & Alta\\ \cline{2-4}
-& \multirow{2}{*}{Almacenamiento} & Mercancia convencional & Media\\ \cline{3-4}
-& & Mercancía pesada & Alta\\ \cline{2-4}
-& Manipulación & & Alta\\ \cline{2-4}
-& \multirow{3}{*}{Estacionamiento} & Vehículos pesados y ligeros & Media\\ \cline{3-4}
-& & Vehículos pesados exclusivamente & Alta\\ \cline{3-4}
-& & Semirremolques & Alta\\ \hline
-\multirow{3}{*}{Militar} & De operación &  & Alta\\ \cline{2-4}
-& \multirow{2}{*}{Almacenamiento} & Mercancia convencional & Media\\ \cline{3-4}
-& & Mercancía pesada y semirremolques & Alta\\ \hline
-\multirow{3}{*}{Pesquera} & Almacenamiento &  & Media\\ \cline{2-4}
-& Manipulación & & Alta\\ \cline{2-4}
-& Clasificación y venta & & Media\\ \hline
-\multirow{3}{*}{Industrial} & De operación &  & Alta\\ \cline{2-4}
-& \multirow{2}{*}{Almacenamiento} & Mercancia convencional & Media\\ \cline{3-4}
-& & Mercancía pesada & Alta\\ \hline
-\end{tabular}
-\caption{Intensidades de uso en zonas industriales.}
-\label{categoriadetraficoenzonasindustrialesintensidades}
-\end{table}
-
-
-\begin{table}[!htb]
-\centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-\multirow{2}{*}{Intensidad de uso} & \multicolumn{3}{c|}{Carga de cálculo} \\ \cline{2-4}
- & Alta & Media & Baja\\ \hline
-Elevada & A & B & C\\ \hline
-Media & A & B & D\\ \hline
-Reducida & B & C & D\\ \hline
-\end{tabular}
-\caption{Categoría de tráfico en zonas industriales.}
-\label{categoriadetraficoenzonasindustriales}
-\end{table}
-
-\section{Secciones tipo}
-
-Las secciones tipo según la base y el uso previsto del área vistas en la sección \ref{sec:secciontipo} pueden resumirse en cinco tipos para cada tipo de base, granular (figura \ref{fig:seccionestipogranular}) u hormigón magro (figura \ref{fig:seccionestipohormigon}).
-
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=15cm]{seccionestipo_1.png}
-\caption{Secciones tipo para base granular. Unidades en cm.}
-\label{fig:seccionestipogranular}
-\end{figure}
-
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=15cm]{seccionestipo_2.png}
-\caption{Secciones tipo para base de hormigon. Unidades en cm.}
-\label{fig:seccionestipohormigon}
-\end{figure}
-
-
+\include{introduccion}
+\include{prefabricados}
+\include{instalacion}
 \cleardoublepage
+
 \part*{Pliego de condiciones}
+\include{pliego}
+\cleardoublepage
 
-\chapter{Objetivos y alcance}
-\section{Introducción}
-
-Prueba normal de \LaTeX\ y el modelo\cite{mlgceballos} estándard \TeX\ para paquetes gráficos. 1 a $\alpha=1-x^2$. $sqrt{2}=\frac{1}{x}$.
-
-\lipsum
-
-\newpage
 \appendix
 \chapter{Planos}\label{aped.A}
 En este apéndice se incluyen los planos de la planta de fabricación de materiales prefabricados y los modelos de fabricación del adoquín y su molde.
-
 \cleardoublepage
-\addcontentsline{toc}{chapter}{Bibliografía}
-% \bibliographystyle{alpha} % BibTeX
-% \bibliography{informe}
-\begin{thebibliography}{100}
-\bibitem[PFULL97]{pfullana}
-Fullana, P. y Puig, R., \emph{Análisis de Ciclo de Vida}, Editorial Rubens, Barcelona (España), 1997.
-\bibitem[MLGAR13]{mlgceballos}
-García Ceballos, M. L., \emph{Tésis Doctoral. Análisis de Ciclo de Vida de Puntos de Luz de Alumbrado Exterior}, Universidad de Málaga, Málaga (España), 2013, pp.56.
-\bibitem[MGOED10]{mgoedkoop}
-Goedkoop, M. et al., \emph{SimaPro 7 Tutorial}, Pré Consultants, Amersfoort (Holanda), 2010, disponible en \url{http://http://www.pre-sustainability.com/manuals}.
-\bibitem[NJUNG11]{mnjungbluth}
-Jungbluth, N. et al., \emph{Environmetal Impacts of Swiss Consumption and Production}. Federal Office for the Environment, Ginebra (Suiza), 2011.
-\bibitem[JSJUN05]{jsjunnesson}
-Sjunnesson, J., \emph{Life Cycle Assessment of Concrete Master Thesis}, Environmental and Energy Systems Studies, Lund University, Lund (Suecia), 2005.
-\bibitem[ISO14040]{iso14040}
-International Organization for Standardization, \emph{UNE-EN-ISO 14040:2006, Gestión Ambiental. Análisis de ciclo de vida. Principios y marco de referencia}, AENOR, Madrid (España), 2006.
-\bibitem[ISO14440]{iso14440}
-International Organization for Standardization, \emph{UNE-EN-ISO 14440:2006, Gestión ambiental. Análisis de ciclo de vida. Requisitos y Directrices}, AENOR, Madrid (España), 2006.
-\bibitem[ISO150041]{iso150041}
-International Organization for Standardization, \emph{UNE-EN-ISO 150041EX:1998, Análisis de ciclo de vida simplificado}, AENOR, Madrid (España), 2006.
-\bibitem[MTCE04]{mtce04}
-Asociación Española para la Investigación y Desarrollo del Adoquín de Hormigón, \emph{Manual Técnico para la correcta colocación de los Euroadoquines, MTCE-04}, Madrid (España), 2004.
-\end{thebibliography}
+
+\include{bibliografia}
 
 \end{document}
