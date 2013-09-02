@@ -1,4 +1,5 @@
 %!TEX program = xelatex
+%!TEX root = informe
 \documentclass[12pt,titlepage,openright]{report}
 \usepackage{geometry}
 \geometry{a4paper}
@@ -9,7 +10,7 @@
 \usepackage{siunitx}
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,chains}
-\usepackage{mhchem}
+\usepackage[version=3]{mhchem}
 \usepackage{wrapfig}
 \usepackage{ccaption}
 \usepackage{picinpar}
@@ -50,7 +51,11 @@
 \part*{Memoria}
 \include{introduccion}
 \include{prefabricados}
+\include{introlca}
+% \include{inventario}
+% \include{fabricacion}
 \include{instalacion}
+% \include{findevida}
 \cleardoublepage
 
 \part*{Pliego de condiciones}
@@ -62,6 +67,8 @@
 En este apéndice se incluyen los planos de la planta de fabricación de materiales prefabricados y los modelos de fabricación del adoquín y su molde.
 \cleardoublepage
 
-\include{bibliografia}
+% \include{bibliografia}
+\bibliographystyle{alpha} % BibTeX
+\bibliography{informe}
 
 \end{document}
