@@ -1,30 +1,79 @@
-*A虂rido tipo 5/7 -> aggregate, sand and gravel, crushed stone, slag, ballast*Arena tipo 0/5 -> sand*Cemento Portland CEM I 52.5N gris -> Binders*Agua -> Tap waterDosif. arena -> doser, dosing machine
-Dosif. 谩ridos -> doser, dosing machine
-*Cinta arena y 谩ridos -> conveyor belt
-Skip -> concrete skip
-Dosif. agua -> doser, dosing machine
-Dosif. cemento -> doser, dosing machine
-Tornillo sin fin cemento -> spiral/screw conveyor
-Mezcladora -> mixer
-Cinta hormig贸n -> conveyor belt
-Tolva hormig贸n 1/2 -> hopper/chute
-Prensado 1/2 -> press
-Cinta piezas frescas 1/2 -> conveyor belt
-Ascensor 1/2 -> elevator, lift (shelf type)
-Tolva hormig贸n 2/2 -> hopper/chute
-Prensado 2/2 -> press
-Cinta piezas frescas 2/2 -> conveyor belt
-Ascensor 2/2 -> elevator, lift (shelf type)
-Multiforca ida -> rack transporter
-Multiforca vuelta -> rack transporter
-Descensor 1/2 -> elevator, lift
-Descensor 2/2 -> elevator, lift
-Transp. bandejas -> roller conveyor
-Cepill.+Volt.+Lubric. -> rotating brush, turned over, lubricating oil/lube/lubricant
-Paletizadora -> palletizer
-Transp. palet -> roller conveyor
-Flejadora -> strapping machine/tool
-Transp. rodillos -> roller conveyor
-Toro almac茅n -> fork lift
-Control informatizado 
-Iluminaci贸n
+*Arido tipo 5/7 (aggregate, sand and gravel, crushed stone, slag, ballast, Kies) ->
+		-> _16 Sand, gravel, stone from quarry EU27
+		-> Sand, at mine/CH U
+
+*Arena tipo 0/5 -> 
+		-> Sand 0/2, wet and dry, quarry, production mix
+
+*Cemento Portland CEM I 52.5N gris ->
+		-> Portland cement, strength class Z 52.5, at plant
+
+*Agua -> 
+		-> Tap water, at user RER/U
+
+*Dosificador -> doser, dosing machine
+		-> Steel, low-alloyed, at plant/RER S
+
+*Cinta arena y aridos ->
+		-> Conveyor belt, at plant RER/U
+
+*Skip (concrete skip) -> 
+*Mezcladora (mixer) -> Junto con el skip -> Concrete mixing plant CH/I U
+
+*Tornillo sin fin cemento -> spiral/screw conveyor
+		-> Steel, low-alloyed, at plant/RER S + peso
+
+*Cinta hormigon ->
+		-> Conveyor belt, at plant RER/U
+
+*Tolva hormigon (hopper/chute) ->
+		-> Steel, low-alloyed, at plant/RER S
+
+*Prensado (block machine, press) ->
+		Industrial machine, heavy, unspecified, at plant/RER/I U
+
+*Cinta piezas frescas ->
+		-> Conveyor belt, at plant RER/U
+
+* Ascensor (elevator, lift (shelf type)) ->
+		-> Steel, low-alloyed, at plant/RER S + Energia
+
+*Multiforca (rack transporter) ->
+		-> Steel, low-alloyed, at plant/RER S + Rail + Energia
+		-> Loader operation, large -> No me convence
+
+* Descensor (elevator, lift (shelf type)) ->
+		-> Steel, low-alloyed, at plant/RER S + Energia
+
+* Transp. bandejas (roller conveyor) ->
+		-> Conveyor belt, at plant RER/U (quitar la goma)
+
+**** Cepillado (rotating brush) ->
+
+**** Volteado (turned over) ->
+
+*Lubricado ->
+		-> Lubricating oil, at plant RER/U
+
+*Paletizadora (palletizer) -> +
+*Flejadora (strapping machine/tool) -> Packing, clay products CH/U
+
+*Transp. palet -> roller conveyor
+		-> Conveyor belt, at plant RER/U (quitar la goma)	
+
+*Transp. rodillos -> roller conveyor
+		-> Conveyor belt, at plant RER/U (quitar la goma)
+
+*Toro almac茅n -> fork lift
+		-> Warehousing and storage
+
+*Control informatizado ->
+		-> Use, computer, desktop, with CRT monitor, office use
+
+*Iluminacion ->
+		-> Energy, unspecified
+
+
+*NOTA: Concrete block, at plant/DE U: No sale ning鷑 material como prensa o tolvas.
+
+**NOTA: Buscando "manufacturing" salen muchos procesos relacionados pero ninguno habla de tolvas, prensas, etc.
