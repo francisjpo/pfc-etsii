@@ -9,7 +9,7 @@
 \usepackage{url}
 \usepackage{siunitx}
 \usepackage{tikz}
-\usetikzlibrary{shapes,arrows,chains}
+\usetikzlibrary{shapes.geometric,arrows,chains}
 \usepackage[version=3]{mhchem}
 \usepackage{wrapfig}
 \usepackage{ccaption}
@@ -34,6 +34,12 @@
 	\usepackage{lmodern}
 	\usepackage[activeacute,spanish]{babel}
 \fi
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, text width=3cm, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
 
 \begin{document}
 

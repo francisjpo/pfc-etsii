@@ -70,8 +70,8 @@
 			<integer>123</integer>
 			<key>Points</key>
 			<array>
-				<string>{265.92001342773438, 423.5}</string>
-				<string>{230.91998490963419, 423.36688137055512}</string>
+				<string>{254.8900146484375, 423.5}</string>
+				<string>{216.69499522857126, 423.36267646988716}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -99,7 +99,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{192, 404.58001708984375}, {37.419995785382071, 37.419995785382071}}</string>
+			<string>{{177.77500915527344, 404.58001708984375}, {37.419995785382071, 37.419995785382071}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -147,6 +147,8 @@
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -176,12 +178,17 @@
 				<key>Size</key>
 				<real>13</real>
 			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>4</integer>
+			</dict>
 			<key>ID</key>
 			<integer>121</integer>
 			<key>Points</key>
 			<array>
-				<string>{132, 298.1400146484375}</string>
-				<string>{161.50001764235233, 297.89211534051856}</string>
+				<string>{128.79239990589079, 297.62301434339804}</string>
+				<string>{154.50000237414343, 297.59534045681977}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -205,6 +212,11 @@
 					<key>Width</key>
 					<real>2</real>
 				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>120</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -255,6 +267,8 @@
 						<key>r</key>
 						<string>1</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -284,12 +298,17 @@
 				<key>Size</key>
 				<real>13</real>
 			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>89</integer>
+			</dict>
 			<key>ID</key>
 			<integer>119</integer>
 			<key>Points</key>
 			<array>
-				<string>{132, 231.25}</string>
-				<string>{161.50001764235233, 231.00210069208106}</string>
+				<string>{128.79245036246795, 230.75705635106704}</string>
+				<string>{154.5000002428124, 230.76854294705851}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -313,6 +332,11 @@
 					<key>Width</key>
 					<real>2</real>
 				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>118</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -363,6 +387,8 @@
 						<key>r</key>
 						<string>1</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -392,12 +418,17 @@
 				<key>Size</key>
 				<real>13</real>
 			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>3</integer>
+			</dict>
 			<key>ID</key>
 			<integer>117</integer>
 			<key>Points</key>
 			<array>
-				<string>{132, 173}</string>
-				<string>{161.50001764235233, 172.75210069208106}</string>
+				<string>{128.79245321099233, 172.50192007924539}</string>
+				<string>{153.49999997774734, 172.50492407407239}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -421,6 +452,11 @@
 					<key>Width</key>
 					<real>2</real>
 				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>116</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -471,6 +507,8 @@
 						<key>r</key>
 						<string>1</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -509,8 +547,8 @@
 			<integer>115</integer>
 			<key>Points</key>
 			<array>
-				<string>{132, 122}</string>
-				<string>{160.50005292705697, 121.76050375691548}</string>
+				<string>{128.10802954703351, 120.71050531174764}</string>
+				<string>{153.50014808825367, 121.06430233159145}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -534,6 +572,11 @@
 					<key>Width</key>
 					<real>2</real>
 				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>13</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -584,6 +627,8 @@
 						<key>r</key>
 						<string>1</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -709,7 +754,7 @@
 			<integer>90</integer>
 			<key>Points</key>
 			<array>
-				<string>{223.49985859841973, 230.32424467444631}</string>
+				<string>{216.49987293904957, 230.34641594148925}</string>
 				<string>{319.92002105712891, 229}</string>
 			</array>
 			<key>Style</key>
@@ -743,7 +788,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{163, 212.75}, {59, 36}}</string>
+			<string>{{156, 212.75}, {59, 36}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -780,6 +825,8 @@
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -794,6 +841,8 @@
 
 \f0\fs26 \cf0 Agua}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Class</key>
@@ -885,6 +934,8 @@
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -899,6 +950,8 @@
 
 \f0\fs26 \cf0 Limpieza}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -974,8 +1027,8 @@
 			<integer>85</integer>
 			<key>Points</key>
 			<array>
-				<string>{608.23198622441623, 102.02194523746769}</string>
-				<string>{608.25161437848271, 69.499995877466588}</string>
+				<string>{608.20636469107023, 103.01074726159879}</string>
+				<string>{608.20636469107023, 69.50000005382914}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1034,7 +1087,7 @@
 				<string>{615.00000977542504, 261.76978840616721}</string>
 				<string>{668, 239}</string>
 				<string>{666, 146}</string>
-				<string>{654.59905774077504, 145.70409529154168}</string>
+				<string>{654.16226293916554, 145.6927585409918}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1088,8 +1141,8 @@
 			<integer>83</integer>
 			<key>Points</key>
 			<array>
-				<string>{343.78003761634159, 424.28519508418009}</string>
-				<string>{321.41999747887326, 424.1598122400386}</string>
+				<string>{335.94501473947378, 424.28825646684305}</string>
+				<string>{310.38998683603808, 424.14770293277144}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1139,8 +1192,8 @@
 			<integer>82</integer>
 			<key>Points</key>
 			<array>
-				<string>{423.14003104593212, 424.1598122392366}</string>
-				<string>{400.77999048803395, 424.28519508498221}</string>
+				<string>{418.50000786739707, 424.15674699309511}</string>
+				<string>{392.94497191395175, 424.29729710634103}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1173,7 +1226,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{265.92002105712891, 406}, {54, 36}}</string>
+			<string>{{254.89000701904297, 406}, {54, 36}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1210,6 +1263,8 @@
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -1224,10 +1279,12 @@
 
 \f0\fs26 \cf0 Alma-c\'e9n}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{345.28001403808594, 406.44500732421875}, {54, 36}}</string>
+			<string>{{337.44499206542969, 406.44500732421875}, {54, 36}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1264,6 +1321,8 @@
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -1278,6 +1337,8 @@
 
 \f0\fs26 \cf0 Zona espera}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Class</key>
@@ -1298,8 +1359,8 @@
 			<integer>79</integer>
 			<key>Points</key>
 			<array>
-				<string>{502.50000002820411, 424}</string>
-				<string>{480.14000746767601, 424}</string>
+				<string>{502.50000002385394, 424}</string>
+				<string>{475.49998519443585, 424}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1548,7 +1609,7 @@
 			<integer>74</integer>
 			<key>Points</key>
 			<array>
-				<string>{576.28782130021921, 465.43508765829773}</string>
+				<string>{575.77934778395309, 465.43195379217531}</string>
 				<string>{575.01840489254005, 424.44499468856975}</string>
 			</array>
 			<key>Style</key>
@@ -1582,7 +1643,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{535, 466.93169534233175}, {84, 43}}</string>
+			<string>{{530, 466.93169534233175}, {92.412698412698418, 43}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1595,7 +1656,7 @@
 			<key>ID</key>
 			<integer>73</integer>
 			<key>Shape</key>
-			<string>Circle</string>
+			<string>Parallelogram</string>
 			<key>Style</key>
 			<dict>
 				<key>fill</key>
@@ -1635,10 +1696,12 @@
 				<key>VerticalPad</key>
 				<integer>0</integer>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0.20000000000000001, 0.079999998211860657}, {0.59999999999999998, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{424.64000749588013, 406}, {54, 36}}</string>
+			<string>{{419.9999852180481, 406}, {54, 36}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1675,6 +1738,8 @@
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -1689,6 +1754,8 @@
 
 \f0\fs26 \cf0 Flejado}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -1729,6 +1796,8 @@
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -1743,6 +1812,8 @@
 
 \f0\fs26 \cf0 Paleti-zado}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -1783,6 +1854,8 @@
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -1797,6 +1870,8 @@
 
 \f0\fs26 \cf0 Descen-sor}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -1837,6 +1912,8 @@
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -1851,6 +1928,8 @@
 
 \f0\fs26 \cf0 Multi-forca}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -1891,6 +1970,8 @@
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -1906,6 +1987,8 @@
 \f0\fs26 \cf0 24/48h\
 secado}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -1946,6 +2029,8 @@ secado}</string>
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -1960,6 +2045,8 @@ secado}</string>
 
 \f0\fs26 \cf0 Parada}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -2089,7 +2176,7 @@ secado}</string>
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{561.92703763810709, 145.8080942003586}</string>
+				<string>{562.29507721593166, 145.79769148646895}</string>
 				<string>{449, 149}</string>
 			</array>
 			<key>Style</key>
@@ -2162,6 +2249,8 @@ secado}</string>
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -2178,6 +2267,8 @@ secado}</string>
 				<key>VerticalPad</key>
 				<integer>0</integer>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0.13500000000000001, 0.16499999910593033}, {0.75, 0.75}}</string>
 		</dict>
 		<dict>
 			<key>Class</key>
@@ -2249,8 +2340,8 @@ secado}</string>
 			<integer>56</integer>
 			<key>Points</key>
 			<array>
-				<string>{475.50000000000006, 230.7499850854031}</string>
-				<string>{502.49999999999994, 230.7499850854031}</string>
+				<string>{475.5, 230.7499850854031}</string>
+				<string>{502.5, 230.7499850854031}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2320,6 +2411,8 @@ secado}</string>
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -2334,6 +2427,8 @@ secado}</string>
 
 \f0\fs26 \cf0 Multi-forca}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -2374,6 +2469,8 @@ secado}</string>
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -2388,6 +2485,8 @@ secado}</string>
 
 \f0\fs26 \cf0 Ascen-sor}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Class</key>
@@ -2410,7 +2509,7 @@ secado}</string>
 			<integer>53</integer>
 			<key>Points</key>
 			<array>
-				<string>{404.4679471681834, 287.50175555586077}</string>
+				<string>{405.32638516261534, 287.50109677752022}</string>
 				<string>{403.15502348542213, 230.7499858311383}</string>
 			</array>
 			<key>Style</key>
@@ -2444,7 +2543,7 @@ secado}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{361, 289}, {88, 43}}</string>
+			<string>{{360, 289}, {92.412698412698418, 43}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -2457,7 +2556,7 @@ secado}</string>
 			<key>ID</key>
 			<integer>28</integer>
 			<key>Shape</key>
-			<string>Circle</string>
+			<string>Parallelogram</string>
 			<key>Style</key>
 			<dict>
 				<key>fill</key>
@@ -2497,6 +2596,8 @@ secado}</string>
 				<key>VerticalPad</key>
 				<integer>0</integer>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0.20000000000000001, 0.079999998211860657}, {0.59999999999999998, 1}}</string>
 		</dict>
 		<dict>
 			<key>Class</key>
@@ -2576,7 +2677,7 @@ secado}</string>
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{223.49999384728773, 297.62910776155894}</string>
+				<string>{216.49999450685604, 297.62429120285532}</string>
 				<string>{315, 297.89211534051856}</string>
 				<string>{315, 148.5}</string>
 				<string>{307.5, 148.5}</string>
@@ -2631,8 +2732,8 @@ secado}</string>
 			<integer>49</integer>
 			<key>Points</key>
 			<array>
-				<string>{235, 149.11614015698433}</string>
-				<string>{250.50014707581641, 148.89908872397129}</string>
+				<string>{232, 147.51997035741806}</string>
+				<string>{250.50032594272389, 147.90573350255204}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2690,10 +2791,10 @@ secado}</string>
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{222.4999008925393, 121.85632069991425}</string>
-				<string>{235, 122}</string>
+				<string>{215.49768234455482, 119.77483942270081}</string>
+				<string>{229.41999578538207, 119}</string>
 				<string>{232, 172.5}</string>
-				<string>{222.5, 172.5}</string>
+				<string>{215.5, 172.5}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -3020,6 +3121,8 @@ secado}</string>
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -3034,6 +3137,8 @@ secado}</string>
 
 \f0\fs26 \cf0 Puesta marcha}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -3074,6 +3179,8 @@ secado}</string>
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -3088,6 +3195,8 @@ secado}</string>
 
 \f0\fs26 \cf0 Model. Comp.}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -3128,6 +3237,8 @@ secado}</string>
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -3142,6 +3253,8 @@ secado}</string>
 
 \f0\fs26 \cf0 Cambio molde}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -3182,6 +3295,8 @@ secado}</string>
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -3196,6 +3311,8 @@ secado}</string>
 
 \f0\fs26 \cf0 Planificaci\'f3n}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -3236,6 +3353,8 @@ secado}</string>
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -3250,6 +3369,8 @@ secado}</string>
 
 \f0\fs26 \cf0 Prensa}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -3290,6 +3411,8 @@ secado}</string>
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -3304,6 +3427,8 @@ secado}</string>
 
 \f0\fs26 \cf0 Mezcla-dora}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -3344,6 +3469,8 @@ secado}</string>
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -3358,10 +3485,12 @@ secado}</string>
 
 \f0\fs26 \cf0 Skip}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{163, 279.5400013923645}, {59, 36}}</string>
+			<string>{{156, 279.5400013923645}, {59, 36}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -3398,6 +3527,8 @@ secado}</string>
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -3412,10 +3543,12 @@ secado}</string>
 
 \f0\fs26 \cf0 Cemento 52.5}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{162, 154.5}, {59, 36}}</string>
+			<string>{{155, 154.5}, {59, 36}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -3452,6 +3585,8 @@ secado}</string>
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -3466,10 +3601,12 @@ secado}</string>
 
 \f0\fs26 \cf0 Arena 0/5}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{162, 103.5}, {59, 36}}</string>
+			<string>{{155, 103.5}, {59, 36}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -3506,6 +3643,8 @@ secado}</string>
 						<key>r</key>
 						<string>0</string>
 					</dict>
+					<key>CornerRadius</key>
+					<real>3</real>
 					<key>Width</key>
 					<real>3</real>
 				</dict>
@@ -3520,6 +3659,8 @@ secado}</string>
 
 \f0\fs26 \cf0 \'c1ridos 5/7}</string>
 			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0, 0.079999998211860657}, {1, 1}}</string>
 		</dict>
 	</array>
 	<key>GridInfo</key>
@@ -3569,7 +3710,7 @@ secado}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-09-26 16:40:04 +0000</string>
+	<string>2013-09-27 11:18:02 +0000</string>
 	<key>Modifier</key>
 	<string>Francisco Pinto</string>
 	<key>NotesVisible</key>
@@ -3657,14 +3798,12 @@ secado}</string>
 		<integer>142</integer>
 		<key>RightSidebar</key>
 		<false/>
-		<key>ShowRuler</key>
-		<true/>
 		<key>Sidebar</key>
 		<false/>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-64, -89}, {910, 739}}</string>
+		<string>{{-70, -111}, {924, 784}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>

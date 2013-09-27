@@ -1,6 +1,6 @@
 %!TEX root = informe.tex
-\chapter{Proceso de fabricación, almacenaje, suministro y recepción}
-Manual Euroadoquín. Documentos de Malaka.
+\chapter{Análisis de Ciclo de Vida: fabricación}
+% Manual Euroadoquín. Documentos de Malaka.
 
 \begin{figure}[!htb]
 \centering
@@ -9,11 +9,53 @@ Manual Euroadoquín. Documentos de Malaka.
 \label{fig:diagrama_de_flujo}
 \end{figure}
 
-Cómo se construyen los bloques de adoquín
+% \begin{figure}[!htb]
+% \centering
+% \begin{tikzpicture}[node distance=2cm]
+% \node (start) [startstop] {Start};
+% \node (in1) [io, below of=start] {Input};
+% \node (pro1) [process, below of=in1] {Process 1};
+% \node (dec1) [decision, below of=pro1, yshift=-0.5cm] {Decision 1};
+% \node (pro2a) [process, below of=dec1, yshift=-1.5cm] {Process 2a text text text text text text text text text text};
+% \node (pro2b) [process, right of=dec1, xshift=2cm] {Process 2b};
+% \node (out1) [io, below of=pro2a] {Output};
+% \node (stop) [startstop, below of=out1] {Stop};
 
-Las materias primas —cemento, arena, áridos y agua— se transportan hasta la planta de fabricación mediante camiones o ferrocarril. Actualmente los áridos y la arena ya no son apilados a bajo unos techados en las explanadas adyacentes a las plantas, sino que el propio transporte rellena las tolvas de forma automática.
+% \draw [arrow] (start) -- (in1);
+% \draw [arrow] (in1) -- (pro1);
+% \draw [arrow] (pro1) -- (dec1);
+% \draw [arrow] (dec1) -- node[anchor=east] {yes} (pro2a);
+% \draw [arrow] (dec1) -- node[anchor=south] {no} (pro2b);
+% \draw [arrow] (pro2b) |- (pro1);
+% \draw [arrow] (pro2a) -- (out1);
+% \draw [arrow] (out1) -- (stop);
+% \end{tikzpicture}
+% \caption{Prueba TikZ.}
+% \label{fig:tikzpic}
+% \end{figure}
+
+\section{Cemento}
+El cemento es transportado a granel en tanques a presión hasta la fábrica. Allí se almacena en silos previstos de compresores que descargan el material desde el tanque hasta su interior. El compresor es alimentado por electricidad mediante una toma de corriente conectada a la red eléctrica. El llenado a presión de los silos suele funcionar en rangos de 800—1000 \si{\cubic\meter/\minute} y presiones cercanas a 2 \si{\bar}, con potencias de 30 \si{\kilo\watt}. La descarga del silo, con una altura total de 20 \si{\meter}, es únicamente por gravedad con válvulas dosificadoras de control de caudal de hasta 35 \si{\tonne/\hour}.
+
+\section{Arena y áridos}
+Las arenas y áridos se transportan hasta la planta de fabricación mediante camiones. Actualmente los áridos y la arena ya no son apilados a bajo unos techados en las explanadas adyacentes a las plantas, sino que el propio transporte rellena las tolvas de forma automática.
 
 Los áridos utilizados para producir adoquines puede incluir arena, gravilla y piedra de machaqueo si se pretende obtener un producto de peso normal. Si se desea que el adoquín sea más ligero —entre un 20 y un 45 \%— sin mermar sus propiedades estructurales se utilizan materiales como pizarra, arcilla, escoria de altos hornos y cenizas de carbón según su disponibilidad y coste.
+
+\section{Agua de amasado}
+El agua es muy importante en la constitución del hormigón. Reacciona químicamente con el cemento —hidratación— para proporcionar las propiedades deseadas del hormigón. El agua de amasado es la cantidad de agua que toma contacto con el cemento y se usa para determinar las proporciones XXXXX.
+
+Water is an important constituent in concrete. It chemically reacts with cement (hydration) to produce the desired properties of concrete. Mixing water is the quantity of water that comes in contact with cement, impacts slump of concrete and is used to determine the water to cementitious materials ratio (w/cm) of the concrete mixture. Strength and durability of concrete is controlled to a large extent by its w/cm. Mixing water in concrete includes batch water measured and added to the mixer at the batch plant, ice, free moisture on aggregates, water included in any significant quantity with chemical admixtures, and water added after batching during delivery or at the jobsite. Water absorbed by aggregates is excluded from mixing water.
+Besides its quantity, the quality of mixing water used in concrete has important effects on fresh concrete properties, such as setting time and workability; it also has important effects on the strength and durability of hardened concrete.
+WHAT Sources of Water Can be Used in concrete?
+In general, water that is fit for human consumption (potable) is acceptable for use as mixing water. However, non-potable sources of water can also be used provided the source does not negatively impact the properties of concrete. Most concrete plants have a source of municipal water that supplies potable water and this can be used as mixing water without any qualification testing. In rural areas, or for portable plants set up on project sites, the concrete producer may have to rely on non-potable sources such as wells, streams or other bodies of water. All concrete producers will also generate process water by cleaning mixers and plant components, also referred to as wash water. Additionally, precipitation on the site of the concrete plant generates storm water that may be collected at the plant. Environmental regulations typically require concrete plants to treat process and storm water to achieve certain characteristics like pH or solids content before it is discharged from the property. Process and storm water at concrete plants is referred to as water from concrete production operations in ASTM C1602.
+Process water is also generated when returned concrete is washed out in concrete reclaimer systems. These systems collect process water with the cement and aggregate fines in the form of a slurry that can be re-used as mixing water in concrete.
+WHY Should Non-Potable Water be Qualified for use?
+Water is an important resource for human existence. In some areas potable water supply is in short supply. Use of non-potable sources of water for production of concrete supports sustainable production of concrete by conserving potable water resources. Managing water from concrete production operations for compliance with environmental regulations represents a cost to the concrete producer and using this water can represent considerable savings for producing concrete. The producer should realize that there is, however, a cost to evaluate, manage and reliably use non-potable water as mixing water in concrete.
+When non-potable sources of water are used, it is important to verify and document that the impurities in the water do no harm to concrete. Non-potable sources of water can contain oils, grease, dissolved salts, and
+
+
+\section{Cintas transportadoras}
 
 Las tolvas tienen dosificadores que descargan la cantidad programada de materia prima sobre dos cintas transportadoras —una para áridos y arena, otra para cemento— con básculas de pesaje incorporadas que se comunican con el sistema de control y cortan el flujo de descarga.
 
