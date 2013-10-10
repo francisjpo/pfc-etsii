@@ -83,4 +83,65 @@ Al ser el adoquín un elemento de pavimentación se encontraría en el denominad
 \section{Análisis de Ciclo de Vida. Proceso completo}
 
 \section{SimaPro}
-Es una aplicación informática \cite{mgoedkoop}
+SimaPro es una herramienta profesional desarrollada por la empresa holandesa PRé Consultants para el Análisis de Ciclo de Vida más utilizada actualmente por la mayor parte de los consultores y la industria, apoyada en la investigación de materiales y elementos por parte institutos y universidades \cite{mgoedkoop}. Permite modelar ciclos de vida complejos y analizarlos de forma sistemática y transparente, ya que puede rastrearse el origen de todos los resultados de forma sencilla.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=15cm]{simapro.png}
+\caption{Estructura de SimaPro.}
+\label{fig:simapro}
+\end{figure}
+
+Entre sus principales cualidades destacan:
+
+\begin{itemize}
+  \item Diseño de productos.
+  \item Desarrollo de indicadores clave.
+  \item Cálculo de la huella de carbono de muchos tipos de productos y sistemas.
+  \item Determinar el impacto medioambiental de productos o servicios con precisión estadística mediante el método de análisis Monte Carlo.
+  \item Incluye Declaraciones Medioambientales de Productos e Informes Medioambientales GRI (Global Reporting Initiative).
+  \item Utilización de bases de datos con inventarios.
+  \item Asignación de múltiples procesos de salida.
+  \item Análisis de Punto Débil, que permite identifica los puntos sensibles en el ciclo de vida utilizando un árbol de procesos.
+  \item Análisis de tratamientos de residuos y escenarios de reciclado.
+\end{itemize}
+
+Esta herramienta cuenta con una interfaz de usuario intuitiva con un explorador de guía a través del Análisis de Ciclo de Vida del producto o servicio siguiendo los principios de las normas ISO 14040 y 14044. Además incorpora un modelado utilizando un asistente paso a paso.
+
+La mayor ventaja de esta herramienta es la utilización de bases de datos con los inventarios de miles de procesos y métodos más importante de análisis de impacto.
+
+\subsection{Bases de datos en SimaPro}
+SimaPro incluye varias bases de datos de inventarios con miles de procesos, además de los métodos de análisis de impacto más importantes. De esta forma, no es necesario recolectar datos de procesos individuales y poder centrarse en los asuntos más importantes del estudio.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=15cm]{bbddsimapro.png}
+\caption{Estructura de una base de datos de SimaPro.}
+\label{fig:bbddsimapro}
+\end{figure}
+
+La calidad de los datos que aparecen en el Inventario de Ciclo de Vida (ICV) implica que el estudio sea relevante o no. \textit{ecoinvent} implementa en una única base de datos miles de conjuntos de datos de ICVs —agricultura, energía, transporte, combustibles, biomateriales, químicos, materiales de construcción, materiales de empaquetamiento, metales elementales y preciosos, procesado de metales, informática y electrónica, tratamiento de residuos— basados en información industrial recopilada por grupos de investigación y consultores reconocidos internacionalmente \cite{website:ecoinvent}.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=15cm]{bbddecoinvent.png}
+\caption[Estructura de la base de datos de \textit{ecoinvent}.]{Estructura de la base de datos de \textit{ecoinvent}. Fuente: \protect\cite{mgoedkoop2}.}
+\label{fig:bbddecoinvent}
+\end{figure}
+
+De esta forma, la metodología de uso de SimaPro consiste en utilizar \textit{ecoinvent} como soporte para aquellos materiales y procesos de nuestro sistema que sean similares con los de la base de datos. En caso de que no se adapten a la entrada de la base de datos será necesario modelar una nueva entrada equivalente, pudiendo usar otras entradas de la base de \textit{ecoinvent}.
+
+La librería \textit{ecoinvent}:
+\begin{itemize}
+  \item Incorpora más de 4000 procesos:
+  \begin{itemize}
+    \item Bienes de producción y calidades.
+    \item Para algunos procesos añade diferencias regionales (Suiza y Unión Europea).
+    \item Mix eléctrico y procesos agrícolas de Estados Unidos y Asia.
+  \end{itemize}
+  \item Incertidumbre en los datos.
+  \item Ilustraciones de la mayoría de los procesos.
+  \item Documentación extensa y consistente de los procesos.
+  \item Actualizaciones frecuentes y periódicas.
+  \item Incluye versiones de los procesos como Unidad (Proceso 1/U) —más detallado— o como Sistema (Proceso 1/S) —sin información de incertidumbre—.
+\end{itemize}
