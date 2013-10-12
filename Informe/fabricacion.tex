@@ -37,13 +37,103 @@
 \section{Cemento}
 El cemento es transportado a granel en tanques a presión hasta la fábrica. Allí se almacena en silos previstos de compresores que descargan el material desde el tanque hasta su interior. El compresor es alimentado por electricidad mediante una toma de corriente conectada a la red eléctrica. El llenado a presión de los silos suele funcionar en rangos de 800—1000 \si{\cubic\meter/\minute} y presiones cercanas a 2 \si{\bar}, con potencias de 30 \si{\kilo\watt}. La descarga del silo, con una altura total de 20 \si{\meter}, es únicamente por gravedad con válvulas dosificadoras de control de caudal de hasta 35 \si{\tonne/\hour}.
 
+% Densidad media de 1250 kg/m3 \cite{website:ecoinvent}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Cemento Portland CEM I 52.5Z gris}\\
+\midrule
+\multicolumn{2}{c}{Materiales/Ensamblajes}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Portland cement, strength class Z 52.5, at plant/CH U & 15.09 & \si{kg}\\
+\midrule
+\multicolumn{2}{c}{Procesos}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Transport, lorry 16-32t, EURO4/RER U & 453 & \si{kg*km}\\
+Tower silo, plastic/CH/I U & 0.0121 & \si{m^3}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del cemento.}
+\label{modeladodelcemento}
+\end{table}
+
 \section{Arena y áridos}
-Las arenas y áridos se transportan hasta la planta de fabricación mediante camiones. Actualmente los áridos y la arena ya no son apilados a bajo unos techados en las explanadas adyacentes a las plantas, sino que el propio transporte rellena las tolvas de forma automática.
+Las arenas y áridos se transportan hasta la planta de fabricación mediante camiones. Actualmente los áridos y la arena ya no se apilan a bajo techados en las explanadas adyacentes a las plantas, sino que el propio transporte rellena las tolvas de forma automática.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Arena tipo 0/5}\\
+\midrule
+\multicolumn{2}{c}{Materiales/Ensamblajes}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Sand 0/2, wet and dry quarry, production mix, at plant, undried/RER S & 70.74 & \si{kg}\\
+\midrule
+\multicolumn{2}{c}{Procesos}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Transport, lorry 16-32t, EURO4/RER U & 566 & \si{kg*km}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la arena.}
+\label{modeladodelaarena}
+\end{table}
 
 Los áridos utilizados para producir adoquines puede incluir arena, gravilla y piedra de machaqueo si se pretende obtener un producto de peso normal. Si se desea que el adoquín sea más ligero —entre un 20 y un 45 \%— sin mermar sus propiedades estructurales se utilizan materiales como pizarra, arcilla, escoria de altos hornos y cenizas de carbón según su disponibilidad y coste.
 
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Árido tipo 5/7}\\
+\midrule
+\multicolumn{2}{c}{Materiales/Ensamblajes}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Gravel, crushed, at mine/CH U & 56.63 & \si{kg}\\
+\midrule
+\multicolumn{2}{c}{Procesos}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Transport, lorry 16-32t, EURO4/RER U & 453 & \si{kg*km}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del árido.}
+\label{modeladodearido}
+\end{table}
+
+
 \section{Agua}
 La mayoría de las plantas tienen una fuente de agua municipal que proporciona potable perfectamente válida para el uso en la fabricación de hormigón.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Agua}\\
+\midrule
+\multicolumn{2}{c}{Materiales/Ensamblajes}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Tap water, at user/RER U & 7.54 & \si{kg}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del agua.}
+\label{modeladodelagua}
+\end{table}
 
 \section{Cintas transportadoras}
 
@@ -79,3 +169,456 @@ Finalmente, un torito transporta cada conjunto de adoquines a la zona de almacen
 \section{Embalaje y almacenamiento}
 \section{Suministro}
 \section{Recepción}
+
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Ascensor}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Steel, low-alloyed, at plant/RER U & 320 & \si{kg}\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.126 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del ascensor.}
+\label{modeladodelascensor}
+\end{table}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Descensor}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Steel, low-alloyed, at plant/RER U & 320 & \si{kg}\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.126 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del descensor.}
+\label{modeladodeldescensor}
+\end{table}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Cepillado, volteado y lubricado de bandejas}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Lubricating oil, at plant/RER U & 0.0001 & \si{kg}\\
+Polyurethane, flexible foam, at plant/RER U & 1 & \si{kg}\\
+Nylon 66, glass-filled, at plant/RER U & 4 & \si{kg}\\
+Fleece, polyethylene, at plant/RER U & 0.6 & \si{kg}\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.0018 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del cepillado, volteado y lubricado de bandejas.}
+\label{modeladodelcepillado}
+\end{table}
+
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Cinta transportadora para arena y áridos}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Conveyor belt, at plant/RER/I U & 14.6 & \si{m}\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.1827 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la cinta transportadora para arena y áridos.}
+\label{modeladodecintaarena}
+\end{table}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Cinta transportadora para cemento}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Conveyor belt, at plant/RER/I U & 7.3 & \si{m}\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.0975 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la cinta transportadora para cemento.}
+\label{modeladodecintacemento}
+\end{table}
+
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Cinta transportadora para hormigón}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Conveyor belt, at plant/RER/I U & 12.1 & \si{m}\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.088 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la cinta transportadora para hormigón.}
+\label{modeladodecintahormigon}
+\end{table}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Cinta transportadora para piezas frescas}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Conveyor belt, at plant/RER/I U & 6.8 & \si{m}\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.077 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la cinta transportadora para piezas frescas.}
+\label{modeladodecintapiezas}
+\end{table}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Control informatizado}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Desktop computer, without screen, at plant/GLO U & 2 & p\\
+Keyboard, standard version, at plant/GLO U & 2 & p\\
+LCD flat screen, 17 inches, at plant/GLO U & 2 & p\\
+Mouse device, optical, with cable, at plant/GLO U & 2 & p\\
+Network access devices, internet, at user/CH/I U & 2 & p\\
+Router, IP network, at server/CH/I U & 1 & p\\
+Power supply unit, at plant/CN U & 2 & p\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.486 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del control informatizado.}
+\label{modeladodecontrol}
+\end{table}
+
+
+% DOSIDIFICADORES
+% TORITO
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Flejado y paletizado}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Packing, clay products/CH U & 150 & \si{kg}\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.065 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del flejado.}
+\label{modeladodelflejado}
+\end{table}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Iluminación}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+CFL Bulb 40W & 60 & p\\
+\multicolumn{2}{c}{Desglose para 1 p. CFL Bulb 40W}\\
+\cmidrule(r){1-2}
+Aluminium alloy, AlMg3, at plant/RER U & 7.09 & \si{g}\\
+Oriented polypropylene film E & 4.25 & \si{g}\\
+Iron-nickel-chromium alloy, at plant/RER U & 6.27 & \si{g}\\
+Copper wire, technology mix, consumption mix, at plant, cross section 1 \si{mm^2} EU-15 S & 4.25 & \si{g}\\
+41 Plastics basic, virgin, EU27 & 1.42 & \si{g}\\
+Integrated circuit, IC, logic type, at plant/GLO U & 1.42 & \si{g}\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.972 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la iluminación.}
+\label{modeladodeiluminacion}
+\end{table}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Multiforca}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Steel, low-alloyed, at plant/RER U & 930 & \si{kg}\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.516 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la multiforca.}
+\label{modeladomultiforca}
+\end{table}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Prensado}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Industrial machine, heavy, unspecified, at plant/RER/I U & 1380 & \si{kg}\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.437 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del prensado.}
+\label{modeladoprensado}
+\end{table}
+
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Skip y mezcladora}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Plaster mixing/CH U & 150 & \si{kg}\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 1.71 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del skip y la mezcladora.}
+\label{modeladoskip}
+\end{table}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Tolva de hormigón}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Steel, low-alloyed, at plant/RER U & 470 & \si{kg}\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.0161 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la tolva de hormigón.}
+\label{modeladotolva}
+\end{table}
+
+
+
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Transporte de bandejas hasta paletizadora}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Roller conveyor, at plant/RER/I U & 6.88 & \si{m}\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.021 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del transporte de bandejas hasta paletizadora.}
+\label{modeladobandejaspalet}
+\end{table}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Transporte de pallets flejados hasta zona de recogida}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Roller conveyor, at plant/RER/I U & 39.1 & \si{m}\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.0315 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del transporte de pallets flejados hasta zona de recogida.}
+\label{modeladopalletsrecogida}
+\end{table}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Transporte de pallets hasta flejadora}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Roller conveyor, at plant/RER/I U & 3.1 & \si{m}\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.021 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del transporte de pallets hasta flejadora.}
+\label{modeladopalletsflejadora}
+\end{table}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Roller conveyor, at plant/RER/I U}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Concrete, sole plate and foundation, at plant/CH U & 0.01 & \si{m^3}\\
+Section bar rolling, steel/RER U & 500 & \si{kg}\\
+Steel, low-alloyed, at plant/RER U & 530 & \si{kg}\\
+Transport, lorry >16t, fleet average/RER U & 55.5 & \si{\tonne*\km}\\
+Wire drawing, steel/RER U & 29.6 & \si{kg}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de 1 metro de cinta de rodillos.}
+\label{modeladoroller}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
