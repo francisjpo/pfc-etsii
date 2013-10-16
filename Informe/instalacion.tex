@@ -35,12 +35,14 @@ Se utiliza un sistema de clasificación de su capacidad portante mediante el ín
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{|c|c|}
-\hline
-Calidad de la explanada & Índice CBR\\ \hline
-E1 & 5 $\leq$ CBR = 10\\ \hline
-E2 & 10 $\leq$ CBR = 20\\ \hline
-E3 & 20 $\leq$ CBR\\ \hline
+\begin{tabular}{cc}
+\toprule
+Calidad de la explanada & Índice CBR\\
+\midrule
+E1 & 5 $\leq$ CBR = 10\\
+E2 & 10 $\leq$ CBR = 20\\
+E3 & 20 $\leq$ CBR\\
+\bottomrule
 \end{tabular}
 \caption{Índice CBR.}
 \label{indicecbr}
@@ -51,11 +53,13 @@ E3 & 20 $\leq$ CBR\\ \hline
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{|c|c|}
-\hline
-Tipo & Categoría de tráfico\\ \hline
-Viales y zonas de aparcamiento & C0 \ldots C4\\ \hline
-Zonas industriales & A \ldots D\\ \hline
+\begin{tabular}{cc}
+\toprule
+Tipo & Categoría de tráfico\\
+\midrule
+Viales y zonas de aparcamiento & C0 \ldots C4\\
+Zonas industriales & A \ldots D\\
+\bottomrule
 \end{tabular}
 \caption{Categoría de tráfico.}
 \label{categoriadetrafico}
@@ -67,14 +71,16 @@ Si en un área limitada existen diversos usos, a efectos de unificación se debe
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{|p{7cm}|c|}
-\hline
-\centering{Uso previsto} & Categoría de tráfico\\ \hline
-Arterias principales con gran afluencia de tráfico, paradas de bus, estaciones de servicio, etc. (50 a 149 v.p.d.) & C0\\ \hline
-Arterias principales (25 a 49 v.p.d.) & C1\\ \hline
-Calles comerciales con gran actividad (16 a 24 v.p.d.) & C2\\ \hline
-Calles comerciales cone escasa actividad (15 v.p.d.) & C3\\ \hline
-Áreas peatonales, calles residenciales & C4\\ \hline
+\begin{tabular}{p{7cm}c}
+\toprule
+Uso previsto & Categoría de tráfico\\
+\midrule
+Arterias principales con gran afluencia de tráfico, paradas de bus, estaciones de servicio, etc. (50 a 149 v.p.d.) & C0\\
+Arterias principales (25 a 49 v.p.d.) & C1\\
+Calles comerciales con gran actividad (16 a 24 v.p.d.) & C2\\
+Calles comerciales cone escasa actividad (15 v.p.d.) & C3\\
+Áreas peatonales, calles residenciales & C4\\
+\bottomrule
 \end{tabular}
 \caption{Categoría de tráfico en viales y zonas de aparcamiento.}
 \label{categoriadetraficoenviales}
@@ -85,25 +91,30 @@ Calles comerciales cone escasa actividad (15 v.p.d.) & C3\\ \hline
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-\multicolumn{2}{|c|}{Área} & Uso & Intensidad de uso\\ \hline
-\multirow{7}{*}{Comercial} & De operación &  & Alta\\ \cline{2-4}
-& \multirow{2}{*}{Almacenamiento} & Mercancia convencional & Media\\ \cline{3-4}
-& & Mercancía pesada & Alta\\ \cline{2-4}
-& Manipulación & & Alta\\ \cline{2-4}
-& \multirow{3}{*}{Estacionamiento} & Vehículos pesados y ligeros & Media\\ \cline{3-4}
-& & Vehículos pesados exclusivamente & Alta\\ \cline{3-4}
-& & Semirremolques & Alta\\ \hline
-\multirow{3}{*}{Militar} & De operación &  & Alta\\ \cline{2-4}
-& \multirow{2}{*}{Almacenamiento} & Mercancia convencional & Media\\ \cline{3-4}
-& & Mercancía pesada y semirremolques & Alta\\ \hline
-\multirow{3}{*}{Pesquera} & Almacenamiento &  & Media\\ \cline{2-4}
-& Manipulación & & Alta\\ \cline{2-4}
-& Clasificación y venta & & Media\\ \hline
-\multirow{3}{*}{Industrial} & De operación &  & Alta\\ \cline{2-4}
-& \multirow{2}{*}{Almacenamiento} & Mercancia convencional & Media\\ \cline{3-4}
-& & Mercancía pesada & Alta\\ \hline
+\begin{tabular}{cccc}
+\toprule
+\multicolumn{2}{c}{Área} & Uso & Intensidad de uso\\
+\midrule
+\multirow{7}{*}{Comercial} & De operación & — & Alta\\
+& \multirow{2}{*}{Almacenamiento} & Mercancia convencional & Media\\
+& & Mercancía pesada & Alta\\
+& Manipulación & — & Alta\\
+& \multirow{3}{*}{Estacionamiento} & Vehículos pesados y ligeros & Media\\
+& & Vehículos pesados exclusivamente & Alta\\
+& & Semirremolques & Alta\\
+\midrule
+\multirow{3}{*}{Militar} & De operación & — & Alta\\
+& \multirow{2}{*}{Almacenamiento} & Mercancia convencional & Media\\
+& & Mercancía pesada y semirremolques & Alta\\
+\midrule
+\multirow{3}{*}{Pesquera} & Almacenamiento & — & Media\\
+& Manipulación & — & Alta\\
+& Clasificación y venta & — & Media\\
+\midrule
+\multirow{3}{*}{Industrial} & De operación & — & Alta\\
+& \multirow{2}{*}{Almacenamiento} & Mercancia convencional & Media\\
+& & Mercancía pesada & Alta\\
+\bottomrule
 \end{tabular}
 \caption{Intensidades de uso en zonas industriales.}
 \label{categoriadetraficoenzonasindustrialesintensidades}
@@ -112,13 +123,16 @@ Calles comerciales cone escasa actividad (15 v.p.d.) & C3\\ \hline
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-\multirow{2}{*}{Intensidad de uso} & \multicolumn{3}{c|}{Carga de cálculo} \\ \cline{2-4}
- & Alta & Media & Baja\\ \hline
-Elevada & A & B & C\\ \hline
-Media & A & B & D\\ \hline
-Reducida & B & C & D\\ \hline
+\begin{tabular}{cccc}
+\toprule
+Intensidad de uso & \multicolumn{3}{c}{Carga de cálculo}\\
+\cmidrule{2-4}
+& Alta & Media & Baja\\
+\midrule
+Elevada & A & B & C\\
+Media & A & B & D\\
+Reducida & B & C & D\\
+\bottomrule
 \end{tabular}
 \caption{Categoría de tráfico en zonas industriales.}
 \label{categoriadetraficoenzonasindustriales}
@@ -131,13 +145,13 @@ Las secciones tipo según la base y el uso previsto del área vistas en la secci
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=15cm]{seccionestipo_1.png}
-\caption{Secciones tipo para base granular. Unidades en cm.}
+\caption[Secciones tipo para base granular.]{Secciones tipo para base granular. Unidades en cm. Fuente: \cite{fenollar}.}
 \label{fig:seccionestipogranular}
 \end{figure}
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=15cm]{seccionestipo_2.png}
-\caption{Secciones tipo para base de hormigon. Unidades en cm.}
+\caption[Secciones tipo para base de hormigón.]{Secciones tipo para base de hormigón. Unidades en cm. Fuente: \cite{fenollar}.}
 \label{fig:seccionestipohormigon}
 \end{figure}

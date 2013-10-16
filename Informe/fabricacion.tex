@@ -2,8 +2,8 @@
 \chapter{Análisis de Ciclo de Vida: fabricación}
 % Manual Euroadoquín. Documentos de Malaka.
 
-\section{Obtención de datos}
-Los datos de partida que se han utilizado en este análisis han sido proporcionados por Malaka de Prefabricados. La figura \ref{fig:diagrama_de_flujo} muestra las entradas al sistema, así como los procesos que ocurren durante la fabricación —que serán explicados en las siguientes secciones— y la salida del sistema.
+\section{Obtención de datos}\label{sec:obtenciondedatos}
+Los datos de partida que se han utilizado en este análisis han sido proporcionados por Malaka de Prefabricados (Apéndice \ref{apend:datos}). La figura \ref{fig:diagrama_de_flujo} muestra las entradas al sistema, así como los procesos que ocurren durante la fabricación —que serán explicados en las siguientes secciones— y la salida del sistema.
 
 \begin{figure}[!htb]
 \centering
@@ -43,7 +43,7 @@ Agua & 5.03 & 7.54 & Red & -\\
 
 En el Apéndice \ref{apend:catalogo} también se especifica un diagrama de Gantt de los procesos para una simulación realizada para fabricar 1 \si{m^2} de adoquín, además de los consumos energéticos desglosados.
 
-\section{Modelado de los procesos}
+\section{Modelado de los procesos}\label{sec:modeladoprocesos}
 \subsection{Cemento}
 El cemento se transporta a granel en camiones con tanques a presión hasta la fábrica. Allí se almacena en silos provistos de compresores que descargan el material desde el tanque hasta su interior. El compresor es alimentado por electricidad mediante una toma de corriente conectada a la red eléctrica. La descarga del silo es únicamente por gravedad con válvulas dosificadoras de control de caudal (ver tabla \ref{modeladodelcemento}).
 
@@ -692,4 +692,65 @@ Electricity mix 2013/ES U & 0.972 & \si{MJ}\\
 \label{modeladodeiluminacion}
 \end{table}
 
+\section{Modelado completo}
+
+Los modelos de los procesos explicados en la sección \ref{sec:modeladoprocesos} han sido introducidos en SimaPro para crear un modelo completo que represente la fabricación de un metro cuadrado de adoquín modelo Holanda 6.
+
+Aunque la mayoría de los procesos sólo ocurren una única vez, hay varios procesos que necesitan funcionar dos veces, debido a que son dos bandejas las que hay que preparar para fabricar el metro cuadrado (ver sección \ref{sec:obtenciondedatos}) o bien, como en el caso de la multiforca, porque hay una ida y una vuelta hacia la zona de curación. El listado completo de procesos se muestra en la tabla \ref{modeladocompleto}.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Fabricación 1 \si{m^2} adoquín Holanda 6}\\
+\midrule
+Materiales/Ensamblajes & Cantidad & Unidad\\
+\midrule
+Agua & 1 & p\\
+Arena tipo 0/5 & 1 & p\\
+Árido tipo 5/7 & 1 & p\\
+\midrule
+Procesos & Cantidad & Unidad\\
+\midrule
+Dosificador de arena & 1 & p\\
+Dosificador de áridos & 1 & p\\
+Cinta transp. para arena y áridos & 1 & p\\
+Cinta transp. para cemento & 1 & p\\
+Skip+mezcladora & 1 & p\\
+Cinta transp. para hormigón & 1 & p\\
+Tolva para hormigón & 2 & p\\
+Prensado & 2 & p\\
+Transportador de rodillos para piezas frescas & 2 & p\\
+Ascensor & 1 & p\\
+Multiforca & 2 & p\\
+Descensor & 1 & p\\
+Transporte de bandejas hasta paletiz. & 1 & p\\
+Paletizado+flejado & 1 & p\\
+Transporte de pallets hasta flejadora & 1 & p\\
+Transporte de pallets flejados hasta zona de recogida & 1 & p\\
+Transporte de pallets con torito hasta almacén & 1 & p\\
+Control informatizado & 1 & p\\
+Iluminación & 1 & p\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la iluminación.}
+\label{modeladocompleto}
+\end{table}
+
 \section{Resultados}
+
+Una vez creado el modelo completo del proceso de fabricación, SimaPro genera un análisis de los datos introducidos. El método de análisis elegido es \textit{ReCiPe Endpoint (H) V1.06 / Europe ReCipe H/A}, previamente explicado en la sección \ref{sec:recipe}.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[angle=90,height=19cm]{fabricacion_caracterizacion.png}
+\caption{Caracterización del análisis de fabricación de 1 \si{m^2} de adoquín.}
+\label{fig:caracterizacionfabricacion}
+\end{figure}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[height=19cm]{fabricacion_red.png}
+\caption{Red del análisis de fabricación de 1 \si{m^2} de adoquín.}
+\label{fig:redfabricacion}
+\end{figure}

@@ -4,28 +4,27 @@ En este apéndice se incluyen los datos proporcionados por el fabricante acerca 
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{lcccc}
+\begin{tabular}{lccc}
 \toprule
-\multicolumn{5}{c}{Fórmula base para de adoquín Holanda 6}\\
+\multicolumn{4}{c}{Fórmula base para de adoquín Holanda 6}\\
 \midrule
-Materia prima & \% Fórmula & Masa (\si{kg}) & Proced. & Dist. (\si{km})\\
+Materia prima & \% Fórmula & Proced. & Dist. (\si{km})\\
 \midrule
 Árido tipo 5/7 & 37.75 & Alh. Torre & 8\\
 Arena tipo 0/5 & 47.16 & Alh. Torre & 8\\
 Cemento Portland 52.5N & 10.06 & Málaga-El Palo & 30\\
-Agua & 5.03 & 7.54 & Red & -\\
+Agua & 5.03 & Red & -\\
 \bottomrule
 \end{tabular}
 \caption{Fórmula base para de adoquín Holanda 6.}
 \label{formulabase}
 \end{table}
 
-
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=15cm]{plano_adoquin.png}
-\caption{Plano modelo adoquín Holanda 6.}
-\label{fig:planoadoquin}
+\includegraphics[width=6cm]{porcent_matprima.png}
+\caption{Porcentajes de materías prima para adoquín.}
+\label{fig:porcentmatprima}
 \end{figure}
 
 \begin{table}[!htb]
@@ -34,12 +33,12 @@ Agua & 5.03 & 7.54 & Red & -\\
 \toprule
 \multicolumn{5}{c}{Tiempo de proceso y energía por \si{m^2} de adoquín fabricado}\\
 \midrule
-Proceso & Duración (\si{s}) & Potencia (\si{kW}) & Energía (\si{kJ}) & Energía (\si{MJ})\\
+Proceso & Duración (\si{s}) & Pot. (\si{kW}) & Energía (\si{kJ}) & Energía (\si{MJ})\\
 \midrule
 Dosif. arena & 3 & 0.7 & 2.1 & 0.0021\\
 Dosif. áridos & 3 & 0.7 & 2.1 & 0.0021\\
 Cinta transp. arena y áridos  & 21 & 8.7 & 182.7 & 0.1827\\
-Cinta transp. cemento  15  6.5 97.5  0.0975\\
+Cinta transp. cemento & 15 & 6.5 & 97.5 & 0.0975\\
 Skip  & 27 & 15 & 405 & 0.405\\
 Mezcladora & 42 & 31 & 1302 & 1.302\\
 Cinta transp. hormigón & 11 & 8 & 88 & 0.088\\
@@ -59,11 +58,18 @@ Transp. bandejas hasta paletiz. & 14 & 1.5 & 21 & 0.021\\
 Paletizadora & 10 & 5 & 50 & 0.05\\
 Transp. palet & 14 & 1.7 & 23.8 & 0.0238\\
 Flejadora & 10 & 1.5 & 15 & 0.015\\
-Transp. rodillos hasta recogida  21  1.5 31.5  0.0315\\
-Control informatizado 405 1.2 486 0.486\\
+Transp. rodillos hasta recogida  & 21 & 1.5 & 31.5 & 0.0315\\
+Control informatizado & 405 & 1.2 & 486 & 0.486\\
 Iluminación & 405 & 2.4 & 972 & 0.972\\
 \bottomrule
 \end{tabular}
 \caption{Desglose de procesos y energías del fabricante por \si{m^2} de adoquín fabricado.}
 \label{desgloseenergia}
 \end{table}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=15cm]{gantt.png}
+\caption{Diagrama de Gantt de los procesos de fabricación.}
+\label{fig:gant}
+\end{figure}
