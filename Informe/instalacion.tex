@@ -174,7 +174,7 @@ Debido a que hay múltiples tipos de vía y uso destinado, se ha optado para el 
 \midrule
 Capa componente & Grosor (\si{cm}) & Densidad (\si{kg/m^3}) & Volumen (\si{m^3})\\
 \midrule
-Adoquín \& Sellado & 10 & — & 0.1\\
+Adoquín \& Sellado & 10 & 2650 & 0.1\\
 Lecho de árido & 4 & 1650 & 0.04\\
 Base granular & 20 & 1500 & 0.2\\
 Subbase & — & — & —\\
@@ -185,6 +185,109 @@ Total & 34 & — & 0.34\\
 \end{tabular}
 \caption{Capas componentes para arterías principales C1-E2 con base granular.}
 \label{cortedelterreno}
+\end{table}
+
+\subsection{Árido grueso para base granular (zahorra)}
+1500kg/m3
+Gravel, crushed, at mine/CH U 300
+Transport, lorry 16-32t, EURO4/RER U 300 50
+
+La arena para sellado debe ser una arena sin exceso de finos, ya que si existen demasiados finos, se producirá un vaciado de las juntas con el uso y limpieza del pavimento o bien se filtrarás hacia el lecho.
+
+Además debe ser libre de sales solubles y otros contaminantes, ya que pueden provocar la aparición de eflorescencias —igual que en el caso del lecho de árido—.
+
+No se debe usar mortero para el sellado de las juntas, ya que no se podrán retirar para hacer tareas de mantenimiento —principal ventaja de los adoquines de hormigón—, además de perder flexibilidad del conjunto.
+
+La arena de sílice —\textit{Silica sand}, en inglés— es un material adecuado para esta tarea \cite{website:cement}. SimaPro pide como parámetro la masa de arena que se empleará para el rellenado. Si se tiene en cuenta que el adoquín mide 10 \si{cm} de altura, 1 \si{cm} quedará enterrado en el lecho, y se añadirá 1 \si{cm} por encima para el vibrado; por otro lado, la junta medirá 5 \si{mm}, se puede obtener el volumen y a partir de él la masa:
+
+\begin{gather}
+1 m^2 = 50 \text{ adoquines} = 10 \times 5\\
+Adoquin = 20 \times 10 \times 6 cm\\
+\delta_{junta} = 0.5cm\\
+Largo = 10 \times 10 + 9 \times 0.5 = 104.5 cm\\
+Ancho = 5 \times 20 + 4 \times 0.5 = 102 cm\\
+\text{Superficie de arena} = 104.5 \times 0.5 + 102 \times 0.5 = 103.25 cm^2\\
+\text{Volumen de arena} = 103.25 \times 10 = 1032.5 cm^3\\
+\rho_{arena}=2.6 g/cm^3\\
+\text{Masa de arena} = 1032.5 \times 2.65 = 2.74 kg
+\end{gather}
+
+Por otro lado, si se supone una distancia de entrega de 50 km hasta el destino de la instalación en un camión de transporte, se tiene:
+
+\begin{equation}
+2.74 kg \times 50 km = 137 kg \times km
+\end{equation}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Arena para sellado}\\
+\midrule
+Materiales/Ensamblajes & Cantidad & Unidad\\
+\midrule
+Silica sand, at plant/DE U & 2.74 & \si{kg}\\
+\midrule
+Procesos & Cantidad & Unidad\\
+\midrule
+Transport, lorry 16-32t, EURO4/RER U & 137 & \si{kg\times km}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la arena para sellado.}
+\label{modeladoarenasellado}
+\end{table}
+
+\subsection{Árido semi-fino para lecho de arena}
+
+Sand, at mine/CH U 66
+1650 kgm3
+Transport 66*50
+
+\subsection{Arena para sellado}
+
+La arena para sellado debe ser una arena sin exceso de finos, ya que si existen demasiados finos, se producirá un vaciado de las juntas con el uso y limpieza del pavimento o bien se filtrarás hacia el lecho.
+
+Además debe ser libre de sales solubles y otros contaminantes, ya que pueden provocar la aparición de eflorescencias —igual que en el caso del lecho de árido—.
+
+No se debe usar mortero para el sellado de las juntas, ya que no se podrán retirar para hacer tareas de mantenimiento —principal ventaja de los adoquines de hormigón—, además de perder flexibilidad del conjunto.
+
+La arena de sílice —\textit{Silica sand}, en inglés— es un material adecuado para esta tarea \cite{website:cement}. SimaPro pide como parámetro la masa de arena que se empleará para el rellenado. Si se tiene en cuenta que el adoquín mide 10 \si{cm} de altura, 1 \si{cm} quedará enterrado en el lecho, y se añadirá 1 \si{cm} por encima para el vibrado; por otro lado, la junta medirá 5 \si{mm}, se puede obtener el volumen y a partir de él la masa:
+
+\begin{gather}
+1 m^2 = 50 \text{ adoquines} = 10 \times 5\\
+Adoquin = 20 \times 10 \times 6 cm\\
+\delta_{junta} = 0.5cm\\
+Largo = 10 \times 10 + 9 \times 0.5 = 104.5 cm\\
+Ancho = 5 \times 20 + 4 \times 0.5 = 102 cm\\
+\text{Superficie de arena} = 104.5 \times 0.5 + 102 \times 0.5 = 103.25 cm^2\\
+\text{Volumen de arena} = 103.25 \times 10 = 1032.5 cm^3\\
+\rho_{arena}=2.6 g/cm^3\\
+\text{Masa de arena} = 1032.5 \times 2.65 = 2.74 kg
+\end{gather}
+
+Por otro lado, si se supone una distancia de entrega de 50 km hasta el destino de la instalación en un camión de transporte, se tiene:
+
+\begin{equation}
+2.74 kg \times 50 km = 137 kg \times km
+\end{equation}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Arena para sellado}\\
+\midrule
+Materiales/Ensamblajes & Cantidad & Unidad\\
+\midrule
+Silica sand, at plant/DE U & 2.74 & \si{kg}\\
+\midrule
+Procesos & Cantidad & Unidad\\
+\midrule
+Transport, lorry 16-32t, EURO4/RER U & 137 & \si{kg\times km}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la arena para sellado.}
+\label{modeladoarenasellado}
 \end{table}
 
 \subsection{Excavación del terreno}
@@ -276,15 +379,33 @@ Tillage, rolling/CH U & 1 & \si{m^2}\\
 
 \subsection{Sellado con arena y vibrado del pavimento}
 
+Una vez colocados y alineados los adoquines de forma que el lecho de árido también sirva de separador entre las juntas, se extiende sobre el pavimento una capa ligera de arena para completar el espacio.
 
-Una vez se han colocado y alineado correctamente los EUROADOQUINES de forma que el árido haya rellenado parcialmente desde abajo las juntas, se procede a extender sobre el pavimento una ligera capa de arena para completar el llenado de las mismas.
+La importancia de esta etapa yace en que un relleno completo de las juntas hace que tanto esta arena como el árido del leche sean los transmisores de los esfuerzos laterales entre los adoquines. Si el pavimento soporta tráfico sin haber sido bien sellado, se pueden producr daños importantes sobre el mismo.
 
-Esta operación es muy importante para el correcto comportamiento del pavimento, ya que debe asegurarse el completo relleno de las juntas de forma que esta arena (y el árido de su parte inferior) sea el transmisor de los esfuerzos laterales entre adoquines, y entre estos y los bordes de confinamiento.
+El sellado consiste en extender arena fina y seca sobre el pavimento e introducirla entre las juntas con un barrido manual o mecánico, intentando que quede una ligera capa de excedente sobre toda la superficie.
 
-La experiencia ha demostrado que se producen importantes daños en el pavimento si éste es sometido a tráfico sin haber completado el relleno de sus juntas.
+A continuación se realiza un proceso de compactación sobre el pavimento para garantizar un relleno adecuado de las juntas. Esta compactación se puede realizar bien con placas vibrantes —\textit{vibratory plates} o \textit{plate compactor}, en inglés— o con rodillos mecánicos con vibración. La fuerza vibratoria y el peso de las herramientas deben ser proporcionales al tipo de pavimento que se está ejecutando.
 
-Se extenderá arena fina y seca sobre el pavimento, procediendo a introducirla en las juntas mediante un barrido manual o mecánico, procurando que quede un excedente sobre toda la superficie.
+Una vez se realiza la compactación, el pavimento puede ponerse en servicio inmediatamente.
 
-A continuación se someterá el pavimento a un proceso de compactación para garantizar el correcto relleno de las juntas.
-La compactación se realiza mediante placas vibrantes, o con rodillos mecánicos (en este caso deben ser, además, vibradores).
-Es recomendable que las fuerzas vibratorias y el peso de los rodillos mecánicos sean proporcionales al espesor y forma de los adoquines, así como a las características del lecho de árido y de la Base.
+El proceso de compactación no aparece reflejado en las librerías que proporciona SimaPro. De acuerdo a \cite{rieradevall}, las placas vibrantes para compactar pueden modelarse mediante su consumo de combustible. En concreto 2.43 \si{MJ} de gasoil para 1 ft$^2$. Por lo que, extrapolando para 1 \si{m^2}, se tendría:
+
+\begin{equation}
+2.43\frac{MJ}{{ft}^2} \times \frac{10.764{ft^2}}{1m^2}=26.16MJ/m^2
+\end{equation}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Vibrado del pavimento}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Diesel, burned in building machine/GLO U & 26.16 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del vibrado del pavimento.}
+\label{modeladovibrado}
+\end{table}
