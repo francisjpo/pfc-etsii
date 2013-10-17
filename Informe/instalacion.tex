@@ -1,8 +1,14 @@
 %!TEX root = informe.tex
-\chapter{Análisis de Ciclo de Vida: instalación}
-\section{Capas componentes}
+\chapter{Análisis de Ciclo de Vida: instalación, uso y mantenimiento}
+%(Fuente: Manual Técnico para la correcta colocación de los Euroadoquines (MTCE 04))
+\section{Introducción}
+La correcta colocación y mantenimiento del pavimento con adoquines es igual de importante que la calidad en los materiales y los procesos de fabricación \cite{euroadoquinc} para que el funcionamiento del pavimento sea el adecuado.
 
-(Fuente: Manual Técnico para la correcta colocación de los Euroadoquines (MTCE 04))
+Hay múltiples manuales y guías técnicas que explican los criterios prácticos y recomendaciones para una correcta colocación de los adoquines.
+
+La planificación del trabajo empieza estudiando el tipo de vía y uso principal al que estará destinado el pavimento. Una vez decidido es necesario preparar la explanada y las diferentes capas componentes en función de ese uso. A continuación se coloca la capa de adoquines, se sella con arena y se realiza un vibrado del pavimento. Por último se realiza una limpieza final.
+
+\section{Capas componentes}
 
 \begin{itemize}
 \item Explanada: Terreno natural adecuadamente compactado hasta alcanzar una capacidad portante mínima.
@@ -155,3 +161,130 @@ Las secciones tipo según la base y el uso previsto del área vistas en la secci
 \caption[Secciones tipo para base de hormigón.]{Secciones tipo para base de hormigón. Unidades en cm. Fuente: \cite{fenollar}.}
 \label{fig:seccionestipohormigon}
 \end{figure}
+
+\section{Modelado de los procesos}
+
+Debido a que hay múltiples tipos de vía y uso destinado, se ha optado para el presente proyecto modelar la instalación más común, \textit{arterias principales}, que pertenece a la \textit{categoría de tráfico C1} y una \textit{calidad de explanada E2} con una base granular. Con esta clasificación, siguiendo las recomendaciones de \cite{euroadoquinc} el corte del terreno 1 \si{m^2} de superficie de terreno, que es la Unidad Funcional, será el reflejado en la tabla \ref{cortedelterreno}.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{lrrr}
+\toprule
+\multicolumn{4}{c}{Capas componentes para arterías principales C1-E2 con base granular}\\
+\midrule
+Capa componente & Grosor (\si{cm}) & Densidad (\si{kg/m^3}) & Volumen (\si{m^3})\\
+\midrule
+Adoquín \& Sellado & 10 & — & 0.1\\
+Lecho de árido & 4 & 1650 & 0.04\\
+Base granular & 20 & 1500 & 0.2\\
+Subbase & — & — & —\\
+Explanada & \multicolumn{3}{c}{Aplanar y compactar}\\
+\midrule
+Total & 34 & — & 0.34\\
+\bottomrule
+\end{tabular}
+\caption{Capas componentes para arterías principales C1-E2 con base granular.}
+\label{cortedelterreno}
+\end{table}
+
+\subsection{Excavación del terreno}
+
+A la hora de realizar un pavimento de adoquines, se debe realizar en primer lugar la excavación del terreno. Dado que el grosor total de las capas componentes es de 34 \si{cm} y se dispone de un área de 1 \si{m^2}, el volumen a introducir para el modelo será 0.34 \si{m^3}, utilizando como entrada de SimaPro de excavación con herramienta hidráulica, \textit{Excavation, hydraulic digger}.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Excavación del terreno}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Excavation, hydraulic digger/RER U & 0.34 & \si{m^3}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la excavación del terreno.}
+\label{modeladoexcavacion}
+\end{table}
+
+\subsection{Compactación de la explanada}
+
+Una vez excavado el terreno es necesario compactar lo que será la explanada. La bibliografía consultada no ha ofrecido ninguna solución óptima a este tipo de proceso, por lo que se ha optado por asemejar el tipo de trabajo de un tractor usando un rodillo para cultivar la tierra —\textit{Tillage, rolling}, en inglés— con el rodillo utilizado por una apisonadora o compactadora —\textit{road roller}, en inglés—. En este caso, la compactación se realiza en unidades de área, por lo que se ha introducido 1 \si{m^2} de superficie.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Compactación de la explanada}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Tillage, rolling/CH U & 1 & \si{m^2}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la compactación de la explanada.}
+\label{modeladoexplanada}
+\end{table}
+
+\subsection{Compactación de la capa base}
+
+En el caso de arterias principales no existe una capa subbase, por lo que se procederá a la extensión y compactación de la capa base. Una correcta ejecución es fundamental ya que esta capa es el principal elemento portante de la estructura y se encarga de transmitir hacia la explanada las cargas verticales. El espesor de esta base debe ser uniforme.
+
+Es muy importante que el plano de la capa base respete una pendiente mínima del 1\% para permitir un drenaje adecuado de las aguas superficiales sin que provoquen daños a las capas portantes, y así evitar daños en la superficie.
+
+La bibliografía consultada no ha ofrecido ninguna solución óptima a este tipo de proceso, por lo que se ha optado por asemejar el tipo de trabajo de un tractor usando un rodillo para cultivar la tierra —\textit{Tillage, rolling}, en inglés— con el rodillo utilizado por una apisonadora o compactadora —\textit{road roller}, en inglés—. En este caso, la compactación se realiza en unidades de área, por lo que se ha introducido 1 \si{m^2} de superficie.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Compactación de la capa base}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Tillage, rolling/CH U & 1 & \si{m^2}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la compactación de la capa base.}
+\label{modeladocapabase}
+\end{table}
+
+\subsection{Compactación del lecho de árido}
+
+El lecho de árido es, junto con la calidad del adoquín, el elemento fundamental que determina el comportamiento y durabilidad del pavimento. El lecho se extiende directamente sobre la capa base.
+
+Una de las funciones principales es la de absorber las pequeñas diferencias de espesor de los adoquines siguiendo las tolerancias de la normativa \cite{une1338}, de forma que, una vez se hace la compactación de los adoquines, formen un plano de rodadura uniforme que transmita las cargas del tráfico sin deteriorar las piezas.
+
+Otra de las funciones del lecho de árido es la de actuar como elemento de relleno inferior de las juntas de los adoquines. Al ser compactados los adoquines, quedan incrustados en el lecho, y así se evita el contacto directo entre las caras laterales de las piezas.
+
+
+Al igual que en las compactaciones anteriores, la bibliografía consultada no ha ofrecido ninguna solución óptima a este tipo de proceso, por lo que se ha optado por asemejar el tipo de trabajo de un tractor usando un rodillo para cultivar la tierra —\textit{Tillage, rolling}, en inglés— con el rodillo utilizado por una apisonadora o compactadora —\textit{road roller}, en inglés—. En este caso, la compactación se realiza en unidades de área, por lo que se ha introducido 1 \si{m^2} de superficie.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Compactación del lecho de árido}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Tillage, rolling/CH U & 1 & \si{m^2}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la compactación del lecho de árido.}
+\label{modeladolecho}
+\end{table}
+
+\subsection{Sellado con arena y vibrado del pavimento}
+
+
+Una vez se han colocado y alineado correctamente los EUROADOQUINES de forma que el árido haya rellenado parcialmente desde abajo las juntas, se procede a extender sobre el pavimento una ligera capa de arena para completar el llenado de las mismas.
+
+Esta operación es muy importante para el correcto comportamiento del pavimento, ya que debe asegurarse el completo relleno de las juntas de forma que esta arena (y el árido de su parte inferior) sea el transmisor de los esfuerzos laterales entre adoquines, y entre estos y los bordes de confinamiento.
+
+La experiencia ha demostrado que se producen importantes daños en el pavimento si éste es sometido a tráfico sin haber completado el relleno de sus juntas.
+
+Se extenderá arena fina y seca sobre el pavimento, procediendo a introducirla en las juntas mediante un barrido manual o mecánico, procurando que quede un excedente sobre toda la superficie.
+
+A continuación se someterá el pavimento a un proceso de compactación para garantizar el correcto relleno de las juntas.
+La compactación se realiza mediante placas vibrantes, o con rodillos mecánicos (en este caso deben ser, además, vibradores).
+Es recomendable que las fuerzas vibratorias y el peso de los rodillos mecánicos sean proporcionales al espesor y forma de los adoquines, así como a las características del lecho de árido y de la Base.
