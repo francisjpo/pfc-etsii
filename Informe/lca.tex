@@ -148,4 +148,23 @@ La librería \textit{ecoinvent}:
 
 \section{ReCiPe}\label{sec:recipe}
 
-XXXX
+El desarrollo de ReCiPe se debió en principio a integrar la metodología orientada al problema de \textit{CML-IA} y la metodología orientada al daño de \textit{Ecoindicator 99}. De esta manera, ReCiPe se convirtió en el sucesor de ambos métodos \cite{mgoedkoop3}.
+
+La metodología orientada al problema de \textit{CML-IA} define las categorías de impacto en el punto medio. La incertidumbre de los resultado en este punto es relativamente baja. El inconveniente de este sistema es la ambigüedad de las conclusiones al haber demasiadas categorías de impacto.
+
+La metogología orientada al daño de \textit{Ecoindicator 99} aborda sólo tres categorías de impacto, lo que hacer más fácil obtener conclusiones. Sin embargo, la incertidumbre de los resultados es más alta que con la otra metodología.
+
+ReCiPe implemente ambas estrategias incluyendo las categorías de impacto tanto a punto medio como a punto final. A los factores de caracterización a punto medio se les aplica un factor de daño para obtener los valores de caracterización de punto final. ReCiPe comprende dos conjuntos de categorías de impacto (ver figura ref{recipecategoriasimpacto}):
+\begin{itemize}
+\item Punto medio: 18 categorías de impacto.
+\item Punto final: 3 categorías de impacto.
+\end{itemize}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=15cm]{recipecategoriasimpacto.png}
+\caption[Categorías de impacto aplicadas por ReCiPe.]{Categorías de impacto aplicadas por ReCiPe. Fuente: \protect\cite{mgoedkoop3}.}
+\label{fig:recipecategoriasimpacto}
+\end{figure}
+
+

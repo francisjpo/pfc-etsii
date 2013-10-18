@@ -162,7 +162,7 @@ Las secciones tipo según la base y el uso previsto del área vistas en la secci
 \label{fig:seccionestipohormigon}
 \end{figure}
 
-\section{Modelado de los procesos}
+\section{Modelado de los procesos}\label{sec:modeladoprocesosinstalacion}
 
 Debido a que hay múltiples tipos de vía y uso destinado, se ha optado para el presente proyecto modelar la instalación más común, \textit{arterias principales}, que pertenece a la \textit{categoría de tráfico C1} y una \textit{calidad de explanada E2} con una base granular. Con esta clasificación, siguiendo las recomendaciones de \cite{euroadoquinc} el corte del terreno 1 \si{m^2} de superficie de terreno, que es la Unidad Funcional, será el reflejado en la tabla \ref{cortedelterreno}.
 
@@ -176,7 +176,7 @@ Capa componente & Grosor (\si{cm}) & Densidad (\si{kg/m^3}) & Volumen (\si{m^3})
 \midrule
 Adoquín \& Sellado & 10 & 2650 & 0.1\\
 Lecho de árido & 4 & 1650 & 0.04\\
-Base granular & 20 & 1500 & 0.2\\
+Base granular & 20 & 2560 & 0.2\\
 Subbase & — & — & —\\
 Explanada & \multicolumn{3}{c}{Aplanar y compactar}\\
 \midrule
@@ -188,60 +188,119 @@ Total & 34 & — & 0.34\\
 \end{table}
 
 \subsection{Árido grueso para base granular (zahorra)}
-1500kg/m3
-Gravel, crushed, at mine/CH U 300
-Transport, lorry 16-32t, EURO4/RER U 300 50
 
-La arena para sellado debe ser una arena sin exceso de finos, ya que si existen demasiados finos, se producirá un vaciado de las juntas con el uso y limpieza del pavimento o bien se filtrarás hacia el lecho.
+Para la base granular es recomendable utilizar áridos calizos, y evitar en cualquier caso el uso de áridos con contenido en arcilla —arena de miga, arcillas refractarias—.
 
-Además debe ser libre de sales solubles y otros contaminantes, ya que pueden provocar la aparición de eflorescencias —igual que en el caso del lecho de árido—.
+El acabado de la base debe ser similar al exigido para una superficie destinada a carreteras, usando una imprimación bituminosa. Tras compactar la base es recomendable hacer un sellado por medio de betún de curado rápido o emulsiones bituminosas para poder evitar filtraciones de agua a través de las juntas y que éstas dañen la base durante los primeros meses de la instalación.
 
-No se debe usar mortero para el sellado de las juntas, ya que no se podrán retirar para hacer tareas de mantenimiento —principal ventaja de los adoquines de hormigón—, además de perder flexibilidad del conjunto.
-
-La arena de sílice —\textit{Silica sand}, en inglés— es un material adecuado para esta tarea \cite{website:cement}. SimaPro pide como parámetro la masa de arena que se empleará para el rellenado. Si se tiene en cuenta que el adoquín mide 10 \si{cm} de altura, 1 \si{cm} quedará enterrado en el lecho, y se añadirá 1 \si{cm} por encima para el vibrado; por otro lado, la junta medirá 5 \si{mm}, se puede obtener el volumen y a partir de él la masa:
+La arena caliza —\textit{Limestone}, en inglés— aparece en la base de datos de SimaPro. Se pide como parámetro la masa de arena que se empleará para el rellenado. Si se tiene en cuenta que la base tiene una profundidad de 20 \si{cm} y un área de 1 \si{m^2}:
 
 \begin{gather}
-1 m^2 = 50 \text{ adoquines} = 10 \times 5\\
-Adoquin = 20 \times 10 \times 6 cm\\
-\delta_{junta} = 0.5cm\\
-Largo = 10 \times 10 + 9 \times 0.5 = 104.5 cm\\
-Ancho = 5 \times 20 + 4 \times 0.5 = 102 cm\\
-\text{Superficie de arena} = 104.5 \times 0.5 + 102 \times 0.5 = 103.25 cm^2\\
-\text{Volumen de arena} = 103.25 \times 10 = 1032.5 cm^3\\
-\rho_{arena}=2.6 g/cm^3\\
-\text{Masa de arena} = 1032.5 \times 2.65 = 2.74 kg
+\text{Volumen de arena} = 0.2 \times 1 = 0.2 m^3\\
+\rho_{arena}=2560 kg/m^3\\
+\text{Masa de arena} = 0.2 \times 2560 = 512 kg
 \end{gather}
 
 Por otro lado, si se supone una distancia de entrega de 50 km hasta el destino de la instalación en un camión de transporte, se tiene:
 
 \begin{equation}
-2.74 kg \times 50 km = 137 kg \times km
+512 kg \times 50 km = 25600 kg \times km
 \end{equation}
 
 \begin{table}[!htb]
 \centering
 \begin{tabular}{p{8cm}rc}
 \toprule
-\multicolumn{3}{c}{Arena para sellado}\\
+\multicolumn{3}{c}{Arena para base granular}\\
 \midrule
-Materiales/Ensamblajes & Cantidad & Unidad\\
+Materiales/ensamblajes & Cantidad & Unidad\\
 \midrule
-Silica sand, at plant/DE U & 2.74 & \si{kg}\\
+Limestone, milled, packed, at plant/CH U & 512 & \si{kg}\\
 \midrule
 Procesos & Cantidad & Unidad\\
 \midrule
-Transport, lorry 16-32t, EURO4/RER U & 137 & \si{kg\times km}\\
+Transport, lorry 16-32t, EURO4/RER U & 25600 & \si{kg\times km}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de la arena para sellado.}
-\label{modeladoarenasellado}
+\caption{Modelado de la arena para base granular.}
+\label{modeladoarenabase}
+\end{table}
+
+Igualmente, para la capa bituminosa de 5 cm que se aplica:
+
+\begin{gather}
+\text{Volumen de betún} = 0.05 \times 1 = 0.05 m^3\\
+\rho_{betún}=1100 kg/m^3\\
+\text{Masa de betún} = 0.05 \times 1100 = 55 kg
+\end{gather}
+
+Si se supone que el material proviene de una distancia de entrega de 50 km hasta el destino de la instalación en un camión de transporte, se tiene:
+
+\begin{equation}
+55 kg \times 50 km = 2750 kg \times km
+\end{equation}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Capa bituminosa para base granular}\\
+\midrule
+Materiales/ensamblajes & Cantidad & Unidad\\
+\midrule
+Bitumen sealing, at plant/RER U & 55 & \si{kg}\\
+\midrule
+Procesos & Cantidad & Unidad\\
+\midrule
+Transport, lorry 16-32t, EURO4/RER U & 2750 & \si{kg\times km}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la capa bituminosa para base granular.}
+\label{modeladocapabituminosa}
 \end{table}
 
 \subsection{Árido semi-fino para lecho de arena}
 
+La capa para el lecho de arena debe estar formada por áridos de resistencia geomecánica elevada, preferentemente de machaqueo ya que presentan mayores ángulos que mejoran la cohesión de la capa.
+
+En general, los áridos deben ser poco finos, limpios y libres de elementos contaminantes.
+
+La arena caliza —\textit{Limestone}, en inglés— aparece en la base de datos de SimaPro. Se pide como parámetro la masa de arena que se empleará para el rellenado. Si se tiene en cuenta que la base tiene una profundidad de 20 \si{cm} y un área de 1 \si{m^2}:
+
 Sand, at mine/CH U 66
 1650 kgm3
 Transport 66*50
+
+\begin{gather}
+\text{Volumen de árido} = 0.04 \times 1 = 0.04 m^3\\
+\rho_{arena}=1650 kg/m^3\\
+\text{Masa de árido} = 0.04 \times 1650 = 66 kg
+\end{gather}
+
+Por otro lado, si se supone una distancia de entrega de 50 km hasta el destino de la instalación en un camión de transporte, se tiene:
+
+\begin{equation}
+66 kg \times 50 km = 3300 kg \times km
+\end{equation}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Árido semi-fino para lecho de arena}\\
+\midrule
+Materiales/ensamblajes & Cantidad & Unidad\\
+\midrule
+Gravel, crushed, at mine/CH U & 66 & \si{kg}\\
+\midrule
+Procesos & Cantidad & Unidad\\
+\midrule
+Transport, lorry 16-32t, EURO4/RER U & 3300 & \si{kg\times km}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del árido semi-fino para lecho de arena.}
+\label{modeladoaridosemifino}
+\end{table}
 
 \subsection{Arena para sellado}
 
@@ -277,7 +336,7 @@ Por otro lado, si se supone una distancia de entrega de 50 km hasta el destino d
 \toprule
 \multicolumn{3}{c}{Arena para sellado}\\
 \midrule
-Materiales/Ensamblajes & Cantidad & Unidad\\
+Materiales/ensamblajes & Cantidad & Unidad\\
 \midrule
 Silica sand, at plant/DE U & 2.74 & \si{kg}\\
 \midrule
@@ -409,3 +468,59 @@ Diesel, burned in building machine/GLO U & 26.16 & \si{MJ}\\
 \caption{Modelado del vibrado del pavimento.}
 \label{modeladovibrado}
 \end{table}
+
+\subsection{Limpieza final}
+
+Cuando se ha terminado el vibrado del pavimento y se ha observado que las juntas quedan completamente rellenas, se debe iniicar el proceso de limpieza de la superficie para eliminar la arena de sellado excedente.
+
+Esta limpieza se realiza mediante un barrido manual, dejando una pequeña capa de arena sobre el pavimento para que el tráfico termine de colocar sobre las juntas de forma natural. Una vez finalizada la limpieza se puede abrir la vía al uso destinado.
+
+Este proceso no se ha incluido en SimaPro ya que es un trabajo manual de un operario y no se consumen directamente materiales o combustibles.
+
+\section{Modelado completo}
+
+Los modelos de los procesos explicados en la sección \ref{sec:modeladoprocesosinstalacion} han sido introducidos en SimaPro para crear un modelo completo que represente la instalación de un metro cuadrado de adoquín modelo Holanda 6. El listado completo de procesos se muestra en la tabla \ref{modeladocompletoinstalacion}.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Fabricación 1 \si{m^2} adoquín Holanda 6}\\
+\midrule
+Materiales/ensamblajes & Cantidad & Unidad\\
+\midrule
+Árido grueso para base granular (zahorra) & 1 & p\\
+Capa bituminosa para base granular (zahorra) & 1 & p\\
+Árido semi-fino para lecho de arena & 1 & p\\
+Arena para sellado de juntas & 1 & p\\
+\midrule
+Procesos & Cantidad & Unidad\\
+\midrule
+Excavación del terreno para arteria principal C1-E2 & 1 & p\\
+Compactación de la explanada & 1 & p\\
+Compactación de la capa base & 1 & p\\
+Compactación del lecho de arena & 1 & p\\
+Sellado+vibrado del pavimento & 1 & p\\
+\bottomrule
+\end{tabular}
+\caption{Modelado completo de la instalación.}
+\label{modeladocompletoinstalacion}
+\end{table}
+
+\section{Resultados}
+
+Una vez creado el modelo completo del proceso de instalación, SimaPro genera un análisis de los datos introducidos. El método de análisis elegido es \textit{ReCiPe Endpoint (H) V1.06 / Europe ReCipe H/A}, previamente explicado en la sección \ref{sec:recipe}.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[angle=90,height=19cm]{instalacion_caracterizacion.png}
+\caption{Caracterización del análisis de instalación de 1 \si{m^2} de adoquín.}
+\label{fig:caracterizacioninstalacion}
+\end{figure}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[height=19cm]{instalacion_red.png}
+\caption{Red del análisis de instalación de 1 \si{m^2} de adoquín.}
+\label{fig:redinstalacion}
+\end{figure}

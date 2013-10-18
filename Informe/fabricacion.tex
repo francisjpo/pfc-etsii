@@ -12,9 +12,11 @@ Los datos de partida que se han utilizado en este análisis han sido proporciona
 \label{fig:diagrama_de_flujo}
 \end{figure}
 
-En primer lugar es necesario señalar que el modelo de adoquín ``Holanda 6'', cuya hoja de datos técnicos aparece en el Apéndice \ref{apend:catalogo}, es el que mayor demanda de fabricación tiene en la empresa, por lo que se ha dispuesto de mayor número de datos.
+El modelo de adoquín ``Holanda 6'' (datos técnicos en Apéndice \ref{apend:catalogo}), es el que mayor demanda de fabricación tiene en la empresa, por lo que se ha dispuesto de mayor número de datos.
 
-Cada bandeja fabricada supone exactamente 0.5 \si{m^2} de adoquines modelo ``Holanda 6''. Como se ha tomado como Unidad Funcional 1 \si{m^2} de adoquín, los cálculos se han realizado para 2 bandejas. Cada adoquín mide 200x100x60 \si{mm} y pesa 3 \si{kg}. Como cada bandeja está formada por 25 adoquines, y son necesarias 2 bandejas para tener 1 \si{m^2}, se tiene un total de 50 adoquines/\si{m^2} (ecuación \ref{eq:masa}). De esta forma:
+\subsection{Unidad funcional}
+
+El motivo de tomar como \textit{Unidad funcional} ``1 \si{m^2} de adoquín'' es debido a que los pedidos y la fabricación se realizan en unidades de superficie y no en cantidad de bloques de adoquín. Cada bandeja fabricada supone exactamente 0.5 \si{m^2} de adoquines modelo ``Holanda 6''. Si se toma como \textit{Unidad funcional} 1 \si{m^2} de adoquín, los cálculos se realizan de forma sencilla para 2 bandejas. Cada adoquín mide 200x100x60 \si{mm} y pesa 3 \si{kg}. Como cada bandeja está formada por 25 adoquines, y son necesarias 2 bandejas para tener 1 \si{m^2}, se tiene un total de 50 adoquines/\si{m^2} (ecuación \ref{eq:masa}). De esta forma:
 
 \begin{gather}
 200 mm \times 100 mm \times 25 ud/bandeja \times 2 bandeja = 1 m^2\\
@@ -68,7 +70,7 @@ El mix eléctrico se obtiene del consumo del compresor del silo proporcional a u
 \toprule
 \multicolumn{3}{c}{Cemento Portland CEM I 52.5Z gris}\\
 \midrule
-Materiales/Ensamblajes & Cantidad & Unidad\\
+Materiales/ensamblajes & Cantidad & Unidad\\
 \midrule
 Portland cement, strength class Z 52.5, at plant/CH U & 15.09 & \si{kg}\\
 \midrule
@@ -104,7 +106,7 @@ Las unidades para el modelado del camión (lorry) vienen expresadas en \si{kg\ti
 \toprule
 \multicolumn{3}{c}{Arena tipo 0/5}\\
 \midrule
-Materiales/Ensamblajes & Cantidad & Unidad\\
+Materiales/ensamblajes & Cantidad & Unidad\\
 \midrule
 Sand 0/2, wet and dry quarry, production mix, at plant, undried/RER S & 70.74 & \si{kg}\\
 \midrule
@@ -133,7 +135,7 @@ Las unidades para el modelado del camión (lorry) vienen expresadas en \si{kg\ti
 \toprule
 \multicolumn{3}{c}{Árido tipo 5/7}\\
 \midrule
-Materiales/Ensamblajes & Cantidad & Unidad\\
+Materiales/ensamblajes & Cantidad & Unidad\\
 \midrule
 Gravel, crushed, at mine/CH U & 56.63 & \si{kg}\\
 \midrule
@@ -156,13 +158,47 @@ La mayoría de las plantas tienen una fuente de agua municipal (\textit{tap wate
 \toprule
 \multicolumn{3}{c}{Agua}\\
 \midrule
-Materiales/Ensamblajes & Cantidad & Unidad\\
+Materiales/ensamblajes & Cantidad & Unidad\\
 \midrule
 Tap water, at user/RER U & 7.54 & \si{kg}\\
 \bottomrule
 \end{tabular}
 \caption{Modelado del agua.}
 \label{modeladodelagua}
+\end{table}
+
+\subsection{Mix eléctrico}
+
+El mix eléctrico es el valor que expresa las emisiones de \ce{CO2} asociadas a la generación de la electricidad que se consume.
+
+Es un indicador de las fuentes energéticas que se emplean para producir electricidad. Cuanto más bajo es el mix, mayor es la contribución de fuentes energéticas bajas en carbono.
+
+Disponer de un mix eléctrico actualizado ayuda a obtener unos resultados más precisos en el Análisis de Ciclo de Vida. La base de datos de \textit{ecoinvent} proporciona un modelo no actualizado para España, sobretodo teniendo en cuenta los últimos avances en adopción de energías renovables en el sector energético español. De esta forma, se ha añadido un nuevo modelo (tabla \ref{modeladomixelectrico}) con las cifras actualizadas al presente año para 1 \si{kWh} \cite{mlgceballos}.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Electricity mix 2013/ES U}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Electricity, hard coal, at power plant/ES U & 0.0596 & \si{kWh}\\
+Electricity, lignite, at power plant/ES U & 0.0268 & \si{kWh}\\
+Electricity, oil, at power plant/ES U & 0.0527 & \si{kWh}\\
+Electricity, natural gas, at power plant/ES U & 0.3025 & \si{kWh}\\
+Electricity, industrial gas, at power plant/ES U & 0.0147 & \si{kWh}\\
+Electricity, hydropower, at power plant/ES U & 0.131 & \si{kWh}\\
+Electricity, hydropower, at pumped storage power plant/ES U & 0.020 & \si{kWh}\\
+Electricity, nuclear, at power plant/UCTE U & 0.205 & \si{kWh}\\
+Electricity, production mix photovoltaic, at plant/ES U & 0.024 & \si{kWh}\\
+Electricity, at wind power plant/RER U & 0.1454 & \si{kWh}\\
+Electricity, at cogen with biogas engine, allocation exergy/CH U & 0.0146 & \si{kWh}\\
+Electricity, production mix FR/FR U & 0.0056 & \si{kWh}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del mix eléctrico español en 2013.}
+\label{modeladomixelectrico}
 \end{table}
 
 \subsection{Dosificador de arena y áridos}
@@ -692,6 +728,25 @@ Electricity mix 2013/ES U & 0.972 & \si{MJ}\\
 \label{modeladodeiluminacion}
 \end{table}
 
+\subsection{Limpieza de la mezcladora y molde}
+
+Una vez finalizada la producción se procede a la limpieza de la mezcladora y el molde con agua y vaciando el contenido (tabla \ref{modeladolimpiezamezcladora}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Limpieza de la mezcladora y molde}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Tap water, at user/RER/I U & 100 & \si{kg}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado la limpieza de la mezcladora y molde.}
+\label{modeladolimpiezamezcladora}
+\end{table}
+
 \section{Modelado completo}
 
 Los modelos de los procesos explicados en la sección \ref{sec:modeladoprocesos} han sido introducidos en SimaPro para crear un modelo completo que represente la fabricación de un metro cuadrado de adoquín modelo Holanda 6.
@@ -704,7 +759,7 @@ Aunque la mayoría de los procesos sólo ocurren una única vez, hay varios proc
 \toprule
 \multicolumn{3}{c}{Fabricación 1 \si{m^2} adoquín Holanda 6}\\
 \midrule
-Materiales/Ensamblajes & Cantidad & Unidad\\
+Materiales/ensamblajes & Cantidad & Unidad\\
 \midrule
 Agua & 1 & p\\
 Arena tipo 0/5 & 1 & p\\
@@ -733,7 +788,7 @@ Control informatizado & 1 & p\\
 Iluminación & 1 & p\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de la iluminación.}
+\caption{Modelado completo de la fabricación.}
 \label{modeladocompleto}
 \end{table}
 
