@@ -1,0 +1,88 @@
+%!TEX root = informe.tex
+\chapter{Análisis de Ciclo de Vida: uso y mantenimiento}
+
+\section{Introducción}\label{sec:introduccionuso}
+
+Una de las principales ventajas del pavimento con adoquines de hormigón es el fácil y económico mantenimiento del mismo durante su vida útil. Aunque la esperanza de vida de un adoquín está probada en 50 años, su tiempo de diseño es únicamente 30 años \cite{euroadoquin}.
+
+Para que el funcionamiento del pavimento sea el correcto, las juntas deben permanecer llenas de arena —la presencia de pasto en las juntas no es nociva—. Si se pierde más de 1 \si{cm} de sello se debe corregir el hueco con arena de sellado.
+
+Si se hunde el pavimento o es necesario acceder a infraestructura urbana, se deben retirar los adoquines, realizar la reparación y volver a reconstruir la franja de pavimento. La presencia de ondulaciones en la superficie del pavimento puede ser un indicio de que fue construido con una base mal construida o las características del tráfico no son las de diseño.
+
+El pavimento de adoquines debe limpiarse, en principio, únicamente por barrido. El lavado con manguera debe ser poco frecuente y sólo cuando el tamaño de las juntas sea pequeño.
+
+Existe un mantenimiento periódico, cada 3—5 años, que consiste en renovar el sellado del pavimento debido a la acción erosiva del medio ambiente \cite{malaka}.
+
+
+\section{Modelado de materias primas y procesos}\label{sec:modeladoprocesosusoymantenimiento}
+
+El pavimento de adoquines puede presentar tres situaciones durante su vida útil en las que intervengan recursos adicionales para su uso y mantenimiento:
+\begin{itemize}
+\item limpieza.
+\item sellado de juntas.
+\item apertura del pavimento por rotura o infraestructura urbana.
+\end{itemize}
+
+En los dos primeros casos se puede establecer un modelo debido a que existe un patrón periódico sobre el que diseñarlo. Sin embargo, el tercero no es posible establecer un modelo sencillo que prevea ese comportamiento, por lo que se procederá a idealizar el uso y mantenimiento del mismo sin roturas.
+
+\subsection{Limpieza mensual}
+Si se tiene en cuenta lo establecido en la sección \ref{sec:introduccionuso}, se riega el pavimento una vez al mes en el que se consumen 5 litros de agua por cada metro cuadrado de adoquín instalado.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Limpieza mensual}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Tap water, at user/RER/I U & 5 & \si{kg}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado la limpieza de mensual del pavimento.}
+\label{modeladolimpiezamensual}
+\end{table}
+
+\subsection{Sellado de juntas}
+
+Si se supone una labor de mantenimiento periódica cada 5 años de sellado de juntas, y la vida útil se considera de 30 años (sección \ref{sec:introduccionuso}), se realizarán 6 sellados de juntas en el transcurso de su vida.
+
+Para el cálculo se puede utilizar lo expuesto en la sección \ref{sec:selladoinstalacion}, utilizando la misma arena —arena silícea— y procedimiento de instalación —vibrado del pavimento. En este caso, se supondrá que las pérdidas de arena no van a ser del 100\% sino del 50\% de la masa inicial de arena de sellado instalada, transportada en camión una distancia de 50 \si{km}.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Arena para sellado para mantenimiento}\\
+\midrule
+Materiales/ensamblajes & Cantidad & Unidad\\
+\midrule
+Silica sand, at plant/DE U & 1.37 & \si{kg}\\
+\midrule
+Procesos & Cantidad & Unidad\\
+\midrule
+Transport, lorry 16-32t, EURO4/RER U & 68.5 & \si{kg\times km}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la arena para sellado para mantenimiento.}
+\label{modeladoarenaselladomantenimiento}
+\end{table}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Vibrado del pavimento para uso y mantenimiento}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Diesel, burned in building machine/GLO U & 26.16 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del vibrado del pavimento para uso y mantenimiento.}
+\label{modeladovibradouso}
+\end{table}
+
+\section{Modelado completo}
+
+\section{Resultados}
