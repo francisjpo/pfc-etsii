@@ -32,20 +32,20 @@ Si se tiene en cuenta lo establecido en la sección \ref{sec:introduccionuso}, s
 \centering
 \begin{tabular}{p{8cm}rc}
 \toprule
-\multicolumn{3}{c}{Limpieza mensual}\\
+\multicolumn{3}{c}{Agua para limpieza mensual}\\
 \midrule
-Materiales/combustibles & Cantidad & Unidad\\
+Materiales/ensamblajes & Cantidad & Unidad\\
 \midrule
 Tap water, at user/RER/I U & 5 & \si{kg}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado la limpieza de mensual del pavimento.}
-\label{modeladolimpiezamensual}
+\caption{Modelado del agua para limpieza de mensual del pavimento.}
+\label{modeladoagualimpiezamensual}
 \end{table}
 
 \subsection{Sellado de juntas}
 
-Si se supone una labor de mantenimiento periódica cada 5 años de sellado de juntas, y la vida útil se considera de 30 años (sección \ref{sec:introduccionuso}), se realizarán 6 sellados de juntas en el transcurso de su vida.
+Si se supone una labor de mantenimiento periódica cada 5 años de sellado de juntas, y la vida útil se considera de 30 años (sección \ref{sec:introduccionuso}), se realizarán 5 sellados de juntas en el transcurso de su vida, ya que la sexta vez sería para renovar el pavimento con nuevos adoquines.
 
 Para el cálculo se puede utilizar lo expuesto en la sección \ref{sec:selladoinstalacion}, utilizando la misma arena —arena silícea— y procedimiento de instalación —vibrado del pavimento. En este caso, se supondrá que las pérdidas de arena no van a ser del 100\% sino del 50\% de la masa inicial de arena de sellado instalada, transportada en camión una distancia de 50 \si{km}.
 
@@ -84,5 +84,27 @@ Diesel, burned in building machine/GLO U & 26.16 & \si{MJ}\\
 \end{table}
 
 \section{Modelado completo}
+
+Los modelos de los procesos explicados en la sección \ref{sec:modeladoprocesosusoymantenimiento} han sido introducidos en SimaPro para crear un modelo completo que represente el uso y mantenimiento de un metro cuadrado de adoquín modelo Holanda 6. El listado completo de procesos se muestra en la tabla \ref{modeladocompletousoymantenimiento}.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Uso y mantenimiento de 1 \si{m^2} adoquín Holanda 6}\\
+\midrule
+Materiales/ensamblajes & Cantidad & Unidad\\
+\midrule
+Arena para sellado para mantenimiento & 1 & p\\
+Agua para limpieza mensual & 1 & p\\
+\midrule
+Procesos & Cantidad & Unidad\\
+\midrule
+Sellado+vibrado del pavimento & 5 & p\\
+\bottomrule
+\end{tabular}
+\caption{Modelado completo del uso y mantenimiento.}
+\label{modeladocompletousoymantenimiento}
+\end{table}
 
 \section{Resultados}
