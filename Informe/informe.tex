@@ -9,6 +9,7 @@
 \usepackage{url}
 \usepackage{siunitx}
 \usepackage{booktabs}
+\usepackage{appendix}
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric,arrows,chains}
 \usepackage[version=3]{mhchem}
@@ -45,6 +46,7 @@
 
 \renewcommand\listtablename{Índice de tablas}
 \renewcommand\tablename{Tabla}
+\renewcommand\appendixname{Anexo}
 
 \include{portada}
 
@@ -64,6 +66,25 @@
 \include{usoymantenimiento}
 \include{findevida}
 \include{conclusiones}
+\addcontentsline{toc}{chapter}{Bibliografía}
+\bibliographystyle{alpha}
+\bibliography{informe}
+\cleardoublepage
+
+\part{Anexos}
+\begin{appendices}
+\include{zapenddatos}
+\cleardoublepage
+\include{zapendsimapro}
+\cleardoublepage
+\include{zapendcatalogo}
+\cleardoublepage
+\include{zapendherramientas}
+\cleardoublepage
+\end{appendices}
+
+\part{Planos}\label{planos}
+\include{planos}
 \cleardoublepage
 
 \part{Pliego de condiciones}
@@ -72,22 +93,4 @@
 
 \part{Presupuesto}
 \include{presupuesto}
-\cleardoublepage
-
-\part{Apéndices}
-\appendix
-\include{zapenddatos}
-\cleardoublepage
-\include{zapendplanos}
-\cleardoublepage
-\include{zapendsimapro}
-\cleardoublepage
-\include{zapendcatalogo}
-\cleardoublepage
-\include{zapendherramientas}
-\cleardoublepage
-
-\bibliographystyle{alpha}
-\bibliography{informe}
-
 \end{document}
