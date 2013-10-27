@@ -7,6 +7,8 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{url}
+\usepackage{hyperref}
+\usepackage{bookmark}
 \usepackage{siunitx}
 \usepackage{booktabs}
 \usepackage{appendix}
@@ -47,6 +49,8 @@
 \renewcommand\listtablename{Índice de tablas}
 \renewcommand\tablename{Tabla}
 \renewcommand\appendixname{Anexo}
+% \let\cite\citep (bibtex-natbib)
+\nocite{*}
 
 \include{portada}
 
@@ -67,7 +71,7 @@
 \include{findevida}
 \include{conclusiones}
 \addcontentsline{toc}{chapter}{Bibliografía}
-\bibliographystyle{alpha}
+\bibliographystyle{plain}
 \bibliography{informe}
 \cleardoublepage
 

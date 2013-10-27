@@ -1,6 +1,8 @@
 @String{pub-ISO     = "International Organization for Standardization"}
 @String{pub-ISO:adr = "Ginebra, Suiza"}
-@String{pub-UNE     = "Una Norma Española"}
+@String{pub-CEN     = "Comité Europeo de Normalización"}
+@String{pub-CEN:adr = "Bruselas, Bélgica"}
+@String{pub-UNE     = "Asociación Española de Normalización y Certificación"}
 @String{pub-UNE:adr = "Madrid, España"}
 
 @book{pfullana,
@@ -68,14 +70,14 @@
 }
 
 @manual{euroadoquin,
-    author        = "{{Asociación Española para la Investigación y Desarrollo del Adoquín de Hormigón}}",
+    author        = "Asociación Española para la Investigación y Desarrollo del Adoquín de Hormigón",
     title         = "Manual Técnico del Euroadoquín",
     address       = "Madrid, España",
     year          = "2004"
 }
 
 @manual{euroadoquinc,
-    author        = "{{Asociación Española para la Investigación y Desarrollo del Adoquín de Hormigón}}",
+    author        = "Asociación Española para la Investigación y Desarrollo del Adoquín de Hormigón",
     title         = "Manual Técnico para la correcta colocación de los Euroadoquines, MTCE-04",
     address       = "Madrid, España",
     year          = "2004"
@@ -114,15 +116,15 @@
     title     = "Sustainable Construction in the USA: Perspectives to the year 2010",
     institution = "Georgia Institute of Technology",
     year      = "2010",
-    howpublished = "{\url{https://sustainability.water.ca.gov/documents/18/3407111/Sustainable+construction+in+the+usa+2010.pdf}}"
+    note = "Disponible en \url{https://sustainability.water.ca.gov/documents/18/3407111/Sustainable+construction+in+the+usa+2010.pdf}"
 }
 
 @techreport{symonds,
-    author    = "Symonds Group Ltd. in association with ARGUS, COWI \& PRC Bouwcentrum",
+    author    = "Symonds Group Ltd. in association with ARGUS COWI \& PRC Bouwcentrum",
     title     = "Construction and demolition waste management practices, and their economic impacts",
     institution = "DGXI, European Commission",
     year      = "1999",
-    howpublished = "{\url{http://ec.europa.eu/environment/waste/studies/cdw/cdw_chapter1-6.pdf}}"
+    note = "Disponible en \url{http://ec.europa.eu/environment/waste/studies/cdw/cdw_chapter1-6.pdf}"
 }
 
 @techreport{oficemen,
@@ -130,6 +132,13 @@
     title     = "El ciclo de vida del cemento. Un puente a la sostenibilidad en la construcción",
     institution = "Oficemen",
     year      = "2008"
+}
+
+@techreport{minetur,
+    author    = "Peláez Ramos, M.L.",
+    title     = "El reto de la eficiencia energética en el sector de la construcción",
+    institution = "Observatorio Industrial del sector de la Construcción. Ministerio de Industria, Energía y Turismo",
+    year      = "2011",
 }
 
 @mastersthesis{jsjunnesson,
@@ -157,6 +166,14 @@
   year =         "2006"
 }
 
+@book{iso14006,
+  author =       "{ISO}",
+  title =        "UNE-EN-ISO 14006:2011, Sistemas de gestión ambiental. Directrices para la incorporación del ecodiseño.",
+  publisher =    pub-ISO,
+  address =      pub-ISO:adr,
+  year =         "2011"
+}
+
 @book{iso150041,
   author =       "{ISO}",
   title =        "UNE-EN-ISO 150041EX:1998, Análisis de ciclo de vida simplificado",
@@ -166,7 +183,7 @@
 }
 
 @book{une127338,
-  author =       "{UNE}",
+  author =       "{AENOR}",
   title =        "UNE 127338:2007 Propiedades y condiciones de suministro y recepción de los adoquines de hormigón. Complemento nacional a la Norma UNE EN 1338",
   publisher =    pub-UNE,
   address =      pub-UNE:adr,
@@ -174,23 +191,63 @@
 }
 
 @book{une1338,
-  author =       "{UNE}",
+  author =       "{CEN}",
   title =        "UNE-EN 1338:2004/AC:2006 Adoquines de hormigón. Especificaciones y métodos de ensayo",
-  publisher =    pub-UNE,
-  address =      pub-UNE:adr,
+  publisher =    pub-CEN,
+  address =      pub-CEN:adr,
   year =         "2004"
 }
 
 @book{une1971,
-  author =       "{UNE}",
+  author =       "{CEN}",
   title =        "UNE-EN 197-1:2011 La norma europea de especificaciones de cementos comunes",
-  publisher =    pub-UNE,
-  address =      pub-UNE:adr,
+  publisher =    pub-CEN,
+  address =      pub-CEN:adr,
   year =         "2011"
 }
 
+@book{iso21930,
+  author =       "{ISO}",
+  title =        "UNE-ISO 21930 Sostenibilidad en la construcción de edificios. Declaración ambiental de productos de construcción",
+  publisher =    pub-ISO,
+  address =      pub-ISO:adr,
+  year =         "2010"
+}
+
+@book{une15804,
+  author =       "{CEN}",
+  title =        "UNE-EN 15804:2012 Sostenibilidad en la construcción. Declaraciones ambientales de producto",
+  publisher =    pub-CEN,
+  address =      pub-CEN:adr,
+  year =         "2012"
+}
+
+@book{une15978,
+  author =       "{CEN}",
+  title =        "UNE-EN 15978:2012 Sostenibilidad en la construcción. Evaluación del comportamiento ambiental de los edificios. Métodos de cálculo.",
+  publisher =    pub-CEN,
+  address =      pub-CEN:adr,
+  year =         "2012"
+}
+
+@book{une15941,
+  author =       "{CEN}",
+  title =        "UNE-CEN/TR 15941:2011 IN Sostenibilidad en la construcción. Declaraciones ambientales de producto. Metodología para la selección y uso de datos genéricos.",
+  publisher =    pub-CEN,
+  address =      pub-CEN:adr,
+  year =         "2011"
+}
+
+@book{une15804,
+  author =       "{CEN}",
+  title =        "UNE-EN 15942:2013 Sostenibilidad en la construcción. Declaraciones ambientales de producto. Formato de comunicación negocio a negocio",
+  publisher =    pub-CEN,
+  address =      pub-CEN:adr,
+  year =         "2013"
+}
+
 @book{une80301,
-  author =       "{UNE}",
+  author =       "{AENOR}",
   title =        "UNE 80301:1996 Cementos. Cementos comunes. Composición,especificaciones y criterios de conformidad",
   publisher =    pub-UNE,
   address =      pub-UNE:adr,
@@ -204,8 +261,7 @@
     address   = "Málaga, España",
     year      = "2013",
     publisher = "{Escuela Técnica Superior de Ingenieros
-                Industriales - Universidad de Málaga}",
-    pages     = "{56--57}"
+                Industriales - Universidad de Málaga}"
 }
 
 @inbook {rieradevall,
@@ -241,31 +297,31 @@
       title = "Phage Lambda: description \& restriction map",
       month = "Noviembre",
       year = "2008",
-      url = "{\url{http://www.fermentas.com/techinfo/nucleicacids/maplambda.htm}}"
+      howpublished = "Disponible en \url{http://www.fermentas.com/techinfo/nucleicacids/maplambda.htm}"
 }
 
 @misc{website:andece,
-      author = "{{Asociación Nacional de la Industria del Prefabricado de Hormigón (ANDECE)}}",
+      author = "Asociación Nacional de la Industria del Prefabricado de Hormigón",
       title = "Los prefabricados de hormigón",
       month = "Julio",
       year = "2013",
-      url = "{\url{http://www.andece.org}}"
+      howpublished = "Disponible en \url{http://www.andece.org}"
 }
 
 @misc{website:ieca,
-      author = "{{Instituto Español del Cemento y sus Aplicaciones (IECA)}}",
+      author = "Instituto Español del Cemento y sus Aplicaciones",
       title = "Guías Técnicas",
       month = "Julio",
       year = "2013",
-      url = "{\url{http://www.ieca.es/lstFichas.asp?id_cat=113}}"
+      howpublished = "Disponible en \url{http://www.ieca.es/lstFichas.asp?id_cat=113}"
 }
 
 @misc{website:alberdi,
       author = "Prefabricados Alberdi",
       title = "Preguntas frecuentes",
-      month = "Junio",
+      month = "junio",
       year = "2013",
-      url = "{\url{http://www.prefabricadosalberdi.com/alberdi/dm/faq.asp?nombre=2370&hoja=0&sesion=1}}"
+      howpublished = "Disponible en \url{http://www.prefabricadosalberdi.com/alberdi/dm/faq.asp?nombre=2370&hoja=0&sesion=1}"
 }
 
 @misc{website:cement,
@@ -273,7 +329,7 @@
       title = "Density of cement and concrete",
       month = "septiembre",
       year = "2013",
-      url = "{\url{http://www.cement.org/tech/faq_unit_weights.asp}}"
+      howpublished = "Disponible en \url{http://www.cement.org/tech/faq_unit_weights.asp}"
 }
 
 @misc{website:ecoinvent,
@@ -281,7 +337,7 @@
       title = "Colocación de adoquines",
       month = "septiembre",
       year = "2013",
-      url = "{\url{http://www.ecoinvent.org/database}}"
+      howpublished = "Disponible en \url{http://www.ecoinvent.org/database}"
 }
 
 @misc{website:arenas,
@@ -289,7 +345,7 @@
       title = "The ecoinvent Database",
       month = "septiembre",
       year = "2013",
-      url = "{\url{http://www.ipc.org.es/guia_colocacion/info_tec_colocacion/tec_colocacion/capa_gruesa/otras_variantes/adoquin.html}}"
+      howpublished = "Disponible en \url{http://www.ipc.org.es/guia_colocacion/info_tec_colocacion/tec_colocacion/capa_gruesa/otras_variantes/adoquin.html}"
 }
 
 @manual{nrmca,
