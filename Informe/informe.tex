@@ -45,6 +45,17 @@
 \tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
+% Bibliography as a section and numbered
+\def\thebibliography#1{\section{Bibliografía}%
+    \markboth{Bibliografía}{Bibliografía}
+  \list{[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin
+\labelwidth
+    \advance\leftmargin\labelsep
+    \usecounter{enumi}}
+    \def\newblock{\hskip .11em plus .33em minus .07em}
+    \sloppy\clubpenalty4000\widowpenalty4000
+    \sfcode`\.=1000\relax}
+
 \begin{document}
 
 \renewcommand\listtablename{Índice de tablas}
@@ -63,7 +74,7 @@
 
 \part{Memoria}
 \include{introduccion}
-\include{prefabricados}
+% \include{prefabricados}
 \include{lca}
 \include{inventario}
 \include{fabricacion}
@@ -71,9 +82,6 @@
 \include{usoymantenimiento}
 \include{findevida}
 \include{conclusiones}
-\addcontentsline{toc}{chapter}{Bibliografía}
-\bibliographystyle{plain}
-\bibliography{informe}
 \cleardoublepage
 
 \part{Anexos}
