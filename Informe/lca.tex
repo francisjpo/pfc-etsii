@@ -40,8 +40,23 @@ Por otro lado, el Análisis de Ciclo de Vida tiene ciertas limitaciones:
   \item se requiere el uso de bases de datos, software especializado y personas capacitadas para poder analizar los datos.
 \end{itemize}
 
+
+
 \section{Software}
-\subsection{SimaPro}
+
+El mercado ofrece una amplia gama de programas para el Análisis de Ciclo de Vida que ofrecen diferentes tipos de prestaciones y rangos de precios. Entre ellos cabe destacar:
+
+\begin{itemize}
+  \item SimaPro: ver sección \ref{sec:simapro}.
+  \item Gabi: permite esbozar ideas en su interfaz y ofrece un potente asistencia para la creación del inventario. Incorpora una base de datos propietaria que también funciona con \textit{ecoinvent}. Es compatible con los estándares ISO 14040 y bastante flexible.
+  \item Quantis Suite: facilita el acceso a personas no expertas con plantillas y asistentes. Incorpora una base de datos propia.
+  \item EarthSmart: permite crear inventarios de forma rápida aunque el usuario no sea experto. Permite crear un final de vida basado en escenarios creados por expertos. Incorpora varias bases de datos como \textit{ecoinvent} y la Australian LCI database.
+  \item Eco-it: desarrollada para la Sociedad Pública de Gestión Ambiental del País Vasco (IHOBE). Realiza Análisis de Ciclo de Vida simplificado basado en la metodología ReCiPe, así como Huella de Carbono basado en valores IPCC. Es compatible con la normativa ISO 14040.
+\end{itemize}
+
+El paquete de software utilizado para este proyecto será SimaPro debido a la versatilidad que aporta, disponibilidad, inclusión de base de datos \textit{ecoinvent} y su compatibilidad con la norma ISO 14040.
+
+\subsection{SimaPro}\label{sec:simapro}
 SimaPro es una herramienta profesional desarrollada por la empresa holandesa PRé Consultants para el Análisis de Ciclo de Vida más utilizada actualmente por la mayor parte de los consultores y la industria, apoyada en la investigación de materiales y elementos por parte institutos y universidades \cite{mgoedkoop}. Permite modelar ciclos de vida complejos y analizarlos de forma sistemática y transparente, ya que puede rastrearse el origen de todos los resultados de forma sencilla.
 
 \begin{figure}[!htb]
@@ -88,7 +103,7 @@ La calidad de los datos que aparecen en el Inventario de Ciclo de Vida (ICV) imp
 \label{fig:bbddecoinvent}
 \end{figure}
 
-De esta forma, la metodología de uso de SimaPro consiste en utilizar \textit{ecoinvent} como soporte para aquellos materiales y procesos de nuestro sistema que sean similares con los de la base de datos. En caso de que no se adapten a la entrada de la base de datos será necesario modelar una nueva entrada equivalente, pudiendo usar otras entradas de la base de \textit{ecoinvent}.
+La metodología de uso de SimaPro consiste en utilizar \textit{ecoinvent} como soporte para aquellos materiales y procesos de nuestro sistema que sean similares con los de la base de datos. En caso de que no se adapten a la entrada de la base de datos será necesario modelar una nueva entrada equivalente, pudiendo usar otras entradas de la base de \textit{ecoinvent}.
 
 La librería \textit{ecoinvent}:
 \begin{itemize}
@@ -106,15 +121,24 @@ La librería \textit{ecoinvent}:
 \end{itemize}
 
 \section{Metodología para Evaluación del Impacto del Ciclo de Vida}
+
+La base de datos \textit{ecoinvent} ofrece múltiples métodos para la evaluación de impactos que aplican diferentes factores —caracterización, normalización, peso y daño— a cada flujo elemental de la tabla de inventario según su implementación. Los métodos más destacables que se tendrán en cuenta en este proyecto son:
+
+\begin{itemize}
+  \item Método ReCiPe: categorías de impacto y áreas de protección del medio ambiente.
+  \item Método de Demanda de Energía Acumulada: cuantificación de energía consumida.
+  \item Método IPCC 2007: cálculo potencial del calentamiento global a lo largo del ciclo de vida.
+\end{itemize}
+
 \subsection{ReCiPe}\label{sec:recipe}
 
-El desarrollo de ReCiPe se debió en principio a integrar la metodología orientada al problema de \textit{CML-IA} y la metodología orientada al daño de \textit{Ecoindicator 99}. De esta manera, ReCiPe se convirtió en el sucesor de ambos métodos \cite{mgoedkoop3}.
+El desarrollo de ReCiPe se debió al principio a integrar la metodología orientada al problema de \textit{CML-IA} y la metodología orientada al daño de \textit{Ecoindicator 99}. De esta manera, ReCiPe se convirtió en el sucesor de ambos métodos \cite{mgoedkoop3}.
 
 La metodología orientada al problema de \textit{CML-IA} define las categorías de impacto en el punto medio. La incertidumbre de los resultado en este punto es relativamente baja. El inconveniente de este sistema es la ambigüedad de las conclusiones al haber demasiadas categorías de impacto.
 
 La metogología orientada al daño de \textit{Ecoindicator 99} aborda sólo tres categorías de impacto, lo que hacer más fácil obtener conclusiones. Sin embargo, la incertidumbre de los resultados es más alta que con la otra metodología.
 
-ReCiPe implemente ambas estrategias incluyendo las categorías de impacto tanto a punto medio como a punto final. A los factores de caracterización a punto medio se les aplica un factor de daño para obtener los valores de caracterización de punto final. ReCiPe comprende dos conjuntos de categorías de impacto (ver figura ref{recipecategoriasimpacto}):
+ReCiPe implemente ambas estrategias incluyendo las categorías de impacto tanto a punto medio como a punto final. A los factores de caracterización a punto medio se les aplica un factor de daño para obtener los valores de caracterización de punto final. ReCiPe comprende un total de 21 categorías de impacto agrupadas en 2 conjuntos (ver figura ref{recipecategoriasimpacto}):
 \begin{itemize}
 \item Punto medio: 18 categorías de impacto.
 \item Punto final: 3 categorías de impacto.
@@ -129,6 +153,27 @@ ReCiPe implemente ambas estrategias incluyendo las categorías de impacto tanto 
 
 \subsection{Demanda de Energía Acumulada}
 
+Esta metodología —desarrollada a principio de los 70 debido a la crisis del petróleo— permite investigar el uso de energía a través del ciclo de vida de un producto o servicio. El análisis de la Demanda Acumulada de Energía consiste en la cuantificación tanto del uso directo como directo de energía —o consumo gris— durante todo el ciclo de vida del producto \cite{ecoinventlcia}.
+
+Los valores CED (Cumulate Energy Demand) pueden utilizarse para comparar los resultado de un estudio detallada de Análisis de Ciclo de Vida con otros donde se indica únicamente la demanda de energía. También pueden utilizarse como indicador de verificación de los datos ya que es bastante fácil juzgar en base a la Demanda de Energía Acumulada si se han cometido errores importantes o no \cite{ecoinventlcia}.
+
+Debido a que existe divergencias en los conceptos para la caracterización de las fuentes de energía primarias, los indicadores CED se dividen en ocho subcategorías para su uso con la base \textit{ecoinvent}, divididos en dos categorías base:
+
+\begin{itemize}
+  \item Fuentes no renovables: fósil, nuclear y bosque primario.
+  \item Fuentes renovables: biomasa, viento, solar, geotérmica y agua.
+\end{itemize}
+
 \subsection{IPCC 2007}
 
+El método IPCC 2007 —Intergovernmental Panel on Climate Change— es una actualización su homónimo de 2001. Este método es uno de los más empleados en la evaluación de impactos ya que realiza una caracterización de diferentes emisiones gaseosas de acuerdo a su Potencial de Calentamiento Global —Global Warming Potencial, GWP— y al conjunto de diferentes emisiones en la categoría de impacto de calentamiento global. Los valores de caracterización para las emisiones de gases de efecto invernadero se basan en los potenciales de calentamiento global publicados por el propio Grupo Intergubernamental de Expertos sobre el Cambio Climático (IPCC).
 
+Al igual que en la versión de 2001, se establecen tres horizontes temporales para mostrar los efectos de la duración en la atmósfera de los diferentes gases:
+
+\begin{itemize}
+  \item GWP 20a (20 años).
+  \item GWP 100a (100 años).
+  \item GWP 500a (500 años).
+\end{itemize}
+
+Los Potenciales de Calentamiento Global (GWPs) directos están relacionados con el impacto del dióxido de carbono (\ce{CO2}). Los GWPs son un índice para la estimación de la contribución de calentamiento global relativo debido a las emisión atmosférica de un kilogramo de un gas de efecto invernadero concreto comparado con la emisión de un kilogramo de \ce{CO2} \cite{ecoinventlcia}.
