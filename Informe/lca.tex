@@ -1,265 +1,833 @@
 %!TEX root = informe.tex
-\chapter{Metodología del Análisis de Ciclo de Vida}
-\section{Proceso completo}
+\chapter{Análisis de Ciclo de Vida de un adoquín}
+\section{Objetivo y alcance}
+Como se indicó en el capítulo \ref{cap:objeto}, el objetivo principal de este proyecto es el Análisis de Ciclo de Vida del adoquín común prefabricado del cemento utilizado en obras civiles y urbanismo, analizando el ciclo de vida del adoquín desde la obtención de la materia prima hasta su fin de vida, es decir, ``desde la cuna hasta la tumba''.
 
-Como se ha mencionado en la sección \ref{sec:introantecedentes}, el Análisis de Ciclo de Vida de un producto incluye todos los procesos de producción y servicios relacionados con el producto durante su ciclo de vida completo, desde la extracción de las materias primas hasta su reciclaje y/o disposición final, pasando por la fabricación y los subproductos que lo forman, la instalación, el uso y mantenimiento del producto. También se pueden incluir en las diferentes etapas del ciclo de vida el almacenamiento, venta, transporte y otras actividades que se consideren relevantes.
+La razón principal de este Análisis de Ciclo de Vida es evaluar el comportamiento ambiental de las distintas etapas de su ciclo de vida, las cargas ambientales asociadas a estas etapas e identificar las posibles mejoras.
 
-El Análisis de Ciclo de Vida hace distinción entre ``Entradas'' —materias primas, energía— y ``Salidas'' —emisiones a la tierra, mar o aire, desechos y subproductos.
+El público al que se prevé comunicar los resultados de este estudio es principalmente al Tribunal Calificador de Proyectos y a los fabricantes de productos prefabricados del cemento.
 
-DIAGRAMA INPUTS-OUTPUTS.
+No está previsto utilizar los resultados en aseveraciones comparativas con otros materiales y que puedan divulgarse al público.
 
-En las ``Entradas'' también pueden aparecer productos que proceden de la \textbf{tecnoesfera} —productos no naturales—, que añadirán su historial medioambiental a los cálculos del producto y/o servicio. Para el caso de residuos, se tendrán que incluir los futuros procesos de tratamiento.
+El adoquín a estudio es el modelo Holanda 6, de dimensiones 200x100x60 \si{mm}.
 
-El Análisis de Impacto del Ciclo de Vida (AICV) recoge la totalidad de entradas y salidas a la naturaleza para realizar un estudio potencial de los efectos medioambientales relacionados con el producto \cite{iso14040}.
+Los límites del sistema (ver figura XXX)
 
-DIAGRAMA LCIA + LCI + LCIA
+FIGURA XXX Diagrama de flujo
 
-\subsection{Etapas del Análisis de Ciclo de Vida}
-\subsubsection{Definición de objetivos y alcance}
-\subsubsection{Análisis de inventario (ICV)}
-\subsubsection{Evaluación del impacto ambiental (EICV)}
-\subsubsection{Interpretación}
+Los límites no incluirán el molde, palé, gastos de gestión y mantenimiento de oficinas.
 
-\subsection{Ventajas e inconvenientes del ACV}
+Para el estudio se ha empleado el modelo con mayor demanda de producción de la empresa Malaka de Prefabricados, S.L. y se han utilizado datos proporcionados de la misma (Anexo \ref{apend:datos}) para desarrollar el inventario y los cálculos. El adoquín a estudio es el modelo Holanda 6, de dimensiones 200x100x60 \si{mm}.
 
-El Análisis de Ciclo de Vida es una herramienta que ofrece muchas ventajas:
-\begin{itemize}
-  \item el ACV es la única herramienta que examina los impactos medioambientales de un producto y/o servicio a través de su ciclo de vida.
-  \item el ACV es un método estándar ISO.
-  \item el ACV proporciona una visualización fácil de entender de separando en etapas las fuentes de impacto.
-  \item el ACV puede tanto guiar las decisiones de un fabricante (nivel microeconómico) como ayudar a un gobierno a definir una política de actuación (nivel macroeconómico).
-  \item el ACV distingue entre la información relevante mediante cuantificación objetiva y los asuntos que pertenecen a políticas y elecciones sociales.
-\end{itemize}
+\section{Unidad funcional}
 
-Por otro lado, el Análisis de Ciclo de Vida tiene ciertas limitaciones:
-\begin{itemize}
-  \item los resultados son geográficamente dependientes. Los resultados de un estudio en Europa no son aplicable en Estados Unidos sin tener en cuenta las variaciones geográficas correspondientes (por ejemplo, el mix eléctrico).
-  \item el ACV sólo evalúa los impactos potenciales, no los verdaderos impactos, por lo que no proporciona ninguna información de las consecuencias.
-  \item los resultados de dos ACVs para un mismo objeto de estudio puede diferir según los objetivos, procesos, calidad de los datos y el método de análisis de impacto utilizados. La ISO insiste en transparencia a la hora de realizar un ACV.
-  \item un ACV detallado requiere un inventario de todos los procesos elementales incluidos dentro de los parámetros del sistema.
-  \item se requiere el uso de bases de datos, software especializado y personas capacitadas para poder analizar los datos.
-\end{itemize}
+\section{Inventario del Ciclo de Vida (ICV)}\label{cap:fabricacion}
 
-\section{Métodos de análisis de aspectos ambientales de productos y establecimiento de prioridades}
-
-Existen varios métodos —cualitativos y cuantitativos— para analizar el perfil ambiental de un producto y establecer prioridades ambientales. Todos ellos se basan en el Análisis del Ciclo de Vida, lo que significa que analizan todas las fases del ciclo de vida del producto en cuanto a los aspectos ambientales del producto en cada una.
-
-Los objetivos de estos métodos son:
-\begin{itemize}
-  \item Obtener una perspectiva general de los principales aspectos ambientales del producto durante todo su Ciclo de Vida.
-  \item Identificar las prioridades ambientales.
-\end{itemize}
-
-A continuación se analizarán brevemente algunos de los métodos más interesantes: Matriz MET, Eco-indicadores y el software de Análisis de Ciclo de Vida. Éste último, debido a su importancia actual y a que son el método utilizado en este proyecto, será desarrollado con mayor amplitud en la sección \ref{sec:software}.
-
-\subsection{Matriz MET}
-
-La Matriz MET (Materiales/Energía/Toxinas) es una método cuantitativo y cualitativo con el que se obtiene una visión global de las entrada y salidas de cada etapa del Ciclo de Vida del producto. Es cuantitivo porque maneja cantidades, pero también se trata de un método cualitativo porque prioriza los aspectos ambientales y se basa en conocimientos ambientales y reglas de oro y no en cifras o resultados \cite{ihobeeco}.
-
-La Matriz MET engloba:
-\begin{itemize}
-  \item M: utilización de Materiales en cada etapa del ciclo de vida. Incluye todas las entradas (consumos) de cada una de las etapas del ciclo de vida, proporcionando una visión de cuáles son las prioritarias por su mayor cantidad, toxicidad o por ser materiales escasos.
-  \item E: utilización de Energía. Engloba el impacto de los procesos y transportes en cada una de las etapas del ciclo de vida —principalmente aquellos que consumen mucha energía—, proporcionando una visión de cuáles son los procesos o transportes de mayor impacto.
-  \item T: emisiones Tóxicas. Recoge todas las salidas producidas en el proceso —emisiones, vertidos o residuos tóxicos—, proporcionando las salidas más importantes por su toxicidad.
-\end{itemize}
-
-El uso de la Matriz MET se recomienda:
-\begin{itemize}
-  \item Para recopilar datos antes de utilizar los Eco-indicadores o software de Análisis de Ciclo de Vida, ya que permite organizar la información de cada etapa del ciclo de vida.
-  \item Para obtener una visión global rápida de las prioridades ambientales sin la necesidad de gran precisión.
-  \item Como método alternativo cuando no existan Eco-indicadores relevantes para los materiales o los procesos del producto.
-\end{itemize}
-
-\subsection{Eco-indicadores}
-
-El Eco-indicador es una método cuantitativa de fácil manejo. Es más preciso que la Matriz MET a la hora de priorizar los principales aspectos ambientales del producto en su ciclo de vida. Es un método cuantitativo porque la priorización se basa en cálculos numéricos \cite{ihobeeco}.
-
-Los Eco-indicadores son el resultado de un proyecto desarrollado por un equipo multidisciplinar formado por industrias punteras de diferentes sectores, científicos de centros de investigación independientes y el gobierno holandés con el objetivo de intentar conseguir evaluar el impacto ambiental que ejerce la actividad industrial sobre el medio ambiente, centrándose en el impacto sobre el ecosistema, los recursos y la salud humana a nivel europeo. Los impactos tenidos en cuenta son: el efecto invernadero, la reducción de la capa de ozono, la lluvia ácida, la disminución de los recursos naturales, la disminución de la biodiversidad y el smog fotoquímico.
-
-Existen diversos métodos basados en Eco-indicadores, entre los que cabe destacar \cite{mlgceballos}:
-
-\begin{itemize}
-  \item CML 2001: desarrollado en los Países Bajos, basado en su versión de 1992. El paso de normalización es opcional para ACVs simplificados, pero obligatorio para los exhaustivos. Las categorías de impacto ambiental son: agotamiento de los recursos abióticos, cambio climático, destrucción de capa de ozono, toxicidad humana, ecotoxicidad, smog fotoquímico, acidificación, eutrofización y uso de recursos.
-  \item ReCiPe: del mismo equipo que la metodología EICV (ver sección \ref{sec:recipe}). Las categorías de impacto ambiental son: destrucción de capa de ozono, toxicidad humana, radiación, smog fotoquímico, formación de partículas, cambio climático, ecotoxicidad del suelo, acidificación del suelo, ocupación del suelo rural, ocupación de suelo urbano, transformación suelo natural, ecotoxicidad marina, eutrofización marina y agua dulce, ecotoxicidad de agua dulce.
-  \item Ecoindicator 95: desarrollado por PRè Consultants, se basa en la existencia de una correlación entre la gravedad del efecto produccido por las emisiones y la distancia entre el nivel actual de emisiones y un nivel objetivo marcado como estándar de calidad ambiental, según un modelo de distancias al nivel objetivo.
-  \item Ecoindicator 99: considera tres categorías de daños, relacionadas directamente con el resultado del inventario: salud humana, calidad del ecosistema y agotamiento de recursos. El Ecoindicador 95 es más un indicador de emisiones mientras que el Ecoindicador 99 lo es más de combustibles fósiles.
-  \item EcoPoint: desarrollado por el Ministerio de Medioambiente de Suiza (BUWAL) en 1990, actualizado en 1997. Se basa en la distancia al objetivo que ofrece como resultado un indicador de impacto único.
-  \item EPS: desarrollado por el Instituto de Investigación Medioambiental de Suecia en 1991. Se basa en una valoración de economía ambiental, es decir, determinar el daño y su asignación monetaria, en unidades ELU (Environmental Load Unit).
-\end{itemize}
-
-\section{Software de Análisis de Ciclo de Vida}\label{sec:software}
-
-El mercado ofrece una amplia gama de programas para el Análisis de Ciclo de Vida que ofrecen diferentes tipos de prestaciones y rangos de precios. Entre ellos cabe destacar:
-
-\begin{itemize}
-  \item SimaPro: ver sección \ref{sec:simapro}.
-  \item Gabi: permite esbozar ideas en su interfaz y ofrece un potente asistencia para la creación del inventario. Incorpora una base de datos propietaria que también funciona con \textit{ecoinvent}. Es compatible con los estándares ISO 14040 y bastante flexible.
-  \item Quantis Suite: facilita el acceso a personas no expertas con plantillas y asistentes. Incorpora una base de datos propia.
-  \item EarthSmart: permite crear inventarios de forma rápida aunque el usuario no sea experto. Permite crear un final de vida basado en escenarios creados por expertos. Incorpora varias bases de datos como \textit{ecoinvent} y la Australian LCI database.
-  \item Eco-it: desarrollada para la Sociedad Pública de Gestión Ambiental del País Vasco (IHOBE). Realiza Análisis de Ciclo de Vida simplificado basado en la metodología ReCiPe, así como Huella de Carbono basado en valores IPCC. Es compatible con la normativa ISO 14040.
-  \item openLCA: es una aplicación profesional de código abierto y gratuita para Análisis de Ciclo de Vida y Huella de Carbono creada por GreenDelta.
-\end{itemize}
-
-El paquete de software utilizado para este proyecto será SimaPro debido a la versatilidad que aporta, disponibilidad, inclusión de base de datos \textit{ecoinvent} y su compatibilidad con la norma ISO 14040.
-
-\subsection{SimaPro}\label{sec:simapro}
-SimaPro es una herramienta profesional desarrollada por la empresa holandesa PRé Consultants para el Análisis de Ciclo de Vida más utilizada actualmente por la mayor parte de los consultores y la industria, apoyada en la investigación de materiales y elementos por parte institutos y universidades \cite{mgoedkoop}. Permite modelar ciclos de vida complejos y analizarlos de forma sistemática y transparente, ya que puede rastrearse el origen de todos los resultados de forma sencilla.
+\section{Introducción}\label{sec:obtenciondedatos}
+Los datos de partida que se han utilizado en este análisis han sido proporcionados por Malaka de Prefabricados (Apéndice \ref{apend:datos}). La figura \ref{fig:diagrama_de_flujo} muestra las entradas al sistema, así como los procesos que ocurren durante la fabricación —que serán explicados en las siguientes secciones— y la salida del sistema.
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=13cm]{simapro.png}
-\caption{Estructura de SimaPro.}
-\label{fig:simapro}
+\includegraphics[width=15cm]{diagrama.png}
+\caption{Diagrama de flujo de la fabricación de adoquines.}
+\label{fig:diagrama_de_flujo}
 \end{figure}
 
-Entre sus principales cualidades destacan:
+El modelo de adoquín ``Holanda 6'' (datos técnicos en Apéndice \ref{apend:catalogo}), es el que mayor demanda de fabricación tiene en la empresa, por lo que se ha dispuesto de mayor número de datos.
 
-\begin{itemize}
-  \item Diseño de productos.
-  \item Desarrollo de indicadores clave.
-  \item Cálculo de la huella de carbono de muchos tipos de productos y sistemas.
-  \item Determinar el impacto medioambiental de productos o servicios con precisión estadística mediante el método de análisis Monte Carlo.
-  \item Incluye Declaraciones Medioambientales de Productos e Informes Medioambientales GRI (Global Reporting Initiative).
-  \item Utilización de bases de datos con inventarios.
-  \item Asignación de múltiples procesos de salida.
-  \item Análisis de Punto Débil, que permite identifica los puntos sensibles en el ciclo de vida utilizando un árbol de procesos.
-  \item Análisis de tratamientos de residuos y escenarios de reciclado.
-\end{itemize}
+\subsection{Unidad funcional}
 
-Esta herramienta cuenta con una interfaz de usuario intuitiva con un explorador de guía a través del Análisis de Ciclo de Vida del producto o servicio siguiendo los principios de las normas ISO 14040 y 14044. Además incorpora un modelado utilizando un asistente paso a paso.
+El motivo de tomar como \textit{Unidad funcional} ``1 \si{m^2} de adoquín'' es debido a que los pedidos y la fabricación se realizan en unidades de superficie y no en cantidad de bloques de adoquín. Cada bandeja fabricada supone exactamente 0.5 \si{m^2} de adoquines modelo ``Holanda 6''. Si se toma como \textit{Unidad funcional} 1 \si{m^2} de adoquín, los cálculos se realizan de forma sencilla para 2 bandejas. Cada adoquín mide 200x100x60 \si{mm} y pesa 3 \si{kg}. Como cada bandeja está formada por 25 adoquines, y son necesarias 2 bandejas para tener 1 \si{m^2}, se tiene un total de 50 adoquines/\si{m^2} (ecuación \ref{eq:masa}). De esta forma:
 
-La mayor ventaja de esta herramienta es la utilización de bases de datos con los inventarios de miles de procesos y métodos más importante de análisis de impacto.
+\begin{gather}
+200 mm \times 100 mm \times 25 ud/bandeja \times 2 bandeja = 1 m^2\\
+3 kg/ud \times 50 ud/m^2 = 150 kg/m^2 \text{ de masa para adoquín}\label{eq:masa}
+\end{gather}
 
-SimaPro incluye varias bases de datos de inventarios con miles de procesos, además de los métodos de análisis de impacto más importantes. De esta forma, no es necesario recolectar datos de procesos individuales y poder centrarse en los asuntos más importantes del estudio.
+Como es necesario disponer de 150 \si{kg/m^2} de masa para adoquín, se aplican los porcentajes de materias primas sobre la fórmula base para adoquín ``Holanda 6'' para obtener las masas de cada materia prima reflejadas en la tabla \ref{desglosemateriasprimas}.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{lcccc}
+\toprule
+\multicolumn{5}{c}{Consumo de materias primas por \si{m^2} de adoquín fabricado}\\
+\midrule
+Materia prima & \% Fórmula & Masa (\si{kg}) & Proced. & Dist. (\si{km})\\
+\midrule
+Árido tipo 5/7 & 37.75 & 56.63 & Alh. Torre & 8\\
+Arena tipo 0/5 & 47.16 & 70.74 & Alh. Torre & 8\\
+Cemento Portland 52.5N & 10.06 & 15.09 & Málaga-El Palo & 30\\
+Agua & 5.03 & 7.54 & Red & -\\
+\bottomrule
+\end{tabular}
+\caption{Desglose de materias primas por \si{m^2} de adoquín fabricado.}
+\label{desglosemateriasprimas}
+\end{table}
+
+En el Apéndice \ref{apend:catalogo} también se especifica un diagrama de Gantt de los procesos para una simulación realizada para fabricar 1 \si{m^2} de adoquín, además de los consumos energéticos desglosados.
+
+\section{Modelado de materias primas y procesos}\label{sec:modeladoprocesos}
+\subsection{Cemento}
+El cemento se transporta a granel en camiones con tanques a presión hasta la fábrica. Allí se almacena en silos provistos de compresores que descargan el material desde el tanque hasta su interior. El compresor es alimentado por electricidad mediante una toma de corriente conectada a la red eléctrica. La descarga del silo es únicamente por gravedad con válvulas dosificadoras de control de caudal (ver tabla \ref{modeladodelcemento}).
+
+Las unidades para el modelado del camión (lorry) vienen expresadas en \si{kg\times km}, mientras que el uso del silo se proporciona en \si{m^3}, dada una densidad media del cemento Portland de 1250 \si{kg/m3} \cite{website:cement}.
+
+\begin{gather}
+15.09 kg \times 30 km = 453 kg\times km\\
+15,09 kg / 1250 kg/m^3 = 0.0121 m^3
+\end{gather}
+
+El mix eléctrico se obtiene del consumo del compresor del silo proporcional a una cantidad de 15.09 \si{kg}, si la potencia del compresor son 30kW, velocidad de carga del silo es 35 \si{\tonne/h} para un tiempo de llenado de 35 minutos.
+
+\begin{gather}
+30 kW \times 1 h \times \frac{35 min}{60 min} = 17.5 kWh = 63 MJ \text{ para 20 toneladas}\\
+35 t/h \times \frac{35 min}{60 min} = 20 t \text{ de cemento con el silo cargado}\\
+15.09 kg \times \frac{63 MJ}{20 t} = 4.79 kJ
+\end{gather}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Cemento Portland CEM I 52.5Z gris}\\
+\midrule
+Materiales/ensamblajes & Cantidad & Unidad\\
+\midrule
+Portland cement, strength class Z 52.5, at plant/CH U & 15.09 & \si{kg}\\
+\midrule
+Procesos & Cantidad & Unidad\\
+\midrule
+Transport, lorry 16-32t, EURO4/RER U & 453 & \si{kg*km}\\
+Tower silo, plastic/CH/I U & 0.0121 & \si{m^3}\\
+Electricity mix 2013/ES U & 4.79 & \si{kJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del cemento.}
+\label{modeladodelcemento}
+\end{table}
+
+\subsection{Arena y áridos}
+Las arenas y áridos se transportan hasta la planta de fabricación mediante camiones. Actualmente los áridos y la arena ya no se apilan a bajo techados en las explanadas adyacentes a las plantas, sino que el propio transporte rellena las tolvas de forma automática.
+
+El tipo de arena que se utiliza en la planta es 0/5 —granulometría en milímetros de las partículas que forman la arena— no está directamente disponible en SimaPro. En su lugar, se ha optado por tomar el material ``Sand 0/2'' (Arena tipo 0/2), que además de pertenecer a la clasificación general de arena —de 0 a 5 \si{mm}—, la descripción de SimaPro indica que puede utilizarse como árido natural estándar en la industria de la construcción (ver tabla \ref{modeladodelaarena}).
+
+\begin{quote}
+Technical purpose of product or process: Standard mineral product used as natural aggregates in the construction industry according to the applied technology.
+\end{quote}
+
+Las unidades para el modelado del camión (lorry) vienen expresadas en \si{kg\times km}.
+
+\begin{equation}
+70.74 kg \times 8 km = 566 kg\times km
+\end{equation}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Arena tipo 0/5}\\
+\midrule
+Materiales/ensamblajes & Cantidad & Unidad\\
+\midrule
+Sand 0/2, wet and dry quarry, production mix, at plant, undried/RER S & 70.74 & \si{kg}\\
+\midrule
+Procesos & Cantidad & Unidad\\
+\midrule
+Transport, lorry 16-32t, EURO4/RER U & 566 & \si{kg*km}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la arena.}
+\label{modeladodelaarena}
+\end{table}
+
+Los áridos utilizados para producir adoquines puede incluir arena, gravilla y piedra de machaqueo si se pretende obtener un producto de peso normal. Si se desea que el adoquín sea más ligero —entre un 20 y un 45 \%— sin mermar sus propiedades estructurales se utilizan materiales como pizarra, arcilla, escoria de altos hornos y cenizas de carbón según su disponibilidad y coste.
+
+El tipo de árido utilizado en planta es de granulometría 5/7 —en milímetros—, catalogado como gravilla. No está directamente disponible en SimaPro, por lo que en su lugar, se ha optado por tomar el material ``Gravel, crushed'' (gravilla de machaqueo) (tabla \ref{modeladodearido}).
+
+Las unidades para el modelado del camión (lorry) vienen expresadas en \si{kg\times km}.
+
+\begin{equation}
+56.63 kg \times 8 km = 566 kg\times km
+\end{equation}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Árido tipo 5/7}\\
+\midrule
+Materiales/ensamblajes & Cantidad & Unidad\\
+\midrule
+Gravel, crushed, at mine/CH U & 56.63 & \si{kg}\\
+\midrule
+Procesos & Cantidad & Unidad\\
+\midrule
+Transport, lorry 16-32t, EURO4/RER U & 453 & \si{kg*km}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del árido.}
+\label{modeladodearido}
+\end{table}
+
+
+\subsection{Agua}
+La mayoría de las plantas tienen una fuente de agua municipal (\textit{tap water}) que proporciona potable perfectamente válida para el uso en la fabricación de hormigón (ver tabla \ref{modeladodelagua}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Agua}\\
+\midrule
+Materiales/ensamblajes & Cantidad & Unidad\\
+\midrule
+Tap water, at user/RER U & 7.54 & \si{kg}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del agua.}
+\label{modeladodelagua}
+\end{table}
+
+\subsection{Mix eléctrico}
+
+El mix eléctrico es el valor que expresa las emisiones de \ce{CO2} asociadas a la generación de la electricidad que se consume.
+
+Es un indicador de las fuentes energéticas que se emplean para producir electricidad. Cuanto más bajo es el mix, mayor es la contribución de fuentes energéticas bajas en carbono.
+
+Disponer de un mix eléctrico actualizado ayuda a obtener unos resultados más precisos en el Análisis de Ciclo de Vida. La base de datos de \textit{ecoinvent} proporciona un modelo no actualizado para España, sobretodo teniendo en cuenta los últimos avances en adopción de energías renovables en el sector energético español. De esta forma, se ha añadido un nuevo modelo (tabla \ref{modeladomixelectrico}) con las cifras actualizadas al presente año para 1 \si{kWh} \cite{mlgceballos}.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Electricity mix 2013/ES U}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Electricity, hard coal, at power plant/ES U & 0.0596 & \si{kWh}\\
+Electricity, lignite, at power plant/ES U & 0.0268 & \si{kWh}\\
+Electricity, oil, at power plant/ES U & 0.0527 & \si{kWh}\\
+Electricity, natural gas, at power plant/ES U & 0.3025 & \si{kWh}\\
+Electricity, industrial gas, at power plant/ES U & 0.0147 & \si{kWh}\\
+Electricity, hydropower, at power plant/ES U & 0.131 & \si{kWh}\\
+Electricity, hydropower, at pumped storage power plant/ES U & 0.020 & \si{kWh}\\
+Electricity, nuclear, at power plant/UCTE U & 0.205 & \si{kWh}\\
+Electricity, production mix photovoltaic, at plant/ES U & 0.024 & \si{kWh}\\
+Electricity, at wind power plant/RER U & 0.1454 & \si{kWh}\\
+Electricity, at cogen with biogas engine, allocation exergy/CH U & 0.0146 & \si{kWh}\\
+Electricity, production mix FR/FR U & 0.0056 & \si{kWh}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del mix eléctrico español en 2013.}
+\label{modeladomixelectrico}
+\end{table}
+
+\subsection{Dosificador de arena y áridos}
+
+El sistema de control central manda una señal a los dosificadores para que viertan la cantidad ordenada por el programa principal de fabricación. Dichos dosificadores consisten en una especie de tolva con forma de embudo con un cierre controlado por el sistema.
+
+No existe un modelo de referencia en SimaPro para este tipo de dosificadores —\textit{feed hopper}, en inglés—, por lo que se ha simplificado un modelo válido \cite{woodpellet}. Se le ha añadido la parte de mix eléctrico de los datos del fabricante (Apéndice \ref{apend:datos}). El dosificador del cemento y del agua están incluidos en su propio modelo (silo y abastecimiento de la red respectivamente).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Dosificadores para arena y áridos}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Steel, low-alloyed, at plant/RER U & 47 & \si{kg}\\
+\midrule
+Electricidad/calor & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.0021 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de los dosificadores para arena y áridos.}
+\label{modeladodedosificadores}
+\end{table}
+
+\subsection{Cintas transportadoras de áridos y cemento}
+
+Las tolvas descargan la cantidad programada de materia prima sobre dos cintas transportadoras —una para áridos y arena, otra para cemento— con básculas de pesaje incorporadas que se comunican con el sistema de control y cortan el flujo de descarga.
+
+La cinta de áridos descarga sobre un skip que eleva los materiales hasta una mezcladora. La cinta de cemento descarga directamente sobre la mezcladora.
+
+Las distancias están medidas sobre planos (Apéndice \ref{planos}), y los consumos se han obtenido de los ensayos en fábrica a partir de la potencia de la cinta transportadora y el tiempo de funcionamiento (Potencia=Energía/Tiempo).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Cinta transportadora para arena y áridos}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Conveyor belt, at plant/RER/I U & 14.6 & \si{m}\\
+\midrule
+Electricidad/calor & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.1827 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la cinta transportadora para arena y áridos.}
+\label{modeladodecintaarena}
+\end{table}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Cinta transportadora para cemento}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Conveyor belt, at plant/RER/I U & 7.3 & \si{m}\\
+\midrule
+Electricidad/calor & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.0975 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la cinta transportadora para cemento.}
+\label{modeladodecintacemento}
+\end{table}
+
+\subsection{Skip y mezcladora}
+
+Para asegurar la consistencia del lote el agua se añade mediante un sistema electrónico de control que dosifica el caudal. En el caso de que haya otros aditivos, tales como acelerantes o colorantes, es en este momento cuando se incorporan a la mezcla. Cuando se termina de añadir el agua se produce el mezclado creando hormigón fresco.
+
+La base de datos \textit{ecoinvent} proporciona un modelo para el mezclado del hormigón, ``Paster mixing'' en el que se introduce la masa de la mezcla, 150 \si{kg} y al que se le añade la parte de mix eléctrico de los datos del fabricante (Apéndice \ref{apend:datos}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Skip y mezcladora}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Plaster mixing/CH U & 150 & \si{kg}\\
+\midrule
+Electricidad/calor & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 1.71 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del skip y la mezcladora.}
+\label{modeladoskip}
+\end{table}
+
+\subsection{Cinta transportadora para hormigón}
+
+El hormigón sale de la mezcladora mediante una cinta transportadora que contiene otra báscula de pesaje y se dirige hacia la tolva de hormigón que se encuentra en lo alto de la prensa.
+
+La base de datos \textit{ecoinvent} proporciona un modelo para la cinta transportadora, ``Conveyor belt'' en el que se introduce la distancia de recorrido, 12.1 \si{m}, y al que se le añade la parte de mix eléctrico de los datos del fabricante (Apéndice \ref{apend:datos}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Cinta transportadora para hormigón}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Conveyor belt, at plant/RER/I U & 12.1 & \si{m}\\
+\midrule
+Electricidad/calor & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.088 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la cinta transportadora para hormigón.}
+\label{modeladodecintahormigon}
+\end{table}
+
+\subsection{Tolva para hormigón}
+
+La tolva de hormigón se encarga de dosificar el hormigón en el molde de la prensa. No existe un modelo de referencia en SimaPro para tolvas —\textit{hopper}, en inglés—, por lo que se ha simplificado un modelo válido \cite{foodnottrash}. Se le ha añadido la parte de mix eléctrico de los datos del fabricante (Apéndice \ref{apend:datos}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Tolva para hormigón}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Steel, low-alloyed, at plant/RER U & 470 & \si{kg}\\
+\midrule
+Electricidad/calor & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.0161 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la tolva para hormigón.}
+\label{modeladotolvahormigon}
+\end{table}
+
+\subsection{Vibrocompresión}
+
+La tolva dosifica el hormigón fresco, que cae en los moldes para adoquines. Los moldes tienen una longevidad muy alta —aproximadamente un millón de ciclos de prensado— y su durabilidad depende de las propiedades abrasivas de los áridos utilizados.
+
+El molde se compone de dos partes: la parte donde se inyecta el hormigón (hembra) y la parte que se coloca encima para dar forma (macho). La prensa tiene incorporado un carro alimentador encargado de proporcionar la parte hembra. Se inyecta el hormigón en el molde hembra, el molde macho baja con la prensa y el hormigón es compactado y cimentado usando un sistema combinado de presión y vibración. Cada molde puede producir 25 adoquines de 200x100x60\si{\milli\meter}, lo que proporciona a una superficie adoquinada de 0.5\si{\square\meter}. Los adoquines son moldeados de una sola pieza y extraidos del molde inmediatamente después de la vibro-compresión sobre una bandeja de madera.
+
+SimaPro no proporciona un modelo para prensas de cemento. Estudiando las similitudes entre una planta de hormigón —\textit{concrete plant}— y la planta objeto de este proyecto, se puede aproximar un modelo de la prensa basado en la maquinaria del primero \cite{buildingproducts}. La aproximación ``Industrial machine, heavy, unspecified, at plant'' pide la masa de la máquina industrial no específica que realiza el proceso. De acuerdo al fabricante, ese dato es de 1380 \si{kg}, al que se le ha añadido la parte de mix eléctrico también proporcionado por el fabricante (Apéndice \ref{apend:datos}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Prensado}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Industrial machine, heavy, unspecified, at plant/RER/I U & 9000 & \si{kg}\\
+\midrule
+Electricidad/calor & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.437 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del prensado.}
+\label{modeladoprensado}
+\end{table}
+
+\subsection{Cinta transportadora para piezas frescas}
+
+La bandeja con las piezas frescas es trasladada sobre un transportador de rodillos hasta un ascensor.
+
+SimaPro no proporciona un modelo para este tipo de transportador. Estudiando las similitudes entre un transportador de rodillos y una cinta transportadora se puede aproximar un modelo propio basado en que la principal diferencia es la falta de una banda de rodadura (tabla \ref{modeladotransportadorrodillos}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Transportadora de rodillos para piezas frescas}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Concrete, sole plate and foundation, at plant/CH U & 0.01 & \si{m^3}\\
+Section bar rolling, steel/RER U & 500 & \si{kg}\\
+Steel, low-alloyed, at plant/RER U & 530 & \si{kg}\\
+Transport, lorry >16t, fleet average/RER U & 55.5 & \si{\tonne\times km}\\
+Wire drawing, steel/RER U & 29.6 & \si{kg}\\
+\midrule
+Residuos y emisiones para tratamiento & Cantidad & Unidad\\
+\midrule
+Disposal, building, reinforced concrete, to final disposal/CH U & 23 & \si{kg}\\
+Disposal, steel, 0\% water, to municipal incineration/CH U & 29.6 & \si{kg}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de 1 metro de transportador de rodillos.}
+\label{modeladotransportadorrodillos}
+\end{table}
+
+La aproximación ``Roller conveyor, at plant'' pide como parámetro la distancia de recorrido, 6.8 \si{m}, al que se le ha añadido la parte de mix eléctrico también proporcionado por el fabricante (Apéndice \ref{apend:datos}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Transportadora de rodillos para piezas frescas}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Conveyor belt, at plant/RER/I U & 6.8 & \si{m}\\
+\midrule
+Electricidad/calor & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.077 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del transportador de rodillos para piezas frescas.}
+\label{modeladotransportadorpiezas}
+\end{table}
+
+\subsection{Ascensor}
+
+Este ascensor tiene diez alturas, de forma que cada vez que recibe una bandeja con adoquines frescos, la bandeja anterior sube una altura y monta la siguiente. El ascensor se encarga de alimentar un carro multiforca de diez alturas.
+
+SimaPro no proporciona un modelo para un ascensor de estas características, por lo que se ha obtado por un elemento genérico que sí esté en la base de datos de \textit{ecoinvent} como ``Industrial machine, heavy, unspecified, at plant'' que pide la masa de la máquina industrial no específica que realiza el proceso. De acuerdo al fabricante, ese dato es de 320 \si{kg}, al que se le ha añadido la parte de mix eléctrico también proporcionado por el fabricante (Apéndice \ref{apend:datos}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Ascensor}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Industrial machine, heavy, unspecified, at plant/RER/I U & 320 & \si{kg}\\
+\midrule
+Electricidad/calor & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.126 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del ascensor.}
+\label{modeladodelascensor}
+\end{table}
+
+\subsection{Multiforca}
+Cuando las diez alturas está ocupadas se cargan en un carro multiforca —\textit{rack transporter}, en inglés— automatizado que transporta las piezas hasta un secadero.
+
+Las piezas permanecen en el secadero curándose a temperatura ambiente entre 24 y 48 horas.
+
+Una vez transcurrido el tiempo de curado, los adoquines están secos y listos para ser recogidos por otro carro multiforca automatizado que recoge las bandejas y las lleva a un descensor.
+
+SimaPro tampoco proporciona un modelo para un carro multiforca, por lo que también se ha obtado por un elemento genérico que sí esté en la base de datos de \textit{ecoinvent} como ``Industrial machine, heavy, unspecified, at plant'' que pide la masa de la máquina industrial no específica que realiza el proceso. De acuerdo al fabricante, un carro multiforca se compone de un tres partes: transportador de forca (rackveyor), rodadura (crawler) y vehículo (transfer car), sumando en total 7500 \si{kg}, a lo que se le ha añadido la parte de mix eléctrico también proporcionado por el fabricante (Apéndice \ref{apend:datos}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Multiforca}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Industrial machine, heavy, unspecified, at plant/RER/I U & 7500 & \si{kg}\\
+\midrule
+Electricidad/calor & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.516 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la multiforca.}
+\label{modeladomultiforca}
+\end{table}
+
+\subsection{Descensor}
+El descensor coloca las bandejas con los adoquines secos en un transportador de rodillos. Su modelado es el mismo que el del ascensor.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Descensor}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Industrial machine, heavy, unspecified, at plant/RER/I U & 320 & \si{kg}\\
+\midrule
+Electricidad/calor & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.126 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del descensor.}
+\label{modeladodeldescensor}
+\end{table}
+
+\subsection{Transporte de bandejas hasta paletizadora}
+El transportador de rodillos lleva las bandejas hasta una paletizadora para hacer bloques de hasta cinco alturas. Se ha vuelto a utilizar el modelado de la tabla \ref{modeladotransportadorrodillos}, introduciendo los 6.88 \si{m} de recorrido entre el origen y el destino, a lo que se le ha añadido la parte de mix eléctrico también proporcionado por el fabricante (Apéndice \ref{apend:datos}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Transporte de bandejas hasta paletizadora}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Roller conveyor, at plant/RER/I U & 6.88 & \si{m}\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.021 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del transporte de bandejas hasta paletizadora.}
+\label{modeladobandejaspalet}
+\end{table}
+
+\subsection{Paletizado y flejado}
+
+La paletizadora dispone los bloques de adoquín sobre un pallet para su posterior almacenaje y transporte. De esta forma se consigue una mayor uniformidad y facilidad de manipulación de la carga, ahorrando espacio y rentabilizando los tiempos de carga—descarga y manipulación.
+
+La paletizadora impulsa el pallet hasta la flejadora que aplica varias lazadas de flejes para evitar que los adoquines se desprendan del conjunto.
+
+El proceso de SimaPro ``Packing, clay products'' abarca ambos procesos en un único modelo, en el que se introduce la masa de la carga, 150 \si{km}, a lo que se le ha añadido la parte de mix eléctrico proporcionado por el fabricante (Apéndice \ref{apend:datos}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Flejado y paletizado}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Packing, clay products/CH U & 150 & \si{kg}\\
+\midrule
+Electricidad/calor & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.065 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del flejado y paletizado.}
+\label{modeladodelflejadoypaletizado}
+\end{table}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Transporte de pallets hasta flejadora}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Roller conveyor, at plant/RER/I U & 3.1 & \si{m}\\
+\midrule
+Electricidad/calor & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.021 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del transporte de pallets hasta flejadora.}
+\label{modeladopalletsflejadora}
+\end{table}
+
+\subsection{Transporte de pallets flejados hasta zona de recogida}
+
+La flejadora descansa los conjuntos paletizados sobre un un transportador de rodillos para ser posteriormente llevados a almacén.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Transporte de pallets flejados hasta zona de recogida}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Roller conveyor, at plant/RER/I U & 39.1 & \si{m}\\
+\midrule
+Electricidad/calor & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.0315 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del transporte de pallets flejados hasta zona de recogida.}
+\label{modeladopalletsrecogida}
+\end{table}
+
+\subsection{Transporte de pallets hasta almacén}
+Finalmente, un toro de almacén (forklift truck) transporta cada pallet de adoquines a la zona de almacenaje, a la espera de que los pedidos salgan de almacén.
+
+SimaPro no incorpora en ninguna de sus bases de datos un modelo aproximado de un toro, generando el modelo de la tabla \ref{modeladoforklift}. El modelo comprende el habitáculo, horquilla, motor, batería, neumáticos y su parte proporcional de trabajo de mecanizado y ensamblado \cite{ecocosts}.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Forklift truck}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Steel, low-alloyed, at plant/RER U & 2250 & \si{kg}\\
+Lead, primary, at plant/GLO U & 1200 & \si{kg}\\
+Sulfuric acid, at plant/kg/RNA & 2800 & \si{kg}\\
+Acrylonitrile-butadiene-styrene copolymer, ABS, at plant/RER U & 90 & \si{kg}\\
+Copper, at regional storage/RER U & 50 & \si{kg}\\
+Turning, steel, conventional, primarily roughing/RER S & 1000 & \si{kg}\\
+Drilling, CNC, steel/RER U & 1250 & \si{kg}\\
+Copper wire, technology mix, consumption mix, at plant, cross section 1 mm² EU-15 S & 50 & \si{kg}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de un toro de almacén (forklift truck).}
+\label{modeladoforklift}
+\end{table}
+
+Al igual que no incluye un modelo de toro, tampoco incluye el transporte mediante un toro de almacén, por lo que se ha establecido un modelado basado en el de un furgón de carga de menos de 3.5 \si{\tonne} para añadir las partes proporcionales de uso del toro, mantenimiento, asfalto y costes de operación (tabla \ref{modeladotransporteforklift}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Transport, forklift truck}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Operation, van < 3,5t/RER U & 5.3015 & \si{km}\\
+Forklift truck & 0.000024098 & p\\
+Maintenance, van < 3.5t/RER/I U & 0.000024098 & p\\
+Road/CH/I U & 0.0067419 & \si{my}\\
+Operation, maintenance, road/CH/I U & 0.0062138 & \si{my}\\
+\midrule
+Residuos y emisiones & Cantidad & Unidad\\
+Disposal, van < 3.5t/CH/I U & 0.000024098 & p\\
+Disposal, road/RER/I U & 0.0067419 & \si{my}\\
+\midrule
+\bottomrule
+\end{tabular}
+\caption{Modelado del transporte con toro de almacén.}
+\label{modeladotransporteforklift}
+\end{table}
+
+De esta forma, el modelado del transporte con el toro hasta el almacén se genera introduciendo las toneladas por kilómetro que se transportan (tabla \ref{modeladotransportetorito}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Transporte de pallets con torito hasta almacén}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Transport, forklift truck/RER U & 0.0132 & \si{\tonne\times km}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del transporte de pallets con torito hasta almacén.}
+\label{modeladotransportetorito}
+\end{table}
+
+\subsection{Control informatizado}
+
+Todo el sistema está centralizado en dos ordenadores que cargan los programas de funcionamiento situados en una cabina supervisada por un operario.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Control informatizado}\\
+\midrule
+\multicolumn{2}{c}{Materiales/combustibles}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Desktop computer, without screen, at plant/GLO U & 2 & p\\
+Keyboard, standard version, at plant/GLO U & 2 & p\\
+LCD flat screen, 17 inches, at plant/GLO U & 2 & p\\
+Mouse device, optical, with cable, at plant/GLO U & 2 & p\\
+Network access devices, internet, at user/CH/I U & 2 & p\\
+Router, IP network, at server/CH/I U & 1 & p\\
+Power supply unit, at plant/CN U & 2 & p\\
+\midrule
+\multicolumn{2}{c}{Electricidad/calor}\\
+\cmidrule(r){1-2}
+Descripción & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.486 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del control informatizado.}
+\label{modeladodecontrol}
+\end{table}
+
+
+\subsection{Iluminación}
+
+La iluminación del recinto se compone principalmente de 60 tubos fluorescentes de 40 \si{W}. Debido a que SimaPro no tiene modelados tubos CFL, se ha añadido un modelo a la base de datos \cite{cflbulb}.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Iluminación}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+CFL Bulb 40W & 60 & p\\
+\multicolumn{2}{c}{Desglose para 1 p. CFL Bulb 40W}\\
+\cmidrule(r){1-2}
+Aluminium alloy, AlMg3, at plant/RER U & 7.09 & \si{g}\\
+Oriented polypropylene film E & 4.25 & \si{g}\\
+Iron-nickel-chromium alloy, at plant/RER U & 6.27 & \si{g}\\
+Copper wire, technology mix, consumption mix, at plant, cross section 1 \si{mm^2} EU-15 S & 4.25 & \si{g}\\
+41 Plastics basic, virgin, EU27 & 1.42 & \si{g}\\
+Integrated circuit, IC, logic type, at plant/GLO U & 1.42 & \si{g}\\
+\midrule
+Electricidad/calor & Cantidad & Unidad\\
+\midrule
+Electricity mix 2013/ES U & 0.972 & \si{MJ}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de la iluminación.}
+\label{modeladodeiluminacion}
+\end{table}
+
+\subsection{Limpieza de la mezcladora y molde}
+
+Una vez finalizada la producción se procede a la limpieza de la mezcladora y el molde con agua y vaciando el contenido (tabla \ref{modeladolimpiezamezcladora}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Limpieza de la mezcladora y molde}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Tap water, at user/RER/I U & 100 & \si{kg}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado la limpieza de la mezcladora y molde.}
+\label{modeladolimpiezamezcladora}
+\end{table}
+
+\section{Modelado completo}
+
+Los modelos de los procesos explicados en la sección \ref{sec:modeladoprocesos} han sido introducidos en SimaPro para crear un modelo completo que represente la fabricación de un metro cuadrado de adoquín modelo Holanda 6.
+
+Aunque la mayoría de los procesos sólo ocurren una única vez, hay varios procesos que necesitan funcionar dos veces, debido a que son dos bandejas las que hay que preparar para fabricar el metro cuadrado (ver sección \ref{sec:obtenciondedatos}) o bien, como en el caso de la multiforca, porque hay una ida y una vuelta hacia la zona de curación. El listado completo de procesos se muestra en la tabla \ref{modeladocompleto}.
+
+\begin{table}[!htp]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Fabricación 1 \si{m^2} adoquín Holanda 6}\\
+\midrule
+Materiales/ensamblajes & Cantidad & Unidad\\
+\midrule
+Agua & 1 & p\\
+Arena tipo 0/5 & 1 & p\\
+Árido tipo 5/7 & 1 & p\\
+\midrule
+Procesos & Cantidad & Unidad\\
+\midrule
+Dosificador de arena & 1 & p\\
+Dosificador de áridos & 1 & p\\
+Cinta transp. para arena y áridos & 1 & p\\
+Cinta transp. para cemento & 1 & p\\
+Skip+mezcladora & 1 & p\\
+Cinta transp. para hormigón & 1 & p\\
+Tolva para hormigón & 2 & p\\
+Prensado & 2 & p\\
+Transportador de rodillos para piezas frescas & 2 & p\\
+Ascensor & 1 & p\\
+Multiforca & 2 & p\\
+Descensor & 1 & p\\
+Transporte de bandejas hasta paletiz. & 1 & p\\
+Paletizado+flejado & 1 & p\\
+Transporte de pallets hasta flejadora & 1 & p\\
+Transporte de pallets flejados hasta zona de recogida & 1 & p\\
+Transporte de pallets con torito hasta almacén & 1 & p\\
+Control informatizado & 1 & p\\
+Iluminación & 1 & p\\
+\bottomrule
+\end{tabular}
+\caption{Modelado completo de la fabricación.}
+\label{modeladocompleto}
+\end{table}
+
+\section{Resultados}
+
+Una vez creado el modelo completo del proceso de fabricación, SimaPro genera un análisis de los datos introducidos. El método de análisis elegido es \textit{ReCiPe Endpoint (H) V1.06 / Europe ReCipe H/A}, previamente explicado en la sección \ref{sec:recipe}.
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=15cm]{bbddsimapro.png}
-\caption{Estructura de una base de datos de SimaPro.}
-\label{fig:bbddsimapro}
+\includegraphics[angle=90,height=19cm]{fabricacion_caracterizacion.png}
+\caption{Caracterización del análisis de fabricación de 1 \si{m^2} de adoquín.}
+\label{fig:caracterizacionfabricacion}
 \end{figure}
-
-\section{Bases de datos}
-
-La calidad de los datos que aparecen en el Inventario de Ciclo de Vida (ICV) tienen gran importancia en la relevancia del estudio que se realice. En función de la base de datos utilizada el Análisis de Ciclo de Vida puede obtener resultados diferentes.
-
-La metodología de uso del software de Análisis de Ciclo de Vida consiste en utilizar una base de datos como soporte para aquellos materiales y procesos de nuestro sistema que sean similares con los de la base de datos. En caso de que no se adapten a la entrada de la base de datos será necesario modelar una nueva entrada equivalente, pudiendo usar otras entradas de la base de datos.
-
-Cuando se habla de bases de datos (BBDD) en el marco de un ACV, se pueden diferenciar, en función de los datos que contengan, dos tipos:
-\begin{itemize}
-  \item BBDD con las entradas/salidas que se emplean para simular el sistema analizado en el Inventario de Ciclo de Vida (ICV), conocidas como BBDD de ICV.
-  \item BBDD con los datos que cada metodología de Evaluación de Impacto del Ciclo de Vida (EICV) necesita para que la herramienta que llevará a cabo el EICV haga los calculos, conocidas como BBDD de metodologías.
-\end{itemize}
-
-Las bases de datos de Inventarios de Ciclo de Vida (ICVs) están formadas por datos de muy diversos materiales y procesos, normalmente agrupados según la fase del ciclo de vida a la que hagan referencia. A través de ellas se puede asignar a cada entrada/salida reflejadas en el ICV una serie de información de la base de datos que indicará la información sobre su impacto ambiental, los factores de caracterización, normalización, etc \cite{ihobecarbono}.
-
-Las bases de datos de metodologías están formadas por los factores de caracterización, ponderación y otros datos que cada metodología de EICV necesita para realizar los cálculos de obtención de resultados. Estas bases de datos recogen los datos en un formato estándar y común (ISO/TS 14048:2002), para que el software de Análisis de Ciclo de Vida pueden utilizar estos datos \cite{ihobecarbono}.
-
-SimaPro (ver sección \ref{sec:simapro}) incorpora varias bases de datos de Inventarios de Ciclo de Vida:
-\begin{itemize}
-  \item ecoinvent (2009): más de 4000 procesos en energía, transporte, materiales; incluye construcción, químicos, agricultura, etc.; unidad y procesos de sistema.
-  \item BUWAL 250 (1997): materiales generales, energía, transporte y desechos, parcialmente basada en base de datos ETH.
-  \item ETH-ESU (1996): reconocida base de datos de energía y transporte.
-  \item USA Input Output (2003): datos Entrada/Salida para los EE.UU.
-  \item Industry data (2001): datos publicados por asociaciones industriales, como APME.
-  \item Idemat (2001): base de datos holandesa, recopilada de diferentes fuentes.
-  \item Franklin (1996): base de datos generales de EE.UU. sobre materiales, transporte y energía.
-  \item Danish IO y Danish Food (2003): bases de datos de Dinamarca de Entrada/Salida y comida.
-\end{itemize}
-
-Entre las bases de datos de metodologías de Evaluación de Impactos de Ciclo de Vida, SimaPro incorpora las siguientes:
-\begin{itemize}
-  \item Efecto 2002: estimación de daños; muchas similitudes con Eco-indicador 99, pero con factores de toxicidad recalculados.
-  \item TRACI 2002: método Midpoint desarrollado por US EPA.
-  \item CML 2 baseline 2000: actualización del método de 1992, modelos re- avanzados e inclusión de análisis de destino.
-  \item EPS 2000: Estimación de daños, usando monetarización (intención de pagar) en lugar de peso por un panel. No hay necesidad de normalización en esta estimación.
-  \item Eco-indicator 99: estimación de daños; usa indicadores de categoría en el nivel final. Se incluyen tres versiones usando diferentes suposiciones en los modelos medioambientales.
-  \item Ecopoints 97 (UBP): distancia al objetivo basado en objetivos de políticas suizas (conocido también como método de escasez o UBP).
-  \item EDIP 97: método de caracterización y normalización desarrollado por EPA de Dinamarca.
-  \item Eco-indicator 95: distancia al método objeto basado en objetivos científicos e incluye estimación de daños.
-  \item CML 92: método “midpoint” (punto intermedio) bastante usado, caracterización relativamente simple, sin destino o exposición, varios sets de normalización.
-\end{itemize}
-
-\subsection{ecoinvent}\label{sec:ecoinvent}
-
-\textit{ecoinvent} implementa en una única base de datos miles de conjuntos de datos de ICVs —agricultura, energía, transporte, combustibles, biomateriales, químicos, materiales de construcción, materiales de empaquetamiento, metales elementales y preciosos, procesado de metales, informática y electrónica, tratamiento de residuos— basados en información industrial recopilada por grupos de investigación y consultores reconocidos internacionalmente \cite{website:ecoinvent}.
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=13cm]{bbddecoinvent.png}
-\caption[Estructura de la base de datos de \textit{ecoinvent}.]{Estructura de la base de datos de \textit{ecoinvent}. Fuente: \protect\cite{mgoedkoop2}.}
-\label{fig:bbddecoinvent}
+\includegraphics[height=19cm]{fabricacion_red.png}
+\caption{Red del análisis de fabricación de 1 \si{m^2} de adoquín.}
+\label{fig:redfabricacion}
 \end{figure}
 
-La base de datos \textit{ecoinvent}:
-\begin{itemize}
-  \item Incorpora más de 4000 procesos:
-  \begin{itemize}
-    \item Bienes de producción y calidades.
-    \item Para algunos procesos añade diferencias regionales (Suiza y Unión Europea).
-    \item Mix eléctrico y procesos agrícolas de Estados Unidos y Asia.
-  \end{itemize}
-  \item Incertidumbre en los datos.
-  \item Ilustraciones de la mayoría de los procesos.
-  \item Documentación extensa y consistente de los procesos.
-  \item Actualizaciones frecuentes y periódicas.
-  \item Incluye versiones de los procesos como Unidad (Proceso 1/U) —más detallado— o como Sistema (Proceso 1/S) —sin información de incertidumbre—.
-\end{itemize}
-
-\section{Metodología para Evaluación del Impacto del Ciclo de Vida}
-
-La base de datos \textit{ecoinvent} ofrece múltiples métodos para la evaluación de impactos que aplican diferentes factores —caracterización, normalización, peso y daño— a cada flujo elemental de la tabla de inventario según su implementación. Los métodos más destacables que se tendrán en cuenta en este proyecto son:
-
-\begin{itemize}
-  \item Método ReCiPe: categorías de impacto y áreas de protección del medio ambiente.
-  \item Método de Demanda de Energía Acumulada: cuantificación de energía consumida.
-  \item Método IPCC 2007: cálculo potencial del calentamiento global a lo largo del ciclo de vida.
-\end{itemize}
-
-\subsection{ReCiPe}\label{sec:recipe}
-
-El desarrollo de ReCiPe se debió al principio a integrar la metodología orientada al problema de \textit{CML-IA} y la metodología orientada al daño de \textit{Ecoindicator 99}. De esta manera, ReCiPe se convirtió en el sucesor de ambos métodos \cite{mgoedkoop3}.
-
-La metodología orientada al problema de \textit{CML-IA} define las categorías de impacto en el punto medio. La incertidumbre de los resultado en este punto es relativamente baja. El inconveniente de este sistema es la ambigüedad de las conclusiones al haber demasiadas categorías de impacto.
-
-La metogología orientada al daño de \textit{Ecoindicator 99} aborda sólo tres categorías de impacto, lo que hacer más fácil obtener conclusiones. Sin embargo, la incertidumbre de los resultados es más alta que con la otra metodología.
-
-ReCiPe implemente ambas estrategias incluyendo las categorías de impacto tanto a punto medio como a punto final. A los factores de caracterización a punto medio se les aplica un factor de daño para obtener los valores de caracterización de punto final. ReCiPe comprende un total de 21 categorías de impacto agrupadas en 2 conjuntos (ver figura ref{recipecategoriasimpacto}):
-\begin{itemize}
-\item Punto medio: 18 categorías de impacto.
-\item Punto final: 3 categorías de impacto.
-\end{itemize}
-
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=12cm]{recipecategoriasimpacto.png}
-\caption[Categorías de impacto aplicadas por ReCiPe.]{Categorías de impacto aplicadas por ReCiPe. Fuente: \protect\cite{mgoedkoop3}.}
-\label{fig:recipecategoriasimpacto}
-\end{figure}
-
-\subsection{Demanda de Energía Acumulada}
-
-Esta metodología —desarrollada a principio de los 70 debido a la crisis del petróleo— permite investigar el uso de energía a través del ciclo de vida de un producto o servicio. El análisis de la Demanda Acumulada de Energía consiste en la cuantificación tanto del uso directo como directo de energía —o consumo gris— durante todo el ciclo de vida del producto \cite{ecoinventlcia}.
-
-Los valores CED (Cumulate Energy Demand) pueden utilizarse para comparar los resultado de un estudio detallada de Análisis de Ciclo de Vida con otros donde se indica únicamente la demanda de energía. También pueden utilizarse como indicador de verificación de los datos ya que es bastante fácil juzgar en base a la Demanda de Energía Acumulada si se han cometido errores importantes o no \cite{ecoinventlcia}.
-
-Debido a que existe divergencias en los conceptos para la caracterización de las fuentes de energía primarias, los indicadores CED se dividen en ocho subcategorías para su uso con la base \textit{ecoinvent}, divididos en dos categorías base:
-
-\begin{itemize}
-  \item Fuentes no renovables: fósil, nuclear y bosque primario.
-  \item Fuentes renovables: biomasa, viento, solar, geotérmica y agua.
-\end{itemize}
-
-\subsection{IPCC 2007}
-
-El método IPCC 2007 —Intergovernmental Panel on Climate Change— es una actualización su homónimo de 2001. Este método es uno de los más empleados en la evaluación de impactos ya que realiza una caracterización de diferentes emisiones gaseosas de acuerdo a su Potencial de Calentamiento Global —Global Warming Potencial, GWP— y al conjunto de diferentes emisiones en la categoría de impacto de calentamiento global. Los valores de caracterización para las emisiones de gases de efecto invernadero se basan en los potenciales de calentamiento global publicados por el propio Grupo Intergubernamental de Expertos sobre el Cambio Climático (IPCC).
-
-Al igual que en la versión de 2001, se establecen tres horizontes temporales para mostrar los efectos de la duración en la atmósfera de los diferentes gases:
-
-\begin{itemize}
-  \item GWP 20a (20 años).
-  \item GWP 100a (100 años).
-  \item GWP 500a (500 años).
-\end{itemize}
-
-Los Potenciales de Calentamiento Global (GWPs) directos están relacionados con el impacto del dióxido de carbono (\ce{CO2}). Los GWPs son un índice para la estimación de la contribución de calentamiento global relativo debido a las emisión atmosférica de un kilogramo de un gas de efecto invernadero concreto comparado con la emisión de un kilogramo de \ce{CO2} \cite{ecoinventlcia}.

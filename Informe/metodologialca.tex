@@ -2,9 +2,10 @@
 \chapter{Metodología del Análisis de Ciclo de Vida}
 \section{Introducción}
 
-Como se ha mencionado en la sección \ref{sec:introantecedentes}, el Análisis de Ciclo de Vida de un producto incluye todos los procesos de producción y servicios relacionados con el producto durante su ciclo de vida completo, desde la extracción de las materias primas hasta su reciclaje y/o disposición final, pasando por la fabricación y los subproductos que lo forman, la instalación, el uso y mantenimiento del producto. También se pueden incluir en las diferentes etapas del ciclo de vida el almacenamiento, venta, transporte y otras actividades que se consideren relevantes.
+Como se ha mencionado en la sección \ref{sec:introantecedentes}, el Análisis de Ciclo de Vida de un producto incluye todos los procesos de producción y servicios relacionados con el producto durante su ciclo de vida completo, desde la extracción de las materias primas hasta su reciclaje y/o disposición final, pasando por la fabricación y los subproductos que lo forman, la instalación, el uso y mantenimiento del producto. También se pueden incluir en las diferentes etapas del ciclo de vida el almacenamiento, venta, transporte y otras actividades que se consideren relevantes. Si se incluyen todos las etapas anteriores, le denomina comúnmente Análisis de Ciclo de Vida ``de la cuna a la tumba''. Cuando únicamente se contempla desde que se obtienen las materias primas hasta que el producto se pone en el mercado, se le denomina ``de la cuna a la puerta''. Hay un enfoque más reciente basado en tener en cuenta que las salidas del Fin de Vida del sistema como materias primas del mismo sistema o de otro nuevo, al que se le denomina ``de la cuna a la cuna''.
 
-El Análisis de Ciclo de Vida hace distinción entre ``Entradas'' —materias primas, energía— y ``Salidas'' —emisiones a la tierra, mar o aire, desechos y subproductos (figura \ref{fig:escenariolca}).
+
+El Análisis de Ciclo de Vida hace distinción entre ``Entradas'' —materias primas, energía— y ``Salidas'' —emisiones a la tierra, mar o aire, desechos y subproductos—, como refleja la figura \ref{fig:escenariolca}.
 
 \begin{figure}[!htb]
 \centering
@@ -23,7 +24,7 @@ Según la norma UNE-EN-ISO 14040:2006, el estudio de Análisis de Ciclo de Vida 
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=12cm]{etapaslca.png}
+\includegraphics[width=12cm]{etapas_lca.png}
 \caption[Etapas del Análisis de Ciclo de Vida.]{Etapas del Análisis de Ciclo de Vida. Fuente: \protect\cite{iso14040}.}
 \label{fig:etapaslca}
 \end{figure}
@@ -32,20 +33,56 @@ Según la norma UNE-EN-ISO 14040:2006, el estudio de Análisis de Ciclo de Vida 
 En esta fase se define el objetivo y el uso previsto del estudio, al mismo tiempo que el alcance de acuerdo con los límites del sistema, la unidad funcional y los flujos dentro del ciclo de vida, la calidad exigida a los datos, y los parámetros tecnológicos y de evaluación \cite{iso14040,ihobeeco}.
 
 \subsubsection{Fase de Análisis de Inventario (ICV)}
-En esta fase se recogen los datos correspondientes a las entradas y salidas para todos los procesos del sistema de producto. Es necesario definir el ciclo de vida del producto
+En esta fase se recogen los datos correspondientes a las entradas materias primas, energía— y salidas —emisiones a la tierra, mar o aire, desechos y subproductos— para todos los procesos del sistema de producto. Durante esta fase es necesario definir completamente el ciclo de vida del producto.
+
+La realización del ICV es un proceso iterativo. A medida que se recopilan los datos y se aprende más sobre el sistema, se pueden identificar nuevos requisitos o limitaciones, que requieran cambios en los procedimientos de recopilación de datos \cite{iso14040,ihobeeco}.
 
 \subsubsection{Fase de Evaluación del Impacto Ambiental (EICV)}
-Es la fase del ACV en la que el inventario de entradas y salidas es traspasado a indicadores de potenciales impactos ambientales al medio ambiente, a la salud humana y a la disponibilidad de recursos naturales.
+En esta fase el inventario con las entradas y salidas es traspasado a indicadores de impactos ambientales potenciales al medio ambiente, a la salud humana y a la disponibilidad de recursos naturales \cite{iso14040,ihobeeco}.
+
+Es la fase del ACV dirigida a conocer y evaluar la magnitud y la significancia de los impactos ambientales potenciales de un sistema. Se emplea un método de evaluación para transformar los datos recogidos en el ICV en resultados de carácter ambiental.
+
+El EICV según la norma UNE-EN-ISO 14040:2006 tiene tres categorías obligatorias:
+
+\begin{itemize}
+  \item Selección de categorías de impacto, indicadores de categoría y modelo de caracterización: estas categorías representan los impactos ambientales de interés a los cuales se quieren asignar los resultados del EICV. Existen múltiples categorías de impacto ambiental y su elección depende del objetivo del estudio, público al que va dirigido y el nivel de exactitud de los resultados requeridos. Las principales categorías de impacto contempladas por la SETAC 1\footnote{SETAC 1: Sociedad de Toxicología y Química Ambiental creada en 1979} (desarrollados en la sección \ref{sec:impactosamb}) son: calentamiento global, consumo de recursos energéticos, reducción de la capa de ozono, eutrofización, acidificación, consumo de materias primas y formación de oxidantes fotoquímicos.
+  \item Asignación de resultados del ICV (clasificación): se asignan los datos del ICV a las categorías de impacto. Si una sustancia contribuye a varias categorías de impacto, tiene que ser considerada en todas esas categorías.
+  \item Cálculo de resultados del indicador de categoría (caracterización): una vez asignadas todas las sustancias del ICV a sus categorías de impacto ambiental (clasificación), se compara su valor con respecto a la sustancia de referencia de dicha categoría. Esto se realiza mediante los factores de caracterización de cada sustancia, que representan la contribución de una sustancia a una determinada categoría de impacto en relación a la sustancia de referencia en dicha categoría. Cada sustancia se multiplica por su correspondiente factor de caracterización para obtener valores con unidades equivalentes, que pueden sumarse posteriormente para medir la contribución de las sustancias a esa categoría de impacto.
+\end{itemize}
+
+Además de las etapas obligatorias anteriores, existen otras opcionales que pueden utilizarse dependiendo del objetivo y alcance previsto:
+
+\begin{itemize}
+  \item Normalización: conversión de los resultados de la caracterización a unidades globales neutras, dividiendo cada uno por un factor de normalización. Mediante estos factores se representa el grado de contribución de cada categoría de impacto ambiental sobre el problema medioambiental local.
+  \item Agrupación: clasificación de las categorías de impacto en otros grupos que engloben categorías de impacto con efectos similares.
+  \item Ponderación: conversión de los resultados de los valores caracterizados (o normalizados) a una unidad común y sumable, multiplicándolos por su factor de ponderación. Pueden sumarse posteriormente spara obtener una puntuación total del impacto ambiental del sistema.
+\end{itemize}
 
 \subsubsection{Fase interpretación}
-Es la fase del ACV en la que los resultados del ICV y el EICV son interpretados de acuerdo al objetivo y alcance marcados inicialmente. En esta fase se realiza un análisis de los resultados y se marcan las conclusiones.
+Es la fase del ACV en la que los resultados del ICV y el EICV son interpretados de acuerdo al objetivo y alcance marcados inicialmente. En esta fase se realiza un análisis de los resultados y se marcan las conclusiones.
+
+\subsection{Impactos ambientales en el ciclo de vida}\label{sec:impactosamb}
+
+Se define el \textit{Impacto ambiental} como cualquier cambio en el medio ambiente, adverso (negativo) o beneficioso (positivo), resultante en todo o en parte de las actividades, productos o servicios de una organización \cite{mlgceballos}.
+
+Según la SETAC 1, se pueden diferenciar los siguientes tipos de impacto \cite{ihobeeco}:
+
+\begin{itemize}
+  \item Calentamiento global: fenómeno observado en las medidas de la temperatura que muestra en promedio un aumento en la temperatura de la atmósfera terrestre y de los océanos en las últimas décadas
+  \item Consumo de recursos energéticos: energía consumida en la obtención de las materias primas, fabricación, distribución, uso y fin de vida del elemento analizado.
+  \item Reducción de la capa de ozono: ffectos negativos sobre la capacidad de protección frente a las radiaciones ultravioletas solares de la capa de ozono atmosférica.
+  \item Eutrofización: crecimiento excesivo de la población de algas originado por el enriquecimiento artificial de las aguas de ríos y embalses como consecuencia del empleo masivo de fertilizantes y detergentes que provoca un alto consumo del oxigeno del agua.
+  \item Acidificación: pérdida de la capacidad neutralizante del suelo y del agua, como consecuencia del retorno a la superficie de la tierra, en forma de ácidos, de los óxidos de azufre y nitrógeno descargados a la atmósfera
+  \item Consumo de materias primas: consumo de materiales extraídos de la naturaleza.
+  \item Formación de oxidantes fotoquímicos: formación de los precursores que dan lugar a la contaminación fotoquímica. La luz solar incide sobre dichos precursores, provocando la formación de una serie de compuestos conocidos como oxidantes fotoquímicos (el ozono-\ce{O3} es el más importante por su abundancia y toxicidad).
+\end{itemize}
 
 \subsection{Ventajas e inconvenientes del ACV}
 
 El Análisis de Ciclo de Vida es una herramienta que ofrece muchas ventajas:
 \begin{itemize}
   \item el ACV es la única herramienta que examina los impactos medioambientales de un producto y/o servicio a través de su ciclo de vida.
-  \item el ACV es un método estándar ISO, en referencia a las normas ISO 14040 e ISO 14044.
+  \item el ACV es un método estándar ISO, en referencia a las normas UNE-EN-ISO 14040:2006 y UNE-EN-ISO 14044:2006.
   \item el ACV proporciona una visualización fácil de entender de separando en etapas las fuentes de impacto.
   \item el ACV puede tanto guiar las decisiones de un fabricante (nivel microeconómico) como ayudar a un gobierno a definir una política de actuación (nivel macroeconómico).
   \item el ACV distingue entre la información relevante mediante cuantificación objetiva y los asuntos que pertenecen a políticas y elecciones sociales.
@@ -113,14 +150,14 @@ El mercado ofrece una amplia gama de programas para el Análisis de Ciclo de Vid
 
 \begin{itemize}
   \item SimaPro: ver sección \ref{sec:simapro}.
-  \item Gabi: permite esbozar ideas en su interfaz y ofrece un potente asistencia para la creación del inventario. Incorpora una base de datos propietaria que también funciona con \textit{ecoinvent}. Es compatible con los estándares ISO 14040 y bastante flexible.
+  \item Gabi: permite esbozar ideas en su interfaz y ofrece un potente asistencia para la creación del inventario. Incorpora una base de datos propietaria que también funciona con \textit{ecoinvent}. Es compatible con los estándares UNE-EN-ISO 14040:2006 y bastante flexible.
   \item Quantis Suite: facilita el acceso a personas no expertas con plantillas y asistentes. Incorpora una base de datos propia.
   \item EarthSmart: permite crear inventarios de forma rápida aunque el usuario no sea experto. Permite crear un final de vida basado en escenarios creados por expertos. Incorpora varias bases de datos como \textit{ecoinvent} y la Australian LCI database.
-  \item Eco-it: desarrollada para la Sociedad Pública de Gestión Ambiental del País Vasco (IHOBE). Realiza Análisis de Ciclo de Vida simplificado basado en la metodología ReCiPe, así como Huella de Carbono basado en valores IPCC. Es compatible con la normativa ISO 14040.
+  \item Eco-it: desarrollada para la Sociedad Pública de Gestión Ambiental del País Vasco (IHOBE). Realiza Análisis de Ciclo de Vida simplificado basado en la metodología ReCiPe, así como Huella de Carbono basado en valores IPCC. Es compatible con la normativa UNE-EN-ISO 14040:2006.
   \item openLCA: es una aplicación profesional de código abierto y gratuita para Análisis de Ciclo de Vida y Huella de Carbono creada por GreenDelta.
 \end{itemize}
 
-El paquete de software utilizado para este proyecto será SimaPro debido a la versatilidad que aporta, disponibilidad, inclusión de base de datos \textit{ecoinvent} y su compatibilidad con la norma ISO 14040.
+El paquete de software utilizado para este proyecto será SimaPro debido a la versatilidad que aporta, disponibilidad, inclusión de base de datos \textit{ecoinvent} y su compatibilidad con la norma UNE-EN-ISO 14040:2006.
 
 \subsection{SimaPro}\label{sec:simapro}
 SimaPro es una herramienta profesional desarrollada por la empresa holandesa PRé Consultants para el Análisis de Ciclo de Vida más utilizada actualmente por la mayor parte de los consultores y la industria, apoyada en la investigación de materiales y elementos por parte institutos y universidades \cite{mgoedkoop}. Permite modelar ciclos de vida complejos y analizarlos de forma sistemática y transparente, ya que puede rastrearse el origen de todos los resultados de forma sencilla.
@@ -146,7 +183,7 @@ Entre sus principales cualidades destacan:
   \item Análisis de tratamientos de residuos y escenarios de reciclado.
 \end{itemize}
 
-Esta herramienta cuenta con una interfaz de usuario intuitiva con un explorador de guía a través del Análisis de Ciclo de Vida del producto o servicio siguiendo los principios de las normas ISO 14040 y 14044. Además incorpora un modelado utilizando un asistente paso a paso.
+Esta herramienta cuenta con una interfaz de usuario intuitiva con un explorador de guía a través del Análisis de Ciclo de Vida del producto o servicio siguiendo los principios de las normas UNE-EN-ISO 14040:2006 y 14044:2006. Además incorpora un modelado utilizando un asistente paso a paso.
 
 La mayor ventaja de esta herramienta es la utilización de bases de datos con los inventarios de miles de procesos y métodos más importante de análisis de impacto.
 
@@ -226,7 +263,7 @@ La base de datos \textit{ecoinvent}:
   \item Incluye versiones de los procesos como Unidad (Proceso 1/U) —más detallado— o como Sistema (Proceso 1/S) —sin información de incertidumbre—.
 \end{itemize}
 
-\section{Metodología para Evaluación del Impacto del Ciclo de Vida}
+\section{Metodología para Evaluación del Impacto del Ciclo de Vida (EICV)}
 
 La base de datos \textit{ecoinvent} ofrece múltiples métodos para la evaluación de impactos que aplican diferentes factores —caracterización, normalización, peso y daño— a cada flujo elemental de la tabla de inventario según su implementación. Los métodos más destacables que se tendrán en cuenta en este proyecto son:
 
@@ -283,3 +320,36 @@ Al igual que en la versión de 2001, se establecen tres horizontes temporales pa
 \end{itemize}
 
 Los Potenciales de Calentamiento Global (GWPs) directos están relacionados con el impacto del dióxido de carbono (\ce{CO2}). Los GWPs son un índice para la estimación de la contribución de calentamiento global relativo debido a las emisión atmosférica de un kilogramo de un gas de efecto invernadero concreto comparado con la emisión de un kilogramo de \ce{CO2} \cite{ecoinventlcia}.
+
+\section{Categorías de impacto e indicadores de categoría}
+
+En la Evaluación del Inventario del Ciclo de Vida (EICV) se seleccionan categorías de impacto e indicadores de categoría para reflejar los asuntos ambientales relacionados con el sistema del producto bajo estudio. Los modelos de caracterización vinculan los resultados de los inventarios con los indicadores de categoría a través de factores de caracterización. El indicador de categoría es la representación cuantificable de una categoría de impacto de EICV \cite{niembro}.
+
+El indicador de categoría es la causa mesurable en una vía de impacto. El cálculo de las magnitudes de estos indicadores requiere factores de caracterización en función de modelos de caracterización \cite{mlgceballos}.
+
+Una ``categoría de impacto de punto medio'' expresa la visión de que este punto está localizado en algún lugar en el recorrido de impacto como un punto intermedio entre los resultados del Inventario de Ciclo de Vida (ICV) y el daño o punto final del recorrido. En consecuencia, un paso más podría asignar estas categorías de punto medio con una o más categorías de daños, que representan cambios en la calidad del medioambiente. Un indicador de daños es la representación cuantificada de este cambio de calidad, que en la práctica es siempre un modelo simplificado de una realidad muy compleja \cite{ecoinventlcia}.
+
+Una ``categoría de impacto de punto final'' corresponde a una zona de protección donde se forman la base de las decisiones políticas y el desarrollo sostenible. Los áreas de protección fundamentalmente son: salud humana, calidad del ecosistema, disponibilidad de recursos \cite{mlgceballos}.
+
+El método ReCiPe relaciona los datos del ICV con un número determinado de puntos medios, que a su vez se relacionarán con otro número determinado de puntos finales. El método alinea los métodos para la Evaluación de Impacto del Ciclo de Vida con orientación al punto medio con los de orientación al punto final, concretamente el método CML 2002 y el método Ecoindicator 99 \cite{unijaume}. Las relaciones alcanzadas con el método ReCiPe, así como las conexiones entre los puntos medios y los puntos finales en términos de las categorías son:
+
+\begin{itemize}
+  \item Cambio climático: CC.
+  \item Reducción de la capa de ozono: OD.
+  \item Acidificación del medio terrestre: TA.
+  \item Eutrofización del agua dulce: FE.
+  \item Eutrofización del medio marino: ME.
+  \item Toxicidad humana: HT.
+  \item Formación de oxidantes fotoquímicos: POF.
+  \item Formación de partículas: PMF.
+  \item Ecotoxicidad terrestre: TET.
+  \item Ecotoxicidad del agua dulce: FET.
+\end{itemize}
+
+Por otro lado, existen tres escenarios en el método ReCiPe (al igual que en Ecoindicator 99):
+
+\begin{itemize}
+  \item Individualista (I, Individualist): se basa en el corto plazo, las tipologias de impacto no son discutibles y el optimismo tecnológico en cuanto a la adaptación humana. Es la perspectiva más optimista.
+  \item Jerárquica (H, Hierarchist): se basa en los principios políticos más comunes en cuanto a plazo temporal y otros problemas.
+  \item Igualitaria (E, Egalitarian): es la más catastrofista, pues considera, entre otros, el largo plazo y los impactos que todavía no están plenamente identificados pero para los que existe alguna evidencia.
+\end{itemize}
