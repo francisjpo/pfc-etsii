@@ -40,74 +40,54 @@ Por otro lado, el Análisis de Ciclo de Vida tiene ciertas limitaciones:
   \item se requiere el uso de bases de datos, software especializado y personas capacitadas para poder analizar los datos.
 \end{itemize}
 
-\section{Bases de datos}
+\section{Métodos de análisis de aspectos ambientales de productos y establecimiento de prioridades}
 
-La calidad de los datos que aparecen en el Inventario de Ciclo de Vida (ICV) tienen gran importancia en la relevancia del estudio que se realice. En función de la base de datos utilizada el Análisis de Ciclo de Vida puede obtener resultados diferentes.
+Existen varios métodos —cualitativos y cuantitativos— para analizar el perfil ambiental de un producto y establecer prioridades ambientales. Todos ellos se basan en el Análisis del Ciclo de Vida, lo que significa que analizan todas las fases del ciclo de vida del producto en cuanto a los aspectos ambientales del producto en cada una.
 
-La metodología de uso del software de Análisis de Ciclo de Vida consiste en utilizar una base de datos como soporte para aquellos materiales y procesos de nuestro sistema que sean similares con los de la base de datos. En caso de que no se adapten a la entrada de la base de datos será necesario modelar una nueva entrada equivalente, pudiendo usar otras entradas de la base de datos.
-
-Cuando se habla de bases de datos (BBDD) en el marco de un ACV, se pueden diferenciar, en función de los datos que contengan, dos tipos:
+Los objetivos de estos métodos son:
 \begin{itemize}
-  \item BBDD con las entradas/salidas que se emplean para simular el sistema analizado en el Inventario de Ciclo de Vida (ICV), conocidas como BBDD de ICV.
-  \item BBDD con los datos que cada metodología de Evaluación de Impacto del Ciclo de Vida (EICV) necesita para que la herramienta que llevará a cabo el EICV haga los calculos, conocidas como BBDD de metodologías.
+  \item Obtener una perspectiva general de los principales aspectos ambientales del producto durante todo su Ciclo de Vida.
+  \item Identificar las prioridades ambientales.
 \end{itemize}
 
-Las bases de datos de Inventarios de Ciclo de Vida (ICVs) están formadas por datos de muy diversos materiales y procesos, normalmente agrupados según la fase del ciclo de vida a la que hagan referencia. A través de ellas se puede asignar a cada entrada/salida reflejadas en el ICV una serie de información de la base de datos que indicará la información sobre su impacto ambiental, los factores de caracterización, normalización, etc \cite{ihobecarbono}.
+A continuación se analizarán brevemente algunos de los métodos más interesantes: Matriz MET, Eco-indicadores y el software de Análisis de Ciclo de Vida. Éste último, debido a su importancia actual y a que son el método utilizado en este proyecto, será desarrollado con mayor amplitud en la sección \ref{sec:software}.
 
-Las bases de datos de metodologías están formadas por los factores de caracterización, ponderación y otros datos que cada metodología de EICV necesita para realizar los cálculos de obtención de resultados. Estas bases de datos recogen los datos en un formato estándar y común (ISO/TS 14048:2002), para que el software de Análisis de Ciclo de Vida pueden utilizar estos datos \cite{ihobecarbono}.
+\subsection{Matriz MET}
 
-SimaPro (ver sección \ref{sec:simapro}) incorpora varias bases de datos de Inventarios de Ciclo de Vida:
+La Matriz MET (Materiales/Energía/Toxinas) es una método cuantitativo y cualitativo con el que se obtiene una visión global de las entrada y salidas de cada etapa del Ciclo de Vida del producto. Es cuantitivo porque maneja cantidades, pero también se trata de un método cualitativo porque prioriza los aspectos ambientales y se basa en conocimientos ambientales y reglas de oro y no en cifras o resultados \cite{ihobeeco}.
+
+La Matriz MET engloba:
 \begin{itemize}
-  \item ecoinvent (2009): más de 4000 procesos en energía, transporte, materiales; incluye construcción, químicos, agricultura, etc.; unidad y procesos de sistema.
-  \item BUWAL 250 (1997): materiales generales, energía, transporte y desechos, parcialmente basada en base de datos ETH.
-  \item ETH-ESU (1996): reconocida base de datos de energía y transporte.
-  \item USA Input Output (2003): datos Entrada/Salida para los EE.UU.
-  \item Industry data (2001): datos publicados por asociaciones industriales, como APME.
-  \item Idemat (2001): base de datos holandesa, recopilada de diferentes fuentes.
-  \item Franklin (1996): base de datos generales de EE.UU. sobre materiales, transporte y energía.
-  \item Danish IO y Danish Food (2003): bases de datos de Dinamarca de Entrada/Salida y comida.
+  \item M: utilización de Materiales en cada etapa del ciclo de vida. Incluye todas las entradas (consumos) de cada una de las etapas del ciclo de vida, proporcionando una visión de cuáles son las prioritarias por su mayor cantidad, toxicidad o por ser materiales escasos.
+  \item E: utilización de Energía. Engloba el impacto de los procesos y transportes en cada una de las etapas del ciclo de vida —principalmente aquellos que consumen mucha energía—, proporcionando una visión de cuáles son los procesos o transportes de mayor impacto.
+  \item T: emisiones Tóxicas. Recoge todas las salidas producidas en el proceso —emisiones, vertidos o residuos tóxicos—, proporcionando las salidas más importantes por su toxicidad.
 \end{itemize}
 
-Entre las bases de datos de metodologías de Evaluación de Impactos de Ciclo de Vida, SimaPro incorpora las siguientes:
+El uso de la Matriz MET se recomienda:
 \begin{itemize}
-  \item Efecto 2002: estimación de daños; muchas similitudes con Eco-indicador 99, pero con factores de toxicidad recalculados.
-  \item TRACI 2002: método Midpoint desarrollado por US EPA.
-  \item CML 2 baseline 2000: actualización del método de 1992, modelos re- avanzados e inclusión de análisis de destino.
-  \item EPS 2000: Estimación de daños, usando monetarización (intención de pagar) en lugar de peso por un panel. No hay necesidad de normalización en esta estimación.
-  \item Eco-indicator 99: estimación de daños; usa indicadores de categoría en el nivel final. Se incluyen tres versiones usando diferentes suposiciones en los modelos medioambientales.
-  \item Ecopoints 97 (UBP): distancia al objetivo basado en objetivos de políticas suizas (conocido también como método de escasez o UBP).
-  \item EDIP 97: método de caracterización y normalización desarrollado por EPA de Dinamarca.
-  \item Eco-indicator 95: distancia al método objeto basado en objetivos científicos e incluye estimación de daños.
-  \item CML 92: método “midpoint” (punto intermedio) bastante usado, caracterización relativamente simple, sin destino o exposición, varios sets de normalización.
+  \item Para recopilar datos antes de utilizar los Eco-indicadores o software de Análisis de Ciclo de Vida, ya que permite organizar la información de cada etapa del ciclo de vida.
+  \item Para obtener una visión global rápida de las prioridades ambientales sin la necesidad de gran precisión.
+  \item Como método alternativo cuando no existan Eco-indicadores relevantes para los materiales o los procesos del producto.
 \end{itemize}
 
-\subsubsection{ecoinvent}
+\subsection{Eco-indicadores}
 
-\textit{ecoinvent} implementa en una única base de datos miles de conjuntos de datos de ICVs —agricultura, energía, transporte, combustibles, biomateriales, químicos, materiales de construcción, materiales de empaquetamiento, metales elementales y preciosos, procesado de metales, informática y electrónica, tratamiento de residuos— basados en información industrial recopilada por grupos de investigación y consultores reconocidos internacionalmente \cite{website:ecoinvent}.
+El Eco-indicador es una método cuantitativa de fácil manejo. Es más preciso que la Matriz MET a la hora de priorizar los principales aspectos ambientales del producto en su ciclo de vida. Es un método cuantitativo porque la priorización se basa en cálculos numéricos \cite{ihobeeco}.
 
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=13cm]{bbddecoinvent.png}
-\caption[Estructura de la base de datos de \textit{ecoinvent}.]{Estructura de la base de datos de \textit{ecoinvent}. Fuente: \protect\cite{mgoedkoop2}.}
-\label{fig:bbddecoinvent}
-\end{figure}
+Los Eco-indicadores son el resultado de un proyecto desarrollado por un equipo multidisciplinar formado por industrias punteras de diferentes sectores, científicos de centros de investigación independientes y el gobierno holandés con el objetivo de intentar conseguir evaluar el impacto ambiental que ejerce la actividad industrial sobre el medio ambiente, centrándose en el impacto sobre el ecosistema, los recursos y la salud humana a nivel europeo. Los impactos tenidos en cuenta son: el efecto invernadero, la reducción de la capa de ozono, la lluvia ácida, la disminución de los recursos naturales, la disminución de la biodiversidad y el smog fotoquímico.
 
-La base de datos \textit{ecoinvent}:
+Existen diversos métodos basados en Eco-indicadores, entre los que cabe destacar \cite{mlgceballos}:
+
 \begin{itemize}
-  \item Incorpora más de 4000 procesos:
-  \begin{itemize}
-    \item Bienes de producción y calidades.
-    \item Para algunos procesos añade diferencias regionales (Suiza y Unión Europea).
-    \item Mix eléctrico y procesos agrícolas de Estados Unidos y Asia.
-  \end{itemize}
-  \item Incertidumbre en los datos.
-  \item Ilustraciones de la mayoría de los procesos.
-  \item Documentación extensa y consistente de los procesos.
-  \item Actualizaciones frecuentes y periódicas.
-  \item Incluye versiones de los procesos como Unidad (Proceso 1/U) —más detallado— o como Sistema (Proceso 1/S) —sin información de incertidumbre—.
+  \item CML 2001: desarrollado en los Países Bajos, basado en su versión de 1992. El paso de normalización es opcional para ACVs simplificados, pero obligatorio para los exhaustivos. Las categorías de impacto ambiental son: agotamiento de los recursos abióticos, cambio climático, destrucción de capa de ozono, toxicidad humana, ecotoxicidad, smog fotoquímico, acidificación, eutrofización y uso de recursos.
+  \item ReCiPe: del mismo equipo que la metodología EICV (ver sección \ref{sec:recipe}). Las categorías de impacto ambiental son: destrucción de capa de ozono, toxicidad humana, radiación, smog fotoquímico, formación de partículas, cambio climático, ecotoxicidad del suelo, acidificación del suelo, ocupación del suelo rural, ocupación de suelo urbano, transformación suelo natural, ecotoxicidad marina, eutrofización marina y agua dulce, ecotoxicidad de agua dulce.
+  \item Ecoindicator 95: desarrollado por PRè Consultants, se basa en la existencia de una correlación entre la gravedad del efecto produccido por las emisiones y la distancia entre el nivel actual de emisiones y un nivel objetivo marcado como estándar de calidad ambiental, según un modelo de distancias al nivel objetivo.
+  \item Ecoindicator 99: considera tres categorías de daños, relacionadas directamente con el resultado del inventario: salud humana, calidad del ecosistema y agotamiento de recursos. El Ecoindicador 95 es más un indicador de emisiones mientras que el Ecoindicador 99 lo es más de combustibles fósiles.
+  \item EcoPoint: desarrollado por el Ministerio de Medioambiente de Suiza (BUWAL) en 1990, actualizado en 1997. Se basa en la distancia al objetivo que ofrece como resultado un indicador de impacto único.
+  \item EPS: desarrollado por el Instituto de Investigación Medioambiental de Suecia en 1991. Se basa en una valoración de economía ambiental, es decir, determinar el daño y su asignación monetaria, en unidades ELU (Environmental Load Unit).
 \end{itemize}
 
-\section{Software de análisis}
+\section{Software de Análisis de Ciclo de Vida}\label{sec:software}
 
 El mercado ofrece una amplia gama de programas para el Análisis de Ciclo de Vida que ofrecen diferentes tipos de prestaciones y rangos de precios. Entre ellos cabe destacar:
 
@@ -159,9 +139,74 @@ SimaPro incluye varias bases de datos de inventarios con miles de procesos, adem
 \label{fig:bbddsimapro}
 \end{figure}
 
-\section{Metodología para Evaluación del Impacto del Ciclo de Vida}
+\section{Bases de datos}
 
-XXX Comprobar título y si ecoinvent tiene recipe ipcc etc (ver su manual)
+La calidad de los datos que aparecen en el Inventario de Ciclo de Vida (ICV) tienen gran importancia en la relevancia del estudio que se realice. En función de la base de datos utilizada el Análisis de Ciclo de Vida puede obtener resultados diferentes.
+
+La metodología de uso del software de Análisis de Ciclo de Vida consiste en utilizar una base de datos como soporte para aquellos materiales y procesos de nuestro sistema que sean similares con los de la base de datos. En caso de que no se adapten a la entrada de la base de datos será necesario modelar una nueva entrada equivalente, pudiendo usar otras entradas de la base de datos.
+
+Cuando se habla de bases de datos (BBDD) en el marco de un ACV, se pueden diferenciar, en función de los datos que contengan, dos tipos:
+\begin{itemize}
+  \item BBDD con las entradas/salidas que se emplean para simular el sistema analizado en el Inventario de Ciclo de Vida (ICV), conocidas como BBDD de ICV.
+  \item BBDD con los datos que cada metodología de Evaluación de Impacto del Ciclo de Vida (EICV) necesita para que la herramienta que llevará a cabo el EICV haga los calculos, conocidas como BBDD de metodologías.
+\end{itemize}
+
+Las bases de datos de Inventarios de Ciclo de Vida (ICVs) están formadas por datos de muy diversos materiales y procesos, normalmente agrupados según la fase del ciclo de vida a la que hagan referencia. A través de ellas se puede asignar a cada entrada/salida reflejadas en el ICV una serie de información de la base de datos que indicará la información sobre su impacto ambiental, los factores de caracterización, normalización, etc \cite{ihobecarbono}.
+
+Las bases de datos de metodologías están formadas por los factores de caracterización, ponderación y otros datos que cada metodología de EICV necesita para realizar los cálculos de obtención de resultados. Estas bases de datos recogen los datos en un formato estándar y común (ISO/TS 14048:2002), para que el software de Análisis de Ciclo de Vida pueden utilizar estos datos \cite{ihobecarbono}.
+
+SimaPro (ver sección \ref{sec:simapro}) incorpora varias bases de datos de Inventarios de Ciclo de Vida:
+\begin{itemize}
+  \item ecoinvent (2009): más de 4000 procesos en energía, transporte, materiales; incluye construcción, químicos, agricultura, etc.; unidad y procesos de sistema.
+  \item BUWAL 250 (1997): materiales generales, energía, transporte y desechos, parcialmente basada en base de datos ETH.
+  \item ETH-ESU (1996): reconocida base de datos de energía y transporte.
+  \item USA Input Output (2003): datos Entrada/Salida para los EE.UU.
+  \item Industry data (2001): datos publicados por asociaciones industriales, como APME.
+  \item Idemat (2001): base de datos holandesa, recopilada de diferentes fuentes.
+  \item Franklin (1996): base de datos generales de EE.UU. sobre materiales, transporte y energía.
+  \item Danish IO y Danish Food (2003): bases de datos de Dinamarca de Entrada/Salida y comida.
+\end{itemize}
+
+Entre las bases de datos de metodologías de Evaluación de Impactos de Ciclo de Vida, SimaPro incorpora las siguientes:
+\begin{itemize}
+  \item Efecto 2002: estimación de daños; muchas similitudes con Eco-indicador 99, pero con factores de toxicidad recalculados.
+  \item TRACI 2002: método Midpoint desarrollado por US EPA.
+  \item CML 2 baseline 2000: actualización del método de 1992, modelos re- avanzados e inclusión de análisis de destino.
+  \item EPS 2000: Estimación de daños, usando monetarización (intención de pagar) en lugar de peso por un panel. No hay necesidad de normalización en esta estimación.
+  \item Eco-indicator 99: estimación de daños; usa indicadores de categoría en el nivel final. Se incluyen tres versiones usando diferentes suposiciones en los modelos medioambientales.
+  \item Ecopoints 97 (UBP): distancia al objetivo basado en objetivos de políticas suizas (conocido también como método de escasez o UBP).
+  \item EDIP 97: método de caracterización y normalización desarrollado por EPA de Dinamarca.
+  \item Eco-indicator 95: distancia al método objeto basado en objetivos científicos e incluye estimación de daños.
+  \item CML 92: método “midpoint” (punto intermedio) bastante usado, caracterización relativamente simple, sin destino o exposición, varios sets de normalización.
+\end{itemize}
+
+\subsection{ecoinvent}\label{sec:ecoinvent}
+
+\textit{ecoinvent} implementa en una única base de datos miles de conjuntos de datos de ICVs —agricultura, energía, transporte, combustibles, biomateriales, químicos, materiales de construcción, materiales de empaquetamiento, metales elementales y preciosos, procesado de metales, informática y electrónica, tratamiento de residuos— basados en información industrial recopilada por grupos de investigación y consultores reconocidos internacionalmente \cite{website:ecoinvent}.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=13cm]{bbddecoinvent.png}
+\caption[Estructura de la base de datos de \textit{ecoinvent}.]{Estructura de la base de datos de \textit{ecoinvent}. Fuente: \protect\cite{mgoedkoop2}.}
+\label{fig:bbddecoinvent}
+\end{figure}
+
+La base de datos \textit{ecoinvent}:
+\begin{itemize}
+  \item Incorpora más de 4000 procesos:
+  \begin{itemize}
+    \item Bienes de producción y calidades.
+    \item Para algunos procesos añade diferencias regionales (Suiza y Unión Europea).
+    \item Mix eléctrico y procesos agrícolas de Estados Unidos y Asia.
+  \end{itemize}
+  \item Incertidumbre en los datos.
+  \item Ilustraciones de la mayoría de los procesos.
+  \item Documentación extensa y consistente de los procesos.
+  \item Actualizaciones frecuentes y periódicas.
+  \item Incluye versiones de los procesos como Unidad (Proceso 1/U) —más detallado— o como Sistema (Proceso 1/S) —sin información de incertidumbre—.
+\end{itemize}
+
+\section{Metodología para Evaluación del Impacto del Ciclo de Vida}
 
 La base de datos \textit{ecoinvent} ofrece múltiples métodos para la evaluación de impactos que aplican diferentes factores —caracterización, normalización, peso y daño— a cada flujo elemental de la tabla de inventario según su implementación. Los métodos más destacables que se tendrán en cuenta en este proyecto son:
 
