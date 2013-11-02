@@ -24,8 +24,8 @@ Existen cinco etapas principales, de las cuales las tres primeras se agrupan en 
 
 \section{Fase de extracción de materias primas, fabricación e instalación}
 
-\subsection{Bases del modelado para la extracción de materias primas y fabricación}
-Como se ha explicado en la sección \ref{sec:unidad_funcional}, cada adoquín mide 200x100x60 \si{mm} y pesa 3 \si{kg}. Cada bandeja está formada por 25 adoquines, por lo que son necesarias 2 bandejas para tener 1 \si{m^2}, con un total de 50 adoquines/\si{m^2} (ecuación \ref{eq:masa}):
+\subsection{Bases del modelado para la extracción de materias primas y fabricación}\label{sec:basesfabricacion}
+Como se ha explicado en la sección \ref{sec:unidad_funcional}, cada adoquín mide 200x100x60 \si{mm} y tiene una masa de 3 \si{kg}. Cada bandeja está formada por 25 adoquines, por lo que son necesarias 2 bandejas para tener 1 \si{m^2}, con un total de 50 adoquines/\si{m^2} (ecuación \ref{eq:masa}):
 
 \begin{gather}
 200 mm \times 100 mm \times 25 ud/bandeja \times 2 bandeja = 1 m^2\\
@@ -1066,7 +1066,7 @@ Este proceso no se ha incluido en SimaPro ya que es un trabajo manual de un oper
 
 Los modelos de los procesos explicados anteriormente han sido introducidos en SimaPro para crear un modelo completo que represente la fase de extracción de materias primas, fabricación e instalación de un metro cuadrado de adoquín modelo Holanda 6.
 
-Aunque la mayoría de los procesos sólo ocurren una única vez, hay varios procesos que necesitan funcionar dos veces, debido a que son dos bandejas las que hay que preparar para fabricar el metro cuadrado (ver sección \ref{sec:obtenciondedatos}) o bien, como en el caso de la multiforca, porque hay una ida y una vuelta hacia la zona de curación. El listado completo de procesos se muestra en la tabla \ref{modeladocompletofabricacion}.
+Aunque la mayoría de los procesos sólo ocurren una única vez, hay varios procesos que necesitan funcionar dos veces, debido a que son dos bandejas las que hay que preparar para fabricar el metro cuadrado (ver sección \ref{sec:basesfabricacion}) o bien, como en el caso de la multiforca, porque hay una ida y una vuelta hacia la zona de curación. El listado completo de procesos se muestra en las tablas \ref{modeladocompletofabricacionmaterias} y \ref{modeladocompletofabricacionprocesos}.
 
 \begin{table}[!htp]
 \centering
@@ -1084,6 +1084,17 @@ Cemento Portland CEM I 52.5Z gris & 1 & p\\
 Capa bituminosa para base granular (zahorra) & 1 & p\\
 Árido semi-fino para lecho de arena & 1 & p\\
 Arena para sellado de juntas & 1 & p\\
+\bottomrule
+\end{tabular}
+\caption{Modelado de materias primas de la extracción, fabricación e instalación.}
+\label{modeladocompletofabricacionmaterias}
+\end{table}
+
+\begin{table}[!htp]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Extracción, fabricación e instalación de 1 \si{m^2} adoquín Holanda 6}\\
 \midrule
 Procesos & Cantidad & Unidad\\
 \midrule
@@ -1113,29 +1124,11 @@ Compactación del lecho de arena & 1 & p\\
 Sellado+vibrado del pavimento & 1 & p\\
 \bottomrule
 \end{tabular}
-\caption{Modelado completo de la extracción, fabricación e instalación.}
-\label{modeladocompletofabricacion}
+\caption{Modelado de los procesos de la extracción, fabricación e instalación.}
+\label{modeladocompletofabricacionprocesos}
 \end{table}
 
-\section{Resultados}
-
-Una vez creado el modelo completo del proceso de fabricación, SimaPro genera un análisis de los datos introducidos. El método de análisis elegido es \textit{ReCiPe Endpoint (H) V1.06 / Europe ReCipe H/A}, previamente explicado en la sección \ref{sec:recipe}.
-
-\begin{figure}[!htb]
-\centering
-\includegraphics[angle=90,height=19cm]{fabricacion_caracterizacion.png}
-\caption{Caracterización del análisis de fabricación de 1 \si{m^2} de adoquín.}
-\label{fig:caracterizacionfabricacion}
-\end{figure}
-
-\begin{figure}[!htb]
-\centering
-\includegraphics[height=19cm]{fabricacion_red.png}
-\caption{Red del análisis de fabricación de 1 \si{m^2} de adoquín.}
-\label{fig:redfabricacion}
-\end{figure}
-
-\section{Fase de uso y mantenimiento}
+\section{Fase de uso y mantenimiento}\label{sec:faseusoymantenimiento}
 
 \subsection{Introducción}
 El pavimento de adoquines puede presentar tres situaciones durante su vida útil en las que intervengan recursos adicionales para su uso y mantenimiento:
@@ -1148,7 +1141,7 @@ El pavimento de adoquines puede presentar tres situaciones durante su vida útil
 En los dos primeros casos se puede establecer un modelo debido a que existe un patrón periódico sobre el que diseñarlo. Sin embargo, el tercero no es posible establecer un modelo sencillo que prevea ese comportamiento, por lo que se procederá a idealizar el uso y mantenimiento del mismo sin roturas.
 
 \subsection{Limpieza mensual}
-Si se tiene en cuenta lo establecido en la sección \ref{sec:introduccionuso}, se riega el pavimento una vez al mes en el que se consumen 5 litros de agua por cada metro cuadrado de adoquín instalado. Para una vida útil de 30 años, serán 359 limpiezas mensuales.
+Si se tiene en cuenta lo establecido en la sección \ref{sec:consideracionesuso}, se riega el pavimento una vez al mes en el que se consumen 5 litros de agua por cada metro cuadrado de adoquín instalado. Para una vida útil de 30 años, serán 359 limpiezas mensuales.
 
 \begin{table}[!htb]
 \centering
@@ -1167,7 +1160,7 @@ Tap water, at user/RER/I U & 5 & \si{kg}\\
 
 \subsection{Sellado de juntas}
 
-Si se supone una labor de mantenimiento periódica cada 5 años de sellado de juntas, y la vida útil se considera de 30 años (sección \ref{sec:introduccionuso}), se realizarán 5 sellados de juntas en el transcurso de su vida, ya que la sexta vez sería para renovar el pavimento con nuevos adoquines.
+Si se supone una labor de mantenimiento periódica cada 5 años de sellado de juntas, y la vida útil se considera de 30 años (sección \ref{sec:consideracionesuso}), se realizarán 5 sellados de juntas en el transcurso de su vida, ya que la sexta vez sería para renovar el pavimento con nuevos adoquines.
 
 Para el cálculo se puede utilizar lo expuesto en la sección \ref{sec:selladoinstalacion}, utilizando la misma arena —arena silícea— y procedimiento de instalación —vibrado del pavimento. En este caso, se supondrá que las pérdidas de arena no van a ser del 100\% sino del 50\% de la masa inicial de arena de sellado instalada, transportada en camión una distancia de 50 \si{km}.
 
@@ -1205,9 +1198,9 @@ Diesel, burned in building machine/GLO U & 26.16 & \si{MJ}\\
 \label{modeladovibradouso}
 \end{table}
 
-\section{Modelado completo del uso y mantenimiento}
+\subsection{Modelado completo del uso y mantenimiento}
 
-Los modelos de los procesos explicados en la sección \ref{sec:modeladoprocesosusoymantenimiento} han sido introducidos en SimaPro para crear un modelo completo que represente el uso y mantenimiento de un metro cuadrado de adoquín modelo Holanda 6. El listado completo de procesos se muestra en la tabla \ref{modeladocompletousoymantenimiento}.
+Los modelos de los procesos explicados en la sección \ref{sec:faseusoymantenimiento} han sido introducidos en SimaPro para crear un modelo completo que represente el uso y mantenimiento de un metro cuadrado de adoquín modelo Holanda 6. El listado completo de procesos se muestra en la tabla \ref{modeladocompletousoymantenimiento}.
 
 \begin{table}[!htb]
 \centering
@@ -1228,3 +1221,22 @@ Sellado+vibrado del pavimento & 5 & p\\
 \caption{Modelado completo del uso y mantenimiento.}
 \label{modeladocompletousoymantenimiento}
 \end{table}
+
+\section{Fase de fin de vida}\label{sec:fasefindevida}
+
+\subsection{Introducción}
+Una vez se han creado los modelos de fabricación, instalación y uso y mantenimiento, el \textbf{final de vida} es el último paso en el ciclo de vida. Para ello es necesario desarrollar un escenario de residuos –waste scenario—. Para la mayoría de los materiales utilizados SimaPro posee datos estándar, pero será de ayuda desarrollar un escenario propio simplificado para los residuos post-uso.
+
+Como se ha podido ver en la tabla \ref{desglosemateriasprimas} de la sección \ref{sec:basesfabricacion}, el adoquín está compuesto de cuatro materiales: cemento, arena, árido y agua. Esto significa que el modelo de residuos deberá contener al menos los datos de fin de vida de estos cuatro elementos. Las características del escenario según los dispuesto en \cite{euroadoquin} son las siguientes:
+\begin{itemize}
+  \item el 95\% de los adoquines son recuperados para su reciclaje;
+  \item el 5\% son desechados en vertederos junto con otros residuos.
+\end{itemize}
+
+Ese 95\% es retirado de la zona donde fue instalado de forma manual —por lo que no se incorporará al inventario— y transportado hasta una planta de reciclaje de hormigón a una distancia supuesta de 50 \si{km} en un camión de 16—32 \si{\tonne} que cumple una normativa europea de emisiones EURO 4.
+
+El proceso de reciclado consiste en la llegada en camión a la planta de reciclaje, donde es introducido en una tolva de recepción, donde se produce un machacado para convertirlo en árido (producto evitado) \cite{monografia,gerd}.
+
+\subsection{Escenarios de residuos}
+
+COPIAR TABLAS DE SIMAPRO.
