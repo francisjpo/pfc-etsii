@@ -2,7 +2,7 @@
 \chapter{Análisis de Ciclo de Vida de un adoquín: evaluación del impacto ambiental (EICV) e interpretación}
 
 \section{Introducción}
-La norma UNE–EN-ISO 14040:2006 indica que ``la fase de EICV es para conocer y evaluar la magnitud y cuán significativos son los impactos potenciales ambientales de un sistema del producto a través de todo el ciclo de vida del producto''.
+La norma UNE–EN-ISO 14040:2006 \cite{iso14040} indica que ``la fase de EICV es para conocer y evaluar la magnitud y cuán significativos son los impactos potenciales ambientales de un sistema del producto a través de todo el ciclo de vida del producto''.
 
 En esta etapa, se utilizan los datos recopilados en la fase de Inventario ICV vistos en el capítulo \ref{cap:inventario} y se hace un enfoque relativo del impacto ambiental basado en la Unidad Funcional, convirtiendo los datos del ICV a unidades comunes, sumando posteriormente los resultados obtenidos dentro de la misma categoría de impacto, siguiendo la metodología explicada en la sección \ref{sec:metodologiaeicv}.
 
@@ -54,7 +54,8 @@ La categoría con mayor impacto es la de ``Agotamiento de recursos fósiles'', d
 \toprule
 \multicolumn{6}{c}{Categorías de impacto}\\
 \midrule
-Proceso & CC[HH] (\%) & HT (\%) & FMP (\%) & CC[Ec] (\%) & FD (\%)\\
+Proceso & CC[HH] & HT & FMP & CC[Ec] & FD\\
+ &  (\%) & (\%) & (\%) & (\%) & (\%)\\
 \midrule
 Transporte de pallets flejados hasta la zona de recogida & 23.7 & 17.1 & 23 & 23.7 & 23.5\\
 Multiforca & 16.9 & 24.2 & 18.4 & 16.9 & 17\\
@@ -80,11 +81,12 @@ Atendiendo a las categorías de daños (punto final) de la tabla \ref{categorias
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{p{6cm}p{2cm}p{2cm}p{2cm}}
+\begin{tabular}{p{6cm}rrr}
 \toprule
 \multicolumn{4}{c}{Categorías de daño}\\
 \midrule
-Proceso & Salud hum. (kPt) & Ecosistema (kPt) & Recursos (kPt)\\
+Proceso & Salud hum. & Ecosistema & Recursos\\
+ & (kPt) & (kPt) &  (kPt)\\
 \midrule
 Transporte de pallets flejados hasta la zona de recogida & 4.75 & 0.94 & 1.53\\
 Multiforca & 2 & 0.67 & 1.12\\
@@ -131,7 +133,8 @@ Al igual que en la fase de extracción de materias primas, fabricación e instal
 \toprule
 \multicolumn{6}{c}{Categorías de impacto}\\
 \midrule
-Proceso & CC[HH] (\%) & HT (\%) & FMP (\%) & CC[Ec] (\%) & FD (\%)\\
+Proceso & CC[HH] & HT & FMP & CC[Ec] & FD\\
+ &  (\%) & (\%) & (\%) & (\%) & (\%)\\
 \midrule
 Sellado y vibrado & 95.5 & 61.4 & 98.2 & 95.5 & 96.5\\
 \bottomrule
@@ -155,11 +158,12 @@ Atendiendo a las categorías de daños (punto final) de la tabla \ref{categorias
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{p{6cm}p{2cm}p{2cm}p{2cm}}
+\begin{tabular}{p{6cm}rrr}
 \toprule
 \multicolumn{4}{c}{Categorías de daño}\\
 \midrule
-Proceso & Salud hum. (kPt) & Ecosistema (kPt) & Recursos (kPt)\\
+Proceso & Salud hum. & Ecosistema & Recursos\\
+& (kPt) &  (kPt) &  (kPt)\\
 \midrule
 Vibrado y sellado & 0.59 & 0.24 & 0.50\\
 \bottomrule
@@ -170,13 +174,13 @@ Vibrado y sellado & 0.59 & 0.24 & 0.50\\
 
 \section{Evaluación del Impacto Ambiental de la fase de fin de vida}
 
-En la red de la fase de fin de vida de la figura \ref{fig:uso_red} se muestran todos los procesos interrelacionados para dar una perspectiva general de la fase.
+En la red de la fase de fin de vida de la figura \ref{fig:fdv_red} se muestran todos los procesos interrelacionados para dar una perspectiva general de la fase.
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[height=15cm]{img/fdv_red.png}
 \caption{Red de la fase de fin de vida.}
-\label{fig:uso_red}
+\label{fig:fdv_red}
 \end{figure}
 
 Cada caja gris representa un proceso y cada proceso se muestra una única vez. Las cajas azul de color azul representan ensamblajes. Las flechas representan los flujos entre procesos. Las barras rojas o termómetros indican la carga medioambiental generada en cada proceso y sus procesos aguas arriba. De esta manera se puede distinguir entre los procesos más importantes y los menos, identificando los puntos calientes.
@@ -202,7 +206,8 @@ Al igual que en las dos fases anteriores, la categoría con mayor impacto es la 
 \toprule
 \multicolumn{6}{c}{Categorías de impacto}\\
 \midrule
-Proceso & CC[HH] (\%) & HT (\%) & FMP (\%) & CC[Ec] (\%) & FD (\%)\\
+Proceso & CC[HH] & HT & FMP & CC[Ec] & FD\\
+ & (\%) & (\%) & (\%) & (\%) & (\%)\\
 \midrule
 Reciclaje de adoquín en árido & -92.6 & -92.7 & -96.7 & -92.6 & -97.6\\
 \bottomrule
@@ -226,11 +231,12 @@ Atendiendo a las categorías de daños (punto final) de la tabla \ref{categorias
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{p{6cm}p{2cm}p{2cm}p{2cm}}
+\begin{tabular}{p{6cm}rrr}
 \toprule
 \multicolumn{4}{c}{Categorías de daño}\\
 \midrule
-Proceso & Salud hum. (kPt) & Ecosistema (kPt) & Recursos (kPt)\\
+Proceso & Salud hum. & Ecosistema & Recursos\\
+ & (kPt) & (kPt) & (kPt)\\
 \midrule
 Reciclaje de adoquín en árido & -7.27 & -3.78 & -8.37\\
 \bottomrule
@@ -254,15 +260,16 @@ La categoría con mayor impacto es la de ``Agotamiento de recursos fósiles'', d
 \label{fig:compar_normalizacion}
 \end{figure}
 
-La tabla de categoría de daños \ref{categoriasdanoscompar} se puede extraer la conclusión de que la etapa que más contribuye al perfil ambiental del adoquín es
+La tabla de categoría de daños \ref{categoriasdanoscompar} se puede extraer la conclusión de que la fase que más contribuye al perfil ambiental del adoquín es la de extracción de materias primas, fabricación e instalación.
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{p{6cm}p{2cm}p{2cm}p{2cm}}
+\begin{tabular}{p{6cm}rrr}
 \toprule
 \multicolumn{4}{c}{Categorías de daño}\\
 \midrule
-Etapa & Salud hum. (kPt) & Ecosistema (kPt) & Recursos (kPt)\\
+Etapa & Salud hum. & Ecosistema & Recursos\\
+ & (kPt) & (kPt) & (kPt)\\
 \midrule
 Extracc., fabric. e instal. & 26 & 9.86 & 32.7\\
 Uso y mantenim. & 0.0016 & 0.0006 & 0.0026 \\
@@ -285,11 +292,14 @@ A continuación se realizará un análisis de con el método de cálculo de \tex
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{p{2cm}p{2cm}p{2cm}p{2cm}p{2cm}p{2cm}p{2cm}}
+\begin{tabular}{p{2cm}rrrrrr}
 \toprule
-\multicolumn{4}{c}{Tipos de energía consumidos}\\
+\multicolumn{7}{c}{Tipos de energía consumidos}\\
 \midrule
-Etapa & No renov. fósil (\%) & No renov. nuclear (\%) & No renov. biomasa (\%) & Renov. biomasa (\%) & Renov. viento, sol, geo (\%) & Renov. agua (\%)\\
+ & \multicolumn{3}{c}{No renovables} & \multicolumn{3}{c}{Renovables}\\
+\midrule
+Etapa & Fósil & Nuclear & Biom. & Biom. & Viento, sol,& Agua\\
+& (\%) & (\%) & (\%) & (\%) & geo (\%) & (\%)\\
 \midrule
 Extracc., fabric. e instal. & 83.4 0& 11.30 & 0.02 & 0.92 & 0.20 & 4.09\\
 Uso y mantenim. & 95.40 & 3.71 & 0.01 & 0.40 & 0.70 & 0.47 \\
@@ -304,9 +314,9 @@ Finalmente, se utiliza el método IPCC para el cálculo potencial del calentamie
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{p{6cm}p{2cm}p{2cm}p{2cm}}
+\begin{tabular}{p{6cm}r}
 \toprule
-\multicolumn{4}{c}{Generación de \ce{CO2}}\\
+\multicolumn{2}{c}{Generación de \ce{CO2}}\\
 \midrule
 Etapa & IPCC GWP 100a (\si{kg}\ce{CO2} eq.)\\
 \midrule
@@ -318,3 +328,5 @@ Fin de vida & -203\\
 \caption{IPCC 2007 GWP 100a: kilogramos de $CO_2$ equivalente generados en cada fase.}
 \label{co2generado}
 \end{table}
+
+
