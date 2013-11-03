@@ -1130,7 +1130,7 @@ Sellado+vibrado del pavimento & 1 & p\\
 
 \section{Fase de uso y mantenimiento}\label{sec:faseusoymantenimiento}
 
-\subsection{Introducción}
+\subsection{Bases para el modelado del uso y mantenimiento}
 El pavimento de adoquines puede presentar tres situaciones durante su vida útil en las que intervengan recursos adicionales para su uso y mantenimiento:
 \begin{itemize}
 \item limpieza.
@@ -1224,7 +1224,7 @@ Sellado+vibrado del pavimento & 5 & p\\
 
 \section{Fase de fin de vida}\label{sec:fasefindevida}
 
-\subsection{Introducción}
+\subsection{Bases para el modelado del fin de vida}
 Una vez se han creado los modelos de fabricación, instalación y uso y mantenimiento, el \textbf{final de vida} es el último paso en el ciclo de vida. Para ello es necesario desarrollar un escenario de residuos –waste scenario—. Para la mayoría de los materiales utilizados SimaPro posee datos estándar, pero será de ayuda desarrollar un escenario propio simplificado para los residuos post-uso.
 
 Como se ha podido ver en la tabla \ref{desglosemateriasprimas} de la sección \ref{sec:basesfabricacion}, el adoquín está compuesto de cuatro materiales: cemento, arena, árido y agua. Esto significa que el modelo de residuos deberá contener al menos los datos de fin de vida de estos cuatro elementos. Las características del escenario según los dispuesto en \cite{euroadoquin} son las siguientes:
@@ -1233,10 +1233,125 @@ Como se ha podido ver en la tabla \ref{desglosemateriasprimas} de la sección \r
   \item el 5\% son desechados en vertederos junto con otros residuos.
 \end{itemize}
 
-Ese 95\% es retirado de la zona donde fue instalado de forma manual —por lo que no se incorporará al inventario— y transportado hasta una planta de reciclaje de hormigón a una distancia supuesta de 50 \si{km} en un camión de 16—32 \si{\tonne} que cumple una normativa europea de emisiones EURO 4.
+\subsection{Desensamblaje de los adoquines}
 
-El proceso de reciclado consiste en la llegada en camión a la planta de reciclaje, donde es introducido en una tolva de recepción, donde se produce un machacado para convertirlo en árido (producto evitado) \cite{monografia,gerd}.
+El pavimento de adoquines es retirado normalmente de forma manual por operarios especializados. Tras mucho tiempo sometidos al tráfico rodado, suelen estar estrechamente ligados unos con otros, por lo que se procede a abrir un área inicial para acceder al lecho de árido y a partir de ahí retirar los adoquines colindantes.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Desensamblaje de los adoquines}\\
+\midrule
+Materiales/ensamblajes & Cantidad & Unidad\\
+\midrule
+T1 m2 adoquín Holanda 6 & 1 & p\\
+\midrule
+Procesos & Cantidad & Unidad\\
+\midrule
+Transport, lorry 16-32t, EURO4/RER U & 7130 & \si{kg\times km}\\
+\bottomrule
+\end{tabular}
+\caption{Modelado del desensamblaje de adoquín.}
+\label{modeladodesensamblaje}
+\end{table}
 
 \subsection{Escenarios de residuos}
 
-COPIAR TABLAS DE SIMAPRO.
+Ese 95\% es —del total de 150 \si{kg} que forman el metro cuadrado— retirado de la zona donde fue instalado de forma manual —por lo que no se incorporará al inventario— y transportado hasta una planta de reciclaje de hormigón a una distancia supuesta de 50 \si{km} en un camión de 16—32 \si{\tonne} que cumple una normativa europea de emisiones EURO 4.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Escenario de residuos para adoquín}\\
+\midrule
+Materiales/combustibles & Cantidad & Unidad\\
+\midrule
+Transport, lorry 16-32t, EURO4/RER U & 7500 & \si{kg\times km}\\
+\midrule
+Escenario de residuo/tratamiento & Porcentaje & Comentarios\\
+\midrule
+Reciclado de adoquín en áridos & 95\% & \\
+Vertedero para adoquín & 5\% & \\
+\bottomrule
+\end{tabular}
+\caption{Modelado del escenario de residuos para adoquín.}
+\label{modeladoescenarioresiduos}
+\end{table}
+
+\subsection{Tratamiento de residuos}
+\subsubsection{Reciclado de adoquín en áridos}
+El proceso de reciclje consiste en la llegada en camión a la planta de reciclaje, donde es introducido en una tolva de recepción, donde se produce un machacado para convertirlo en árido (producto evitado) \cite{monografia,gerd}.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}p{2cm}c}
+\toprule
+\multicolumn{3}{c}{Reciclado de adoquín en áridos}\\
+\midrule
+\multicolumn{3}{c}{Materiales y/o tipos de residuo separados del flujo de residuos}\\
+\midrule
+Escenario de residuo/tratamiento & Material/tipo de residuo & Porcentaje\\
+\midrule
+Reciclaje de adoquín en áridos & Concrete block, at plant/DE U & 100\%\\
+\midrule
+\multicolumn{3}{c}{Materiales y/o tipos de residuo separados del flujo de residuos}\\
+\midrule
+Escenario de residuo/tratamiento & Porcentaje & \\
+\midrule
+Disposal, building, concrete, not reinforced, to final disposal/CH U & 100\% & \\
+\bottomrule
+\end{tabular}
+\caption{Modelado del reciclado de adoquín en áridos.}
+\label{modeladorecicladoenaridos}
+\end{table}
+
+\subsubsection{Vertedero para adoquín}
+El 5\% residual de adoquines que aparece en mezclado con otros residuos urbanos en vertederos. Las causas de su aparición suelen ser excedentes abandonados de obras y pequeñas roturas de pavimentos recogidas por los servicios de limpieza.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}p{2cm}c}
+\toprule
+\multicolumn{3}{c}{Vertedero para adoquín}\\
+\midrule
+\multicolumn{3}{c}{Materiales y/o tipos de residuo separados del flujo de residuos}\\
+\midrule
+Escenario de residuo/tratamiento & Material/tipo de residuo & Porcentaje\\
+\midrule
+Vertedero de adoquines & Concrete block, at plant/DE U & 100\%\\
+\midrule
+\multicolumn{3}{c}{Materiales y/o tipos de residuo separados del flujo de residuos}\\
+\midrule
+Escenario de residuo/tratamiento & Porcentaje & \\
+\midrule
+Disposal, building, concrete, not reinforced, to final disposal/CH U & 100\% & \\
+\bottomrule
+\end{tabular}
+\caption{Modelado del vertedero para adoquín.}
+\label{modeladovertederoadoquin}
+\end{table}
+
+\subsection{Modelado completo del fin de vida}
+
+Los modelos de los procesos explicados en la sección \ref{sec:fasefindevida} han sido introducidos en SimaPro para crear un modelo completo que represente el fin de vida de un metro cuadrado de adoquín modelo Holanda 6. El listado completo de procesos se muestra en la tabla \ref{modeladocompletofindevida}.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}rc}
+\toprule
+\multicolumn{3}{c}{Fin de vida de 1 \si{m^2} adoquín Holanda 6}\\
+\midrule
+Materiales/ensamblajes & Cantidad & Unidad\\
+\midrule
+1 m2 adoquín Holanda 6 & 1 & p\\
+\midrule
+Escenarios de residuos/disposición &  & \\
+\midrule
+Escenario de residuos para adoquín &  & \\
+\bottomrule
+\end{tabular}
+\caption{Modelado completo del fin de vida.}
+\label{modeladocompletofindevida}
+\end{table}
