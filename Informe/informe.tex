@@ -38,13 +38,14 @@
 	\usepackage{lmodern}
 	\usepackage[activeacute,spanish]{babel}
 \fi
-% \setlength{\headheight}{28pt}
-% \usepackage{fancyhdr}
-% \lhead{\fancyplain{}{\itshape\nouppercase\rightmark}}
-% \rhead{}\chead{}\cfoot{}
-% \lfoot{\itshape\nouppercase Análisis de Ciclo de Vida de un adoquín}
-% \rfoot{\rmfamily\thepage}
-% \pagestyle{fancy}
+\setlength{\headheight}{15pt}
+\usepackage{fancyhdr}
+\lhead{}
+\rhead{\itshape\nouppercase\leftmark}
+\chead{}\cfoot{}
+\lfoot{\itshape\nouppercase Análisis de Ciclo de Vida de un adoquín.\ \itshape\nouppercase\thepart\ \parttitle .}
+\rfoot{\rmfamily\thepage}
+\pagestyle{fancy}
 
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
 \tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
@@ -68,9 +69,19 @@
 \renewcommand\listtablename{Índice de tablas}
 \renewcommand\tablename{Tabla}
 \renewcommand\appendixname{Anexo}
-% \let\cite\citep (bibtex-natbib)
 \nocite{*}
-% \renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\newcommand*\parttitle{}
+\let\origpart\part
+\renewcommand*{\part}[2][]{%
+   \ifx\\#1\\% optional argument not present?
+      \origpart{#2}%
+      \renewcommand*\parttitle{#2}%
+   \else
+      \origpart[#1]{#2}%
+      \renewcommand*\parttitle{#1}%
+   \fi
+}
 
 \include{portada}
 

@@ -1,5 +1,5 @@
 %!TEX root = informe.tex
-\chapter{Metodología del Análisis de Ciclo de Vida}
+\chapter{Metodología del Análisis de Ciclo de Vida}\label{cap:metodologia_acv}
 \section{Introducción}
 
 Como se ha mencionado en la sección \ref{sec:introantecedentes}, el Análisis de Ciclo de Vida de un producto incluye todos los procesos de producción y servicios relacionados con el producto durante su ciclo de vida completo, desde la extracción de las materias primas hasta su reciclaje y/o disposición final, pasando por la fabricación y los subproductos que lo forman, la instalación, el uso y mantenimiento del producto. También se pueden incluir en las diferentes etapas del ciclo de vida el almacenamiento, venta, transporte y otras actividades que se consideren relevantes. Si se incluyen todos las etapas anteriores, le denomina comúnmente Análisis de Ciclo de Vida ``de la cuna a la tumba''. Cuando únicamente se contempla desde que se obtienen las materias primas hasta que el producto se pone en el mercado, se le denomina ``de la cuna a la puerta''. Hay un enfoque más reciente basado en tener en cuenta que las salidas del Fin de Vida del sistema como materias primas del mismo sistema o de otro nuevo, al que se le denomina ``de la cuna a la cuna''.
@@ -10,7 +10,7 @@ El Análisis de Ciclo de Vida hace distinción entre ``Entradas'' —materias pr
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=12cm]{img/escenariolca.png}
-\caption[Escenario de un ACV]{Escenario de un ACV. Fuente: basado en \protect\cite{epa}.}
+\caption[Escenario de un ACV]{Escenario de un ACV. Fuente: \protect\cite{epa}.}
 \label{fig:escenariolca}
 \end{figure}
 
@@ -165,7 +165,7 @@ SimaPro es una herramienta profesional desarrollada por la empresa holandesa PR�
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=13cm]{img/simapro.png}
-\caption{Estructura de SimaPro.}
+\caption[Estructura de SimaPro]{Estructura de SimaPro. Fuente: \protect\cite{mgoedkoop2}.}
 \label{fig:simapro}
 \end{figure}
 
@@ -192,7 +192,7 @@ SimaPro incluye varias bases de datos de inventarios con miles de procesos, adem
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=15cm]{img/bbddsimapro.png}
-\caption{Estructura de una base de datos de SimaPro.}
+\caption[Estructura de una base de datos de SimaPro.]{Estructura de una base de datos de SimaPro. Fuente: \protect\cite{mgoedkoop3}.}
 \label{fig:bbddsimapro}
 \end{figure}
 
@@ -281,10 +281,10 @@ La metodología orientada al problema de \textit{CML-IA} define las categorías 
 
 La metogología orientada al daño de \textit{Ecoindicator 99} aborda sólo tres categorías de impacto, lo que hacer más fácil obtener conclusiones. Sin embargo, la incertidumbre de los resultados es más alta que con la otra metodología.
 
-ReCiPe implemente ambas estrategias incluyendo las categorías de impacto tanto a punto medio como a punto final. A los factores de caracterización a punto medio se les aplica un factor de daño para obtener los valores de caracterización de punto final. ReCiPe comprende un total de 21 categorías de impacto agrupadas en 2 conjuntos (ver figura ref{recipecategoriasimpacto}):
+ReCiPe implemente ambas estrategias incluyendo las categorías de impacto tanto a punto medio como a punto final. A los factores de caracterización a punto medio se les aplica un factor de daño para obtener los valores de caracterización de punto final. ReCiPe comprende un total de 21 categorías de impacto agrupadas en 2 conjuntos (ver figura \ref{fig:recipecategoriasimpacto}):
 \begin{itemize}
-\item Punto medio: 18 categorías de impacto.
-\item Punto final: 3 categorías de impacto.
+\item A nivel de punto medio: 18 categorías de impacto.
+\item A nivel de punto final: 3 categorías de daño.
 \end{itemize}
 
 \begin{figure}[!htb]
@@ -321,7 +321,7 @@ Al igual que en la versión de 2001, se establecen tres horizontes temporales pa
 
 Los Potenciales de Calentamiento Global (GWPs) directos están relacionados con el impacto del dióxido de carbono (\ce{CO2}). Los GWPs son un índice para la estimación de la contribución de calentamiento global relativo debido a las emisión atmosférica de un kilogramo de un gas de efecto invernadero concreto comparado con la emisión de un kilogramo de \ce{CO2} \cite{ecoinventlcia}.
 
-\section{Categorías de impacto e indicadores de categoría}
+\section{Categorías de impacto e indicadores de categoría}\label{sec:catimpactos}
 
 En la Evaluación del Inventario del Ciclo de Vida (EICV) se seleccionan categorías de impacto e indicadores de categoría para reflejar los asuntos ambientales relacionados con el sistema del producto bajo estudio. Los modelos de caracterización vinculan los resultados de los inventarios con los indicadores de categoría a través de factores de caracterización. El indicador de categoría es la representación cuantificable de una categoría de impacto de EICV \cite{niembro}.
 
@@ -355,3 +355,26 @@ Por otro lado, existen tres escenarios en el método ReCiPe (al igual que en Eco
 \end{itemize}
 
 En este proyecto se utilizará únicamente el método de análisis ReCiPe Endpoint (H) V1.06 / Europe ReCipe H/A, como método recomendado por los desarrolladores de SimaPro. En la perspectiva jerárquica (H) se asume que los daños son evitables si se realiza una buena gestión y al uso de la ponderación media (A).
+
+\section{Interpretación del ciclo de vida}
+
+La fase de interpretación de un estudio de Análisis de Ciclo de Vida comprende varios elementos \cite{iso14044}:
+\begin{itemize}
+  \item identificación de los asuntos significativos basados en los resultados de las fases del ICV y la EICV de un ACV;
+  \item una evaluación que considera las verificaciones de los análisis integridad, sensibilidad y coherencia;
+  \item conclusiones, limitaciones y recomendaciones.
+\end{itemize}
+
+\subsection{Identificación de los asuntos significativos}
+
+El objetivo es estructurar los resultados de las fases de ICV o EICV para ayudar a determinar los asuntos significativos de acuerdo con la definición del objetivo y el alcance y de forma interactiva con el elemento de evaluación con el propósito de incluir en las fases previas las implicaciones de los métodos utilizados, suposiciones hechas, etc.
+
+\subsection{Evaluación de los análisis de integridad, sensibilidad y coherencia}
+
+El objetivo generar y fortalecer la confianza y la fiabilidad en los resultados del estudio del Análisis de Ciclo de Vida, incluyendo los asuntos significativos identificados en el primer elemento de la interpretación. La evaluación debe realizarse de acuerdo con el objetivo y el alcance del estudio. Es conveniente que los resultados proporcionen una visión clara y comprensible del resultado del estudio.
+
+\subsection{Conclusiones, limitaciones y recomendaciones}
+
+El objetivo es llegar a conclusiones, identificar limitaciones y realizar recomendaciones para el público previsto del ACV.
+
+Las conclusiones se deben obtener del estudio y debería realizarse de forma iterativa con los otros elementos en la fase de interpretación del ciclo de vida.
