@@ -8,7 +8,7 @@ En esta etapa, se utilizan los datos recopilados en la fase de Inventario ICV vi
 
 En este proyecto también se desarrollarán las etapas opcionales de normalización, agrupación y ponderación de los resultados.
 
-Como se ha establecido la sección \ref{sec:categoriasimpactoseleccionadas}, para la elección de las categorías de impacto, el método ReCiPe recoge 21 categorías, de las cuales se ha seleccionado las más significativas mediante una previsualización de los resultados:
+Como se ha establecido la sección \ref{sec:categoriasimpactoseleccionadas}, para la elección de las categorías de impacto, el método ReCiPe recoge 18 categorías, de las cuales se ha seleccionado las más significativas mediante una previsualización de los resultados:
 
 \begin{itemize}
   \item Cambio climático — Salud humana (CC[HH]).
@@ -22,7 +22,7 @@ Una vez introducidos los datos del inventario para todas las fases del ciclo de 
 
 \section{Evaluación del Impacto Ambiental de la fase de extracción de materias primas, fabricación e instalación}
 
-La red de la fase de extracción de materias primas, fabricación e instalación de la figura \ref{fig:fabric_red} se muestran todos los procesos interrelacionados para dar una perspectiva general de la fase.
+La red de la fase de extracción de materias primas, fabricación e instalación de la figura \ref{fig:fabric_red} muestra todos los procesos interrelacionados para dar una perspectiva general de la fase.
 
 \begin{figure}[!htb]
 \centering
@@ -31,7 +31,7 @@ La red de la fase de extracción de materias primas, fabricación e instalación
 \label{fig:fabric_red}
 \end{figure}
 
-Cada caja gris representa un proceso y cada proceso se muestra una única vez. Las cajas azul de color azul representan ensamblajes. Las flechas representan los flujos entre procesos. Las barras rojas o termómetros indican la carga medioambiental generada en cada proceso y sus procesos aguas arriba. De esta manera se puede distinguir entre los procesos más importantes y los menos, identificando los puntos calientes.
+Cada caja representa un proceso y cada proceso se muestra una única vez. Las flechas representan los flujos entre procesos. Las barras o termómetros indican la carga medioambiental generada en cada proceso y sus procesos aguas arriba. De esta manera se puede distinguir entre los procesos más importantes y los menos, identificando los puntos calientes.
 
 De la red de la fase de extracción de materias primas, fabricación e instalación se puede obtener los transportadores de rodillo, cintas transportadoras, prensas y multiforcas son los procesos con mayor carga medioambiental de esta fase.
 
@@ -62,7 +62,7 @@ Multiforca & 16.9 & 24.2 & 18.4 & 16.9 & 17\\
 Prensado & 20.3 & 29.1 & 22.1 & 20.3 & 20.4\\
 \bottomrule
 \end{tabular}
-\caption[Categorías de impacto de la fase de extracción de materias primas, fabricación e instalación.]{Categorías de impacto de la fase de extracción de materias primas, fabricación e instalación. CC[HH]: cambio climático—salud humana, HT: toxicidad humana, FMP: formación de partículas, CC[Ec]: cambio climático—ecosistema, FD: agotamiento de recursos fósiles.}
+\caption[Categorías de impacto normalizadas de la fase de extracción de materias primas, fabricación e instalación.]{Categorías de impacto normalizadas de la fase de extracción de materias primas, fabricación e instalación. CC[HH]: cambio climático—salud humana, HT: toxicidad humana, FMP: formación de partículas, CC[Ec]: cambio climático—ecosistema, FD: agotamiento de recursos fósiles.}
 \label{categoriasimpactofabricacion}
 \end{table}
 
@@ -75,27 +75,45 @@ La puntuación única permite observar los resultados desde una perspectiva dife
 \label{fig:fabric_puntuacionunica}
 \end{figure}
 
-La figura \ref{fig:fabric_puntuacionunica} muestra las categorías de impacto a nivel de puntuación única. Los resultados son similares a los de la normalización, donde el transporte de pallets flejados hasta la zona de recogida, la multiforca y el prensado tienen la mayor puntuación.
+La figura \ref{fig:fabric_puntuacionunica} muestra las categorías de impacto a nivel de puntuación única. Los resultados son similares a los de la normalización, donde el transporte de pallets flejados hasta la zona de recogida, la multiforca y el prensado tienen la mayor puntuación (ver tabla \ref{categoriasimpactofabricacionpuntunica}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{4cm}rrrrr}
+\toprule
+\multicolumn{6}{c}{Categorías de impacto}\\
+\midrule
+Proceso & CC[HH] & HT & FMP & CC[Ec] & FD\\
+ &  (\%) & (\%) & (\%) & (\%) & (\%)\\
+\midrule
+Transporte de pallets flejados hasta la zona de recogida & 23.7 & 17.1 & 23.0 & 23.7 & 23.5\\
+Multiforca & 16.9 & 24.2 & 18.4 & 16.9 & 17.0\\
+Prensado & 20.3 & 29.1 & 22.1 & 20.3 & 20.4\\
+\bottomrule
+\end{tabular}
+\caption[Categorías de impacto a nivel de puntuación única de la fase de extracción de materias primas, fabricación e instalación.]{Categorías de impacto a nivel de puntuación única de la fase de extracción de materias primas, fabricación e instalación. CC[HH]: cambio climático—salud humana, HT: toxicidad humana, FMP: formación de partículas, CC[Ec]: cambio climático—ecosistema, FD: agotamiento de recursos fósiles.}
+\label{categoriasimpactofabricacionpuntunica}
+\end{table}
 
 Atendiendo a las categorías de daños (punto final) de la tabla \ref{categoriasdanosfabricacion}, los resultados indican que el mayor daño se produce en la salud humana.
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{p{6cm}rrr}
+\begin{tabular}{p{6cm}rrrr}
 \toprule
-\multicolumn{4}{c}{Categorías de daño}\\
+\multicolumn{5}{c}{Categorías de daño}\\
 \midrule
-Proceso & Salud hum. & Ecosistema & Recursos\\
- & (kPt) & (kPt) &  (kPt)\\
+Proceso & Salud hum. & Ecosistema & Recursos & Total\\
+ & (Pt) & (Pt) &  (Pt) & (Pt)\\
 \midrule
-Transporte de pallets flejados hasta la zona de recogida & 4.75 & 0.94 & 1.53\\
-Multiforca & 2 & 0.67 & 1.12\\
-Prensado & 2.4 & 0.80 & 1.35\\
+Transporte de pallets flejados hasta la zona de recogida & 2270 & 942 & 1530 & 4750\\
+Multiforca & 2000 & 666 & 1120 & 3790\\
+Prensado & 2400 & 799 & 1350 & 4550\\
 \midrule
-Total (kPt) & 9.15 & 2.41 & 4.00\\
+Total (Pt) & 6670 & 2407 & 4000 & \textbf{13090}\\
 \bottomrule
 \end{tabular}
-\caption{Categorías de daños de la fase de extracción de materias primas, fabricación e instalación.}
+\caption{Puntuación única por categorías de daños de la fase de extracción de materias primas, fabricación e instalación.}
 \label{categoriasdanosfabricacion}
 \end{table}
 
@@ -110,7 +128,7 @@ La red de la fase de uso y mantenimiento de la figura \ref{fig:uso_red} muestra 
 \label{fig:uso_red}
 \end{figure}
 
-Cada caja gris representa un proceso y cada proceso se muestra una única vez. Las cajas azul de color azul representan ensamblajes. Las flechas representan los flujos entre procesos. Las barras rojas o termómetros indican la carga medioambiental generada en cada proceso y sus procesos aguas arriba. De esta manera se puede distinguir entre los procesos más importantes y los menos, identificando los puntos calientes.
+Cada caja representa un proceso y cada proceso se muestra una única vez. Las flechas representan los flujos entre procesos. Las barras o termómetros indican la carga medioambiental generada en cada proceso y sus procesos aguas arriba. De esta manera se puede distinguir entre los procesos más importantes y los menos, identificando los puntos calientes.
 
 Como era de esperar, en la red de la fase de uso y mantenimiento el proceso con mayor carga ambiental es el sellado y vibrado del pavimento.
 
@@ -136,10 +154,11 @@ Al igual que en la fase de extracción de materias primas, fabricación e instal
 Proceso & CC[HH] & HT & FMP & CC[Ec] & FD\\
  &  (\%) & (\%) & (\%) & (\%) & (\%)\\
 \midrule
+Limpieza & 4.54 & 38.6 & 1.75 & 4.54 & 3.48\\
 Sellado y vibrado & 95.5 & 61.4 & 98.2 & 95.5 & 96.5\\
 \bottomrule
 \end{tabular}
-\caption[Categorías de impacto de la fase de uso y mantenimiento.]{Categorías de impacto de la fase de uso y mantenimiento. CC[HH]: cambio climático—salud humana, HT: toxicidad humana, FMP: formación de partículas, CC[Ec]: cambio climático—ecosistema, FD: agotamiento de recursos fósiles.}
+\caption[Categorías de impacto normalizadas de la fase de uso y mantenimiento.]{Categorías de impacto normalizadas de la fase de uso y mantenimiento. CC[HH]: cambio climático—salud humana, HT: toxicidad humana, FMP: formación de partículas, CC[Ec]: cambio climático—ecosistema, FD: agotamiento de recursos fósiles.}
 \label{categoriasimpactouso}
 \end{table}
 
@@ -152,23 +171,43 @@ La puntuación única permite observar los resultados desde una perspectiva dife
 \label{fig:uso_puntuacionunica}
 \end{figure}
 
-La figura \ref{fig:uso_puntuacionunica} muestra las categorías de impacto a nivel de puntuación única. Los resultados son similares a los de la normalización. El proceso de sellado y vibrado del pavimento afecta principalmente a las categorías de agotamiento de recursos fósiles y al cambio climático desde el punto de vista de la salud humana. En menor medida afecta al cambio climática visto desde el ecosistema y a la formación de partículas.
+La figura \ref{fig:uso_puntuacionunica} muestra las categorías de impacto a nivel de puntuación única. Los resultados son similares a los de la normalización. El proceso de sellado y vibrado del pavimento afecta principalmente a las categorías de agotamiento de recursos fósiles y al cambio climático desde el punto de vista de la salud humana. En menor medida afecta al cambio climática visto desde el ecosistema y a la formación de partículas (ver tabla \ref{categoriasimpactousopuntunica}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{4cm}rrrrr}
+\toprule
+\multicolumn{6}{c}{Categorías de impacto}\\
+\midrule
+Proceso & CC[HH] & HT & FMP & CC[Ec] & FD\\
+ &  (\%) & (\%) & (\%) & (\%) & (\%)\\
+\midrule
+Limpieza & 4.5 & 38.6 & 1.8 & 4.5 & 3.5\\
+Sellado y vibrado & 95.5 & 61.4 & 98.2 & 95.5 & 96.5\\
+\bottomrule
+\end{tabular}
+\caption[Categorías de impacto a nivel de puntuación única de la fase de uso y mantenimiento.]{Categorías de impacto a nivel de puntuación única de la fase de uso y mantenimiento. CC[HH]: cambio climático—salud humana, HT: toxicidad humana, FMP: formación de partículas, CC[Ec]: cambio climático—ecosistema, FD: agotamiento de recursos fósiles.}
+\label{categoriasimpactousopuntunica}
+\end{table}
 
 Atendiendo a las categorías de daños (punto final) de la tabla \ref{categoriasdanosuso}, los resultados indican que el mayor daño se produce en la salud humana.
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{p{6cm}rrr}
+\begin{tabular}{p{6cm}rrrr}
 \toprule
-\multicolumn{4}{c}{Categorías de daño}\\
+\multicolumn{5}{c}{Categorías de daño}\\
 \midrule
-Proceso & Salud hum. & Ecosistema & Recursos\\
-& (kPt) &  (kPt) &  (kPt)\\
+Proceso & Salud hum. & Ecosistema & Recursos & Total\\
+ & (Pt) & (Pt) &  (Pt) & (Pt)\\
 \midrule
-Vibrado y sellado & 0.59 & 0.24 & 0.50\\
+Limpieza & 0.0262 & 0.0134 & 0.5940 & 0.0577\\
+Sellado y vibrado & 0.5940 & 0.2400 & 0.5040 & 1.3400\\
+\midrule
+Total (Pt) & 0.6202 & 0.2534 & 1.098 & \textbf{1.3977}\\
 \bottomrule
 \end{tabular}
-\caption{Categorías de daños de la fase de uso y mantenimiento.}
+\caption{Puntuación única por categorías de daños de la fase de uso y mantenimiento.}
 \label{categoriasdanosuso}
 \end{table}
 
@@ -183,7 +222,7 @@ En la red de la fase de fin de vida de la figura \ref{fig:fdv_red} se muestran t
 \label{fig:fdv_red}
 \end{figure}
 
-Cada caja gris representa un proceso y cada proceso se muestra una única vez. Las cajas azul de color azul representan ensamblajes. Las flechas representan los flujos entre procesos. Las barras rojas o termómetros indican la carga medioambiental generada en cada proceso y sus procesos aguas arriba. De esta manera se puede distinguir entre los procesos más importantes y los menos, identificando los puntos calientes.
+Cada caja representa un proceso y cada proceso se muestra una única vez. Las flechas representan los flujos entre procesos. Las barras o termómetros indican la carga medioambiental generada en cada proceso y sus procesos aguas arriba. De esta manera se puede distinguir entre los procesos más importantes y los menos, identificando los puntos calientes.
 
 En la red de la fase de fin de vida el proceso con mayor carga ambiental es el reciclaje del adoquín en árido, como era de esperar.
 
@@ -209,10 +248,11 @@ A diferencia de las dos fases anteriores, se produce un beneficio, principalment
 Proceso & CC[HH] & HT & FMP & CC[Ec] & FD\\
  & (\%) & (\%) & (\%) & (\%) & (\%)\\
 \midrule
+Vertedero & 7.38 & 7.31 & 3.25 & 7.38 & 2.39\\
 Reciclaje de adoquín en árido & -92.6 & -92.7 & -96.7 & -92.6 & -97.6\\
 \bottomrule
 \end{tabular}
-\caption[Categorías de impacto de la fase de fin de vida.]{Categorías de impacto de la fase de fin de vida. CC[HH]: cambio climático—salud humana, HT: toxicidad humana, FMP: formación de partículas, CC[Ec]: cambio climático—ecosistema, FD: agotamiento de recursos fósiles.}
+\caption[Categorías de impacto normalizadas de la fase de fin de vida.]{Categorías de impacto normalizadas de la fase de fin de vida. CC[HH]: cambio climático—salud humana, HT: toxicidad humana, FMP: formación de partículas, CC[Ec]: cambio climático—ecosistema, FD: agotamiento de recursos fósiles.}
 \label{categoriasimpactofdv}
 \end{table}
 
@@ -225,61 +265,168 @@ La puntuación única permite observar los resultados desde una perspectiva dife
 \label{fig:fdv_puntuacionunica}
 \end{figure}
 
-La figura \ref{fig:fdv_puntuacionunica} muestra las categorías de impacto a nivel de puntuación única. Los resultados son coherentes con los de la normalización. El proceso de reciclaje de adoquín en áridos aporta un beneficio principalmente a las categorías de agotamiento de recursos fósiles y al cambio climático desde el punto de vista de la salud humana. También beneficia, en menor proporción, al cambio climática visto desde el ecosistema y a la formación de partículas.
+La figura \ref{fig:fdv_puntuacionunica} muestra las categorías de impacto a nivel de puntuación única. Los resultados son coherentes con los de la normalización. El proceso de reciclaje de adoquín en áridos aporta un beneficio principalmente a las categorías de agotamiento de recursos fósiles y al cambio climático desde el punto de vista de la salud humana. También beneficia, en menor proporción, al cambio climática visto desde el ecosistema y a la formación de partículas (ver tabla \ref{categoriasimpactofdvpuntunica}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{4cm}rrrrr}
+\toprule
+\multicolumn{6}{c}{Categorías de impacto}\\
+\midrule
+Proceso & CC[HH] & HT & FMP & CC[Ec] & FD\\
+ &  (\%) & (\%) & (\%) & (\%) & (\%)\\
+\midrule
+Vertedero & 7.38 & 7.31 & 3.25 & 7.38 & 2.39\\
+Reciclaje de adoquín en árido & 92.62 & 92.69 & 96.75 & 92.62 & 97.61\\
+\bottomrule
+\end{tabular}
+\caption[Categorías de impacto a nivel de puntuación única de la fase de fin de vida.]{Categorías de impacto a nivel de puntuación única de la fase de fin de vida. CC[HH]: cambio climático—salud humana, HT: toxicidad humana, FMP: formación de partículas, CC[Ec]: cambio climático—ecosistema, FD: agotamiento de recursos fósiles.}
+\label{categoriasimpactofdvpuntunica}
+\end{table}
 
 Atendiendo a las categorías de daños (punto final) de la tabla \ref{categoriasdanosfdv}, los resultados indican que el mayor beneficio se produce en los recursos.
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{p{6cm}rrr}
+\begin{tabular}{p{6cm}rrrr}
 \toprule
-\multicolumn{4}{c}{Categorías de daño}\\
+\multicolumn{5}{c}{Categorías de daño}\\
 \midrule
-Proceso & Salud hum. & Ecosistema & Recursos\\
- & (kPt) & (kPt) & (kPt)\\
+Proceso & Salud hum. & Ecosistema & Recursos & Total\\
+ & (Pt) & (Pt) & (Pt) & (Pt)\\
 \midrule
-Reciclaje de adoquín en árido & -7.27 & -3.78 & -8.37\\
+Vertedero & 0.499 & 0.293 & 0.205 & 0.997\\
+Reciclaje de adoquín en árido & -7.27 & -3.78 & -8.37 & -19.4\\
+\midrule
+Total (Pt) & -6.771 & -3.487 & -8.165 & \textbf{-18.403}\\
 \bottomrule
 \end{tabular}
 \caption{Categorías de daños de la fase de fin de vida.}
 \label{categoriasdanosfdv}
 \end{table}
 
-\section{Evaluación del Impacto Ambiental de todas las fases del ciclo de vida}
+\section{Evaluación del Impacto Ambiental del ciclo de vida completo}
 
-% Una vez estudiadas las tres fases del ciclo de vida por separado es interesante hacer una comparación entre las tres etapas.
+Una vez estudiadas las tres fases del ciclo de vida se procederá a realizar un análisis completo del producto a lo largo de las tres fases anteriores de su ciclo de vida.
 
 A priori, observando los resultados ya obtenidos en las tablas de categorías de impacto \ref{categoriasimpactofabricacion}, \ref{categoriasimpactouso} y \ref{categoriasimpactofdv}, se puede asegurar que las etapas de uso y mantenimiento y fin de vida apenas tienen consecuencias comparadas con la de extracción de materias primas, fabricación e instalación. Esto puede ratificar las características que tienen los pavimentos de adoquín (sección \ref{sec:ventajas}, donde el coste de fabricación es mayor, pero el mantenimiento y su reutilización hacen que sea una opción muy recomendable a largo plazo.
 
-La categoría con mayor impacto es la de ``Agotamiento de recursos fósiles'', donde la fase que predomina es la de extracción de materias primas, fabricación e instalación en todas las categorías de impacto (ver figura \ref{fig:compar_normalizacion}).
+La red del ciclo de vida completo de la figura \ref{fig:completo_red} muestra los procesos más significativos del ciclo de vida interrelacionados para dar una perspectiva general de la fase.
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=15cm]{img/compar_normalizacion.png}
-\caption{Cuantificación de los impactos normalizados por fases.}
-\label{fig:compar_normalizacion}
+\includegraphics[height=15cm]{img/completo_red.png}
+\caption{Red del ciclo de vida completo.}
+\label{fig:completo_red}
 \end{figure}
 
-La tabla de categoría de daños \ref{categoriasdanoscompar} se puede extraer la conclusión de que la fase que más contribuye al perfil ambiental del adoquín es la de extracción de materias primas, fabricación e instalación. La fase de uso y mantenimiento es despreciable. Por último, la fase de fin de vida aunque contribuye mínimamente, es necesaria tenerla en cuenta para cumplir con la Directiva Europea 1999/31/CE relativa al vertido de residuos.
+Cada caja representa un proceso y cada proceso se muestra una única vez. Las flechas representan los flujos entre procesos. Las barras o termómetros indican la carga medioambiental generada en cada proceso y sus procesos aguas arriba. De esta manera se puede distinguir entre los procesos más importantes y los menos, identificando los puntos calientes.
+
+La caracterización del análisis de impacto muestra todas las categorías de impacto. Cada una de ellas tiene una unidad de medida diferente, por lo que se representan gráficamente de forma porcentual. Para tener una visión más clara de los impactos relevantes de la fase, es mejor recurrir a la normalización donde las diferentes puntuaciones de los impactos caracterizados se relativizan a una referencia común.
+
+La figura \ref{fig:completo_normalizacion} y la tabla \ref{categoriasimpactocompleto} muestran las categorías de impacto relevantes de esta fase.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=15cm]{img/completo_normalizacion.png}
+\caption{Cuantificación de los impactos normalizados del ciclo de vida completo.}
+\label{fig:completo_normalizacion}
+\end{figure}
+
+La categoría con mayor impacto es la de ``Agotamiento de recursos fósiles'', donde la fase que predomina es la de extracción de materias primas, fabricación e instalación en todas las categorías de impacto (ver figura \ref{fig:completo_normalizacion}).
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{p{6cm}rrr}
+\begin{tabular}{p{4cm}rrrrr}
 \toprule
-\multicolumn{4}{c}{Categorías de daño}\\
+\multicolumn{6}{c}{Categorías de impacto}\\
 \midrule
-Etapa & Salud hum. & Ecosistema & Recursos\\
- & (kPt) & (kPt) & (kPt)\\
+Proceso & CC[HH] & HT & FMP & CC[Ec] & FD\\
+ &  (\%) & (\%) & (\%) & (\%) & (\%)\\
 \midrule
-Extracc., fabric. e instal. & 26 & 9.86 & 32.7\\
-Uso y mantenim. & 0.0016 & 0.0006 & 0.0026 \\
-Fin de vida & -0.019 & -0.01 & -0.04 \\
+Extracc., fabric. e instal. & 99.9 & 100 & 99.9 & 99.9 & 99.9\\
+Uso y mantenim. & 0.007 & 0.001 & 0.008 & 0.007 & 0.008\\
+Fin de vida & -0.119 & -0.013 & -0.059 & -0.119 & -0.134\\
 \bottomrule
 \end{tabular}
-\caption{Categorías de daños de la comparación entre fases.}
-\label{categoriasdanoscompar}
+\caption[Categorías de impacto normalizadas del ciclo de vida completo..]{Categorías de impacto normalizadas del ciclo de vida completo. CC[HH]: cambio climático—salud humana, HT: toxicidad humana, FMP: formación de partículas, CC[Ec]: cambio climático—ecosistema, FD: agotamiento de recursos fósiles.}
+\label{categoriasimpactocompleto}
 \end{table}
 
+Los datos ponderados de la tabla \ref{categoriasimpactocompletoponderados} indican resultados similares a la normalización.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{4cm}rrrrr}
+\toprule
+\multicolumn{6}{c}{Categorías de impacto}\\
+\midrule
+Proceso & CC[HH] & HT & FMP & CC[Ec] & FD\\
+ &  (\%) & (\%) & (\%) & (\%) & (\%)\\
+\midrule
+Extracc., fabric. e instal. & 99.9 & 100 & 99.9 & 99.9 & 99.9\\
+Uso y mantenim. & 0.007 & 0.001 & 0.008 & 0.007 & 0.008\\
+Fin de vida & -0.119 & -0.013 & -0.059 & -0.119 & -0.134\\
+\bottomrule
+\end{tabular}
+\caption[Categorías de impacto ponderadas del ciclo de vida completo..]{Categorías de impacto ponderadas del ciclo de vida completo. CC[HH]: cambio climático—salud humana, HT: toxicidad humana, FMP: formación de partículas, CC[Ec]: cambio climático—ecosistema, FD: agotamiento de recursos fósiles.}
+\label{categoriasimpactocompletoponderados}
+\end{table}
+
+La puntuación única permite observar los resultados desde una perspectiva diferente. Esta opción agrupa las categorías de impacto aplicando una serie de puntos a cada una, representando finalmente todas las categorías de impacto usando una misma unidad, el kilopunto (\textit{kiloPoint}, kPt). La carga ambiental será mayor cuanto más kPt tenga.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=15cm]{img/completo_puntuacionunica.png}
+\caption{Cuantificación de los impactos a nivel de puntuación única del ciclo de vida completo.}
+\label{fig:completo_puntuacionunica}
+\end{figure}
+
+La figura \ref{fig:completo_puntuacionunica} muestra las categorías de impacto a nivel de puntuación única. Los resultados son similares a los de la normalización, donde la fase de extracción de materias primas, fabricación e instalación tiene la mayor puntuación (ver tabla \ref{categoriasimpactocompletopuntunica}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{4cm}rrrrr}
+\toprule
+\multicolumn{6}{c}{Categorías de impacto}\\
+\midrule
+Proceso & CC[HH] & HT & FMP & CC[Ec] & FD\\
+ &  (\%) & (\%) & (\%) & (\%) & (\%)\\
+\midrule
+Extracc., fabric. e instal. & 99.9 & 100 & 99.9 & 99.9 & 99.9\\
+Uso y mantenim. & 0.007 & 0.001 & 0.008 & 0.007 & 0.008\\
+Fin de vida & -0.119 & -0.013 & -0.059 & -0.119 & -0.134\\
+\bottomrule
+\end{tabular}
+\caption[Categorías de impacto a nivel de puntuación única del ciclo de vida completo.]{Categorías de impacto a nivel de puntuación única del ciclo de vida completo. CC[HH]: cambio climático—salud humana, HT: toxicidad humana, FMP: formación de partículas, CC[Ec]: cambio climático—ecosistema, FD: agotamiento de recursos fósiles.}
+\label{categoriasimpactocompletopuntunica}
+\end{table}
+
+Atendiendo a las categorías de daños (punto final) de la tabla \ref{categoriasdanoscompleto}, los resultados indican que el mayor daño se produce en la salud humana.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{6cm}rrrr}
+\toprule
+\multicolumn{5}{c}{Categorías de daño}\\
+\midrule
+Proceso & Salud hum. & Ecosistema & Recursos & Total\\
+ & (Pt) & (Pt) &  (Pt) & (Pt)\\
+\midrule
+Extracc., fabric. e instal. & 10400 & 3940 & 6540 & 20900\\
+Uso y mantenim. & 0.622 & 0.254 & 0.524 & 1.4\\
+Fin de vida & -7.77 & -4.07 & -8.57 & -20.4\\
+\midrule
+Total (Pt) & 10392.85 & 3936.18 & 6531.95 & \textbf{20881}\\
+\bottomrule
+\end{tabular}
+\caption{Puntuación única por categorías de daños del ciclo de vida completo.}
+\label{categoriasdanoscompleto}
+\end{table}
+
+De las tablas \ref{categoriasimpactocompleto}, \ref{categoriasimpactocompletoponderados} y \ref{categoriasimpactocompletopuntunica} se puede extraer la conclusión de que la fase que más contribuye al perfil ambiental del adoquín es la de extracción de materias primas, fabricación e instalación. La fase de uso y mantenimiento es despreciable. Por último, la fase de fin de vida aunque contribuye mínimamente, es necesaria tenerla en cuenta para cumplir con la Directiva Europea 1999/31/CE relativa al vertido de residuos.
+
+\subsection{Demanda de Energía Acumulada}
 A continuación se realizará un análisis de con el método de cálculo de \textbf{Demanda de Energía Acumulada} para conocer la energía que se consume en cada etapa. La figura \ref{fig:ced_puntuacionunica} y la tabla \ref{tiposenergiaced} muestran que existe el mayor consumo de energía se produce en la fase de extracción de materias primas, fabricación e instalación, y el tipo de energía consumida es fósil no renovable, un 83.4\% en esa fase. Las energías nuclear y renovables representan un 11.3\% y un 5.2\% respectivamente. Por tanto, es esta fase donde hay que mejorar el consumo y por tanto su perfil ambiental.
 
 
@@ -310,19 +457,23 @@ Fin de vida & -92.40 & -6.23 & -0.01 & -0.19 & -0.05 & -1.14 \\
 \label{tiposenergiaced}
 \end{table}
 
-Finalmente, se utiliza el método IPCC para el cálculo potencial del calentamiento global a lo largo del ciclo de vida. Se aplicará un horizonte temporal a 100 años (GWP 100a) para conocer los kilogramos de \ce{CO2} equivalentes que genera el producto en base a su Unidad Funcional (ver tabla.
+\subsection{Cálculo del Potencial de Calentamiento Global}
+Finalmente, se utiliza el método IPCC para el cálculo potencial del calentamiento global a lo largo del ciclo de vida. Se aplicará un horizonte temporal a 100 años (GWP 100a) para conocer los kilogramos de \ce{CO2} equivalentes que genera el producto en base a su Unidad Funcional (ver tabla \ref{co2generado}).
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{p{6cm}r}
+\begin{tabular}{p{6cm}rr}
 \toprule
-\multicolumn{2}{c}{Generación de \ce{CO2}}\\
+\multicolumn{3}{c}{Generación de \ce{CO2}}\\
 \midrule
-Etapa & IPCC GWP 100a (\si{kg}\ce{CO2} eq.)\\
+Etapa & IPCC GWP 100a & IPCC GWP 100a\\
+ & (\si{kg}\ce{CO2} eq.) & (\%)\\
 \midrule
-Extracc., fabric. e instal. & 1.7E5\\
-Uso y mantenim. & 12.5\\
-Fin de vida & -203\\
+Extracc., fabric. e instal. & 1.7E5 & 99.87\\
+Uso y mantenim. & 12.5 & 0.007\\
+Fin de vida & -203 & -0.12\\
+\midrule
+Total (\si{kg}\ce{CO2} eq.) & \textbf{169809} & \\
 \bottomrule
 \end{tabular}
 \caption{IPCC 2007 GWP 100a: kilogramos de $CO_2$ equivalente generados en cada fase.}

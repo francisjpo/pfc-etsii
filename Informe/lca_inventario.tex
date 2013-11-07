@@ -11,7 +11,7 @@ Como se ha mencionado en la sección \ref{sec:etapaslca}, el Inventario del Cicl
   \item otros aspectos ambientales.
 \end{itemize}
 
-Los datos para cada unidad de proceso del sistema del producto se obtienen bien de la industria o bien de bases de datos. En este caso se ha utilizado la base de datos \textit{ecoinvent} v.2.1 (desarrollada en la sección \ref{sec:ecoinvent}).
+Los datos para cada unidad de proceso del sistema del producto se obtienen bien de la industria o bien de bases de datos. En este caso se ha utilizado la base de datos \textit{ecoinvent} v2.2 (explicada en la sección \ref{sec:ecoinvent}).
 
 Existen cinco etapas principales, de las cuales las tres primeras se agrupan en la etapa de fabricación:
 \begin{itemize}
@@ -25,10 +25,10 @@ Existen cinco etapas principales, de las cuales las tres primeras se agrupan en 
 \section{Fase de extracción de materias primas, fabricación e instalación}
 
 \subsection{Bases del modelado para la extracción de materias primas y fabricación}\label{sec:basesfabricacion}
-Como se ha explicado en la sección \ref{sec:unidad_funcional}, cada adoquín mide 200x100x60 \si{mm} y tiene una masa de 3 \si{kg}. Cada bandeja está formada por 25 adoquines, por lo que son necesarias 2 bandejas para tener 1 \si{m^2}, con un total de 50 adoquines/\si{m^2} (ecuación \ref{eq:masa}):
+Cada adoquín mide 200x100x60 \si{mm} y tiene una masa de 3 \si{kg}. Cada bandeja está formada por 25 adoquines, por lo que son necesarias 2 bandejas para tener la \textit{Unidad funcional} de 1 \si{m^2}, con un total de 50 adoquines/\si{m^2} (ecuación \ref{eq:masa}):
 
 \begin{gather}
-200 mm \times 100 mm \times 25 ud/bandeja \times 2 bandeja = 1 m^2\\
+200 mm \times 100 mm \times 25\ ud/bandeja \times 2\ bandejas = 1 m^2\\
 3 kg/ud \times 50 ud/m^2 = 150 kg/m^2 \text{ de masa para adoquín}\label{eq:masa}
 \end{gather}
 
@@ -202,7 +202,7 @@ Electricity, at cogen with biogas engine, allocation exergy/CH U & 0.0146 & \si{
 Electricity, production mix FR/FR U & 0.0056 & \si{kWh}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del mix eléctrico español en 2013.}
+\caption[Modelado del mix eléctrico español en 2013.]{Modelado del mix eléctrico español en 2013. Fuente: \cite{mlgceballos}.}
 \label{modeladomixelectrico}
 \end{table}
 
@@ -1225,7 +1225,7 @@ Sellado+vibrado del pavimento & 5 & p\\
 \section{Fase de fin de vida}\label{sec:fasefindevida}
 
 \subsection{Bases para el modelado del fin de vida}
-Una vez se han creado los modelos de fabricación, instalación y uso y mantenimiento, el \textbf{final de vida} es el último paso en el ciclo de vida. Para ello es necesario desarrollar un escenario de residuos –waste scenario—. Para la mayoría de los materiales utilizados SimaPro posee datos estándar, pero será de ayuda desarrollar un escenario propio simplificado para los residuos post-uso.
+Una vez se han creado los modelos de fabricación, instalación y uso y mantenimiento, el \textbf{final de vida} es el último paso en el ciclo de vida. Para ello es necesario desarrollar un escenario de residuos –waste scenario—. SimaPro ofrece datos estándar para la mayoría de los materiales usados mediante sus bases de datos, pero será de ayuda desarrollar un escenario propio simplificado para los residuos post-uso.
 
 Como se ha podido ver en la tabla \ref{desglosemateriasprimas} de la sección \ref{sec:basesfabricacion}, el adoquín está compuesto de cuatro materiales: cemento, arena, árido y agua. Esto significa que el modelo de residuos deberá contener al menos los datos de fin de vida de estos cuatro elementos. Las características del escenario según los dispuesto en \cite{euroadoquin} son las siguientes:
 \begin{itemize}
@@ -1347,9 +1347,9 @@ Materiales/ensamblajes & Cantidad & Unidad\\
 \midrule
 1 m2 adoquín Holanda 6 & 1 & p\\
 \midrule
-Escenarios de residuos/disposición &  & \\
+Escenarios de residuos/disposición & & \\
 \midrule
-Escenario de residuos para adoquín &  & \\
+Escenarios de residuos para adoquín & & \\
 \bottomrule
 \end{tabular}
 \caption{Modelado completo del fin de vida.}

@@ -12,7 +12,7 @@
 \usepackage{siunitx}
 \usepackage{booktabs}
 \usepackage{appendix}
-% \usepackage[nottoc,numbib]{tocbibind}
+\usepackage[spanish]{minitoc}
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric,arrows,chains}
 \usepackage[version=3]{mhchem}
@@ -65,7 +65,6 @@
     \sfcode`\.=1000\relax}
 
 \begin{document}
-
 \renewcommand\listtablename{Índice de tablas}
 \renewcommand\tablename{Tabla}
 \renewcommand\appendixname{Anexo}
@@ -84,7 +83,7 @@
 }
 
 \include{portada}
-
+\doparttoc
 \pagenumbering{roman} \tableofcontents \newpage \listoffigures
 \newpage \listoftables \newpage \pagenumbering{arabic}
 
@@ -92,6 +91,7 @@
 \cleardoublepage
 
 \part{Memoria}
+\parttoc
 \include{objeto}
 \include{alcance}
 \include{antecedentes}
@@ -106,11 +106,12 @@
 \cleardoublepage
 
 \part{Anexos}
+\parttoc
 \begin{appendices}
 \include{zapenddatos}
 \cleardoublepage
-\include{zapendsimapro}
-\cleardoublepage
+% \include{zapendsimapro}
+% \cleardoublepage
 \include{zapendcatalogo}
 \cleardoublepage
 \include{zapendherramientas}
@@ -118,13 +119,17 @@
 \end{appendices}
 
 \part{Planos}\label{planos}
+\parttoc
 \include{planos}
 \cleardoublepage
 
 \part{Pliego de condiciones}
+\parttoc
 \include{pliego}
 \cleardoublepage
 
 \part{Presupuesto}
+\parttoc
 \include{presupuesto}
 \end{document}
+

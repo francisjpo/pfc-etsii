@@ -2,7 +2,7 @@
 \chapter{Metodología del Análisis de Ciclo de Vida}\label{cap:metodologia_acv}
 \section{Introducción}
 
-Como se ha mencionado en la sección \ref{sec:introantecedentes}, el Análisis de Ciclo de Vida de un producto incluye todos los procesos de producción y servicios relacionados con el producto durante su ciclo de vida completo, desde la extracción de las materias primas hasta su reciclaje y/o disposición final, pasando por la fabricación y los subproductos que lo forman, la instalación, el uso y mantenimiento del producto. También se pueden incluir en las diferentes etapas del ciclo de vida el almacenamiento, venta, transporte y otras actividades que se consideren relevantes. Si se incluyen todos las etapas anteriores, le denomina comúnmente Análisis de Ciclo de Vida ``de la cuna a la tumba''. Cuando únicamente se contempla desde que se obtienen las materias primas hasta que el producto se pone en el mercado, se le denomina ``de la cuna a la puerta''. Hay un enfoque más reciente basado en tener en cuenta que las salidas del Fin de Vida del sistema como materias primas del mismo sistema o de otro nuevo, al que se le denomina ``de la cuna a la cuna''.
+Como se ha mencionado en la sección \ref{sec:introantecedentes}, el Análisis de Ciclo de Vida de un producto incluye todos los procesos de producción y servicios relacionados con el producto durante su ciclo de vida completo, desde la extracción de las materias primas hasta su reciclaje y/o disposición final, pasando por la fabricación y los subproductos que lo forman, la instalación, el uso y mantenimiento del producto. También se pueden incluir en las diferentes etapas del ciclo de vida el almacenamiento, venta, transporte y otras actividades que se consideren relevantes. Si se incluyen todas las etapas anteriores, se le denomina comúnmente Análisis de Ciclo de Vida ``de la cuna a la tumba''. Cuando únicamente se contempla desde que se obtienen las materias primas hasta que el producto se pone en el mercado, se le denomina ``de la cuna a la puerta''. Hay un enfoque más reciente basado en tener en cuenta que las salidas del Fin de Vida del sistema como materias primas del mismo sistema o de otro nuevo, al que se le denomina ``de la cuna a la cuna''.
 
 
 El Análisis de Ciclo de Vida hace distinción entre ``Entradas'' —materias primas, energía— y ``Salidas'' —emisiones a la tierra, mar o aire, desechos y subproductos—, como refleja la figura \ref{fig:escenariolca}.
@@ -50,7 +50,7 @@ El EICV según la norma UNE-EN-ISO 14040:2006 \cite{iso14040} tiene tres categor
   \item Cálculo de resultados del indicador de categoría (caracterización): una vez asignadas todas las sustancias del ICV a sus categorías de impacto ambiental (clasificación), se compara su valor con respecto a la sustancia de referencia de dicha categoría. Esto se realiza mediante los factores de caracterización de cada sustancia, que representan la contribución de una sustancia a una determinada categoría de impacto en relación a la sustancia de referencia en dicha categoría. Cada sustancia se multiplica por su correspondiente factor de caracterización para obtener valores con unidades equivalentes, que pueden sumarse posteriormente para medir la contribución de las sustancias a esa categoría de impacto.
 \end{itemize}
 
-Además de las etapas obligatorias anteriores, existen otras opcionales que pueden utilizarse dependiendo del objetivo y alcance previsto:
+Y se complementa con otras tres etapas opcionales que pueden utilizarse dependiendo del objetivo y alcance previsto:
 
 \begin{itemize}
   \item Normalización: conversión de los resultados de la caracterización a unidades globales neutras, dividiendo cada uno por un factor de normalización. Mediante estos factores se representa el grado de contribución de cada categoría de impacto ambiental sobre el problema medioambiental local.
@@ -149,7 +149,7 @@ Existen diversos métodos basados en Eco-indicadores, entre los que cabe destaca
 El mercado ofrece una amplia gama de programas para el Análisis de Ciclo de Vida que ofrecen diferentes tipos de prestaciones y rangos de precios. Entre ellos cabe destacar:
 
 \begin{itemize}
-  \item SimaPro: ver sección \ref{sec:simapro}.
+  \item SimaPro: desarrollado en la sección \ref{sec:simapro}.
   \item Gabi: permite esbozar ideas en su interfaz y ofrece un potente asistencia para la creación del inventario. Incorpora una base de datos propietaria que también funciona con \textit{ecoinvent}. Es compatible con los estándares UNE-EN-ISO 14040:2006 y bastante flexible.
   \item Quantis Suite: facilita el acceso a personas no expertas con plantillas y asistentes. Incorpora una base de datos propia.
   \item EarthSmart: permite crear inventarios de forma rápida aunque el usuario no sea experto. Permite crear un final de vida basado en escenarios creados por expertos. Incorpora varias bases de datos como \textit{ecoinvent} y la Australian LCI database.
@@ -212,7 +212,7 @@ Las bases de datos de Inventarios de Ciclo de Vida (ICVs) están formadas por da
 
 Las bases de datos de metodologías están formadas por los factores de caracterización, ponderación y otros datos que cada metodología de EICV necesita para realizar los cálculos de obtención de resultados. Estas bases de datos recogen los datos en un formato estándar y común (ISO/TS 14048:2002), para que el software de Análisis de Ciclo de Vida pueden utilizar estos datos \cite{ihobecarbono}.
 
-SimaPro (ver sección \ref{sec:simapro}) incorpora varias bases de datos de Inventarios de Ciclo de Vida:
+SimaPro incorpora varias bases de datos de Inventarios de Ciclo de Vida:
 \begin{itemize}
   \item ecoinvent (2009): más de 4000 procesos en energía, transporte, materiales; incluye construcción, químicos, agricultura, etc.; unidad y procesos de sistema.
   \item BUWAL 250 (1997): materiales generales, energía, transporte y desechos, parcialmente basada en base de datos ETH.
@@ -346,7 +346,7 @@ El método ReCiPe relaciona los datos del ICV con un número determinado de punt
   \item Ecotoxicidad del agua dulce: FET.
 \end{itemize}
 
-Por otro lado, existen tres escenarios en el método ReCiPe (al igual que en Ecoindicator 99):
+Por otro lado, se contemplan tres escenarios o perspectivas en el método ReCiPe coincidentes con las del método \textbf{Ecoindicator 99} comparadas en la tabla \ref{perspectivas_recipe}:
 
 \begin{itemize}
   \item Individualista (I, Individualist): se basa en el corto plazo, las tipologias de impacto no son discutibles y el optimismo tecnológico en cuanto a la adaptación humana. Es la perspectiva más optimista.
@@ -354,7 +354,29 @@ Por otro lado, existen tres escenarios en el método ReCiPe (al igual que en Eco
   \item Igualitaria (E, Egalitarian): es la más catastrofista, pues considera, entre otros, el largo plazo y los impactos que todavía no están plenamente identificados pero para los que existe alguna evidencia.
 \end{itemize}
 
-En este proyecto se utilizará únicamente el método de análisis ReCiPe Endpoint (H) V1.06 / Europe ReCipe H/A, como método recomendado por los desarrolladores de SimaPro. En la perspectiva jerárquica (H) se asume que los daños son evitables si se realiza una buena gestión y al uso de la ponderación media (A).
+\begin{table}[!htb]
+\centering
+\begin{footnotesize}
+\begin{tabular}{p{3.5cm}p{3cm}p{3cm}p{3cm}}
+\toprule
+\multicolumn{4}{c}{Perspectivas del método ReCiPe}\\
+\midrule
+Característica & Individualista & Jerarquista & Igualitaria\\
+\midrule
+Visión de la naturaleza & Robusta & Tolerante & Vulnerable\\
+Nivel de conocimiento & Sólo ciertos efectos (probados) & Efectos provables & Todos los efectos conocidos\\
+Horizonte temporal & Presente y corto plazo & Equilibrado & Los efectos actuales y los futuros son iguales\\
+Visión de la socidad & Las salidas económicas las dirige el mercado & Desarrollos en los límites de la naturaleza & Dirigido por la igualdad y la sociedad\\
+Administrabilidad & Estilo adaptativo & Estilo preventivo y comprensivo & Estilo de control y limitado\\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+\caption[Comparativa de perspectivas del método ReCiPe.]{Comparativa de perspectivas del método ReCiPe. Fuente: \cite{schryver}.}
+\label{perspectivas_recipe}
+\end{table}
+
+
+En este proyecto se utilizará principalmente el método de análisis ReCiPe Endpoint (H) V1.06 / Europe ReCipe H/A, como método recomendado por los desarrolladores de SimaPro. En la perspectiva jerárquica (H) se asume que los daños son evitables si se realiza una buena gestión y al uso de la ponderación media (A).
 
 \section{Interpretación del ciclo de vida}
 
