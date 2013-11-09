@@ -12,7 +12,7 @@
 \usepackage{siunitx}
 \usepackage{booktabs}
 \usepackage{appendix}
-\usepackage[spanish]{minitoc}
+\usepackage[spanish,nohints]{minitoc}
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric,arrows,chains}
 \usepackage[version=3]{mhchem}
@@ -81,9 +81,11 @@
       \renewcommand*\parttitle{#1}%
    \fi
 }
+\renewcommand\ptctitle{Índice de \parttitle}
 
 \include{portada}
 \doparttoc
+\noptcrule
 \pagenumbering{roman} \tableofcontents \newpage \listoffigures
 \newpage \listoftables \newpage \pagenumbering{arabic}
 
