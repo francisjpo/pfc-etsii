@@ -54,6 +54,12 @@ Agua & 5.03 & 7.54 & Red & -\\
 
 En el Anexo \ref{apend:catalogo} también se especifica un diagrama de Gantt de los procesos para una simulación realizada para fabricar 1 \si{m^2} de adoquín, además de los consumos energéticos desglosados.
 
+A la hora de realizar el inventario de esta fase es necesario tener en cuenta la vida útil de las instalaciones donde se realiza el proceso de fabricación. El fabricante estima esta vida útil en 15 años con una fabricación media anual de 12000 \si{m^2}. Por tanto, los modelados se dividirán entre un factor de proporcionalidad FF de 180000 (ver ecuación \ref{ec:ff}).
+
+\begin{equation}\label{ec:ff}
+FF = 12000\ m^2/a \times 15\ a = 180000 m^2 \text{ en 15 años}\\
+\end{equation}
+
 \subsection{Cemento}
 El cemento se transporta a granel en camiones con tanques a presión hasta la fábrica. Allí se almacena en silos provistos de compresores que descargan el material desde el tanque hasta su interior. El compresor es alimentado por electricidad mediante una toma de corriente conectada a la red eléctrica. La descarga del silo es únicamente por gravedad con válvulas dosificadoras de control de caudal (ver tabla \ref{modeladodelcemento}).
 
