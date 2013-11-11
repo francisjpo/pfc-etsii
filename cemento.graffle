@@ -6,8 +6,8 @@
 	<integer>0</integer>
 	<key>ApplicationVersion</key>
 	<array>
-		<string>com.omnigroup.OmniGrafflePro</string>
-		<string>139.18.0.187838</string>
+		<string>com.omnigroup.OmniGraffle6</string>
+		<string>156.2.0.196174</string>
 	</array>
 	<key>AutoAdjust</key>
 	<true/>
@@ -21,11 +21,6 @@
 		<integer>2</integer>
 		<key>Style</key>
 		<dict>
-			<key>shadow</key>
-			<dict>
-				<key>Draws</key>
-				<string>NO</string>
-			</dict>
 			<key>stroke</key>
 			<dict>
 				<key>Draws</key>
@@ -46,9 +41,9 @@
 	<key>Creator</key>
 	<string>Francisco Pinto</string>
 	<key>DisplayScale</key>
-	<string>1 0/72 in = 1 0/72 in</string>
+	<string>1 in = 1 in</string>
 	<key>GraphDocumentVersion</key>
-	<integer>8</integer>
+	<integer>11</integer>
 	<key>GraphicsList</key>
 	<array>
 		<dict>
@@ -58,8 +53,13 @@
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
 			<dict>
+				<key>Color</key>
+				<dict>
+					<key>w</key>
+					<string>0</string>
+				</dict>
 				<key>Font</key>
-				<string>MinionPro-Regular</string>
+				<string>MyriadPro-Regular</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -122,8 +122,6 @@
 					<string>NO</string>
 					<key>Fuzziness</key>
 					<real>4.9729371070861816</real>
-					<key>ShadowVector</key>
-					<string>{0, 2}</string>
 				</dict>
 				<key>stroke</key>
 				<dict>
@@ -154,8 +152,13 @@
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
 			<dict>
+				<key>Color</key>
+				<dict>
+					<key>w</key>
+					<string>0</string>
+				</dict>
 				<key>Font</key>
-				<string>MinionPro-Regular</string>
+				<string>MyriadPro-Regular</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -218,8 +221,6 @@
 					<string>NO</string>
 					<key>Fuzziness</key>
 					<real>4.9729371070861816</real>
-					<key>ShadowVector</key>
-					<string>{0, 2}</string>
 				</dict>
 				<key>stroke</key>
 				<dict>
@@ -245,13 +246,18 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{219.026113915091, 356.97636315399984}, {45.973907470703125, 15}}</string>
+			<string>{{219.02611391509103, 356.97636315399984}, {45.973907470703075, 15}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
 			<dict>
+				<key>Color</key>
+				<dict>
+					<key>w</key>
+					<string>0</string>
+				</dict>
 				<key>Font</key>
-				<string>MinionPro-Regular</string>
+				<string>MyriadPro-Regular</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -265,7 +271,7 @@
 			<key>ID</key>
 			<integer>34</integer>
 			<key>Rotation</key>
-			<real>359.92184448242188</real>
+			<real>359.92184448242199</real>
 			<key>Shape</key>
 			<string>AdjustableArrow</string>
 			<key>ShapeData</key>
@@ -321,8 +327,6 @@
 					<string>NO</string>
 					<key>Fuzziness</key>
 					<real>4.9729371070861816</real>
-					<key>ShadowVector</key>
-					<string>{0, 2}</string>
 				</dict>
 				<key>stroke</key>
 				<dict>
@@ -348,13 +352,18 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{281.27749331220855, 406.66751098632835}, {45.44500732421875, 15}}</string>
+			<string>{{281.27749331220741, 406.66751098632835}, {45.4450073242187, 15}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
 			<dict>
+				<key>Color</key>
+				<dict>
+					<key>w</key>
+					<string>0</string>
+				</dict>
 				<key>Font</key>
-				<string>MinionPro-Regular</string>
+				<string>MyriadPro-Regular</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -368,7 +377,7 @@
 			<key>ID</key>
 			<integer>33</integer>
 			<key>Rotation</key>
-			<real>89.999992370605469</real>
+			<real>89.999992370608311</real>
 			<key>Shape</key>
 			<string>AdjustableArrow</string>
 			<key>ShapeData</key>
@@ -424,8 +433,6 @@
 					<string>NO</string>
 					<key>Fuzziness</key>
 					<real>4.9729371070861816</real>
-					<key>ShadowVector</key>
-					<string>{0, 2}</string>
 				</dict>
 				<key>stroke</key>
 				<dict>
@@ -451,13 +458,18 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{281.27749633795543, 307.22250366210938}, {45.44500732421875, 15}}</string>
+			<string>{{281.27749633792303, 307.22250366210938}, {45.44500732421875, 15}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
 			<dict>
+				<key>Color</key>
+				<dict>
+					<key>w</key>
+					<string>0</string>
+				</dict>
 				<key>Font</key>
-				<string>MinionPro-Regular</string>
+				<string>MyriadPro-Regular</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -471,7 +483,7 @@
 			<key>ID</key>
 			<integer>32</integer>
 			<key>Rotation</key>
-			<real>90</real>
+			<real>90.000000000081684</real>
 			<key>Shape</key>
 			<string>AdjustableArrow</string>
 			<key>ShapeData</key>
@@ -527,8 +539,6 @@
 					<string>NO</string>
 					<key>Fuzziness</key>
 					<real>4.9729371070861816</real>
-					<key>ShadowVector</key>
-					<string>{0, 2}</string>
 				</dict>
 				<key>stroke</key>
 				<dict>
@@ -554,13 +564,18 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{286.8612470670235, 211.86125183105474}, {34.277496337890625, 15}}</string>
+			<string>{{286.11124944903895, 212.61125183105472}, {35.777496337890888, 15}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
 			<dict>
+				<key>Color</key>
+				<dict>
+					<key>w</key>
+					<string>0</string>
+				</dict>
 				<key>Font</key>
-				<string>MinionPro-Regular</string>
+				<string>MyriadPro-Regular</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -574,7 +589,7 @@
 			<key>ID</key>
 			<integer>31</integer>
 			<key>Rotation</key>
-			<real>90</real>
+			<real>89.999992370654525</real>
 			<key>Shape</key>
 			<string>AdjustableArrow</string>
 			<key>ShapeData</key>
@@ -630,8 +645,6 @@
 					<string>NO</string>
 					<key>Fuzziness</key>
 					<real>4.9729371070861816</real>
-					<key>ShadowVector</key>
-					<string>{0, 2}</string>
 				</dict>
 				<key>stroke</key>
 				<dict>
@@ -662,8 +675,13 @@
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
 			<dict>
+				<key>Color</key>
+				<dict>
+					<key>w</key>
+					<string>0</string>
+				</dict>
 				<key>Font</key>
-				<string>MinionPro-Regular</string>
+				<string>MyriadPro-Regular</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -733,8 +751,6 @@
 					<string>NO</string>
 					<key>Fuzziness</key>
 					<real>4.9729371070861816</real>
-					<key>ShadowVector</key>
-					<string>{0, 2}</string>
 				</dict>
 				<key>stroke</key>
 				<dict>
@@ -772,8 +788,13 @@
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
 			<dict>
+				<key>Color</key>
+				<dict>
+					<key>w</key>
+					<string>0</string>
+				</dict>
 				<key>Font</key>
-				<string>MinionPro-Regular</string>
+				<string>MyriadPro-Regular</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -787,7 +808,7 @@
 			<key>ID</key>
 			<integer>29</integer>
 			<key>Rotation</key>
-			<real>179.99998474121094</real>
+			<real>180</real>
 			<key>Shape</key>
 			<string>AdjustableArrow</string>
 			<key>ShapeData</key>
@@ -843,8 +864,6 @@
 					<string>NO</string>
 					<key>Fuzziness</key>
 					<real>4.9729371070861816</real>
-					<key>ShadowVector</key>
-					<string>{0, 2}</string>
 				</dict>
 				<key>stroke</key>
 				<dict>
@@ -877,13 +896,18 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{219.02611459560697, 71.532366239742004}, {44.473907470703125, 15}}</string>
+			<string>{{219.02611389839316, 71.53134358620035}, {45.973907470703082, 15}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
 			<dict>
+				<key>Color</key>
+				<dict>
+					<key>w</key>
+					<string>0</string>
+				</dict>
 				<key>Font</key>
-				<string>MinionPro-Regular</string>
+				<string>MyriadPro-Regular</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -897,7 +921,7 @@
 			<key>ID</key>
 			<integer>28</integer>
 			<key>Rotation</key>
-			<real>359.921875</real>
+			<real>359.92187500000011</real>
 			<key>Shape</key>
 			<string>AdjustableArrow</string>
 			<key>ShapeData</key>
@@ -953,8 +977,6 @@
 					<string>NO</string>
 					<key>Fuzziness</key>
 					<real>4.9729371070861816</real>
-					<key>ShadowVector</key>
-					<string>{0, 2}</string>
 				</dict>
 				<key>stroke</key>
 				<dict>
@@ -980,13 +1002,18 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{129.01969008930075, 71.562695980174311}, {35.980419158935547, 15}}</string>
+			<string>{{129.01969008930081, 71.562695980184714}, {35.980419158950284, 15}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
 			<dict>
+				<key>Color</key>
+				<dict>
+					<key>w</key>
+					<string>0</string>
+				</dict>
 				<key>Font</key>
-				<string>MinionPro-Regular</string>
+				<string>MyriadPro-Regular</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -1000,7 +1027,7 @@
 			<key>ID</key>
 			<integer>27</integer>
 			<key>Rotation</key>
-			<real>359.80032348632812</real>
+			<real>359.80032348636126</real>
 			<key>Shape</key>
 			<string>AdjustableArrow</string>
 			<key>ShapeData</key>
@@ -1056,8 +1083,6 @@
 					<string>NO</string>
 					<key>Fuzziness</key>
 					<real>4.9729371070861816</real>
-					<key>ShadowVector</key>
-					<string>{0, 2}</string>
 				</dict>
 				<key>stroke</key>
 				<dict>
@@ -1089,7 +1114,7 @@
 			<key>FontInfo</key>
 			<dict>
 				<key>Font</key>
-				<string>MinionPro-Regular</string>
+				<string>MyriadPro-Regular</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -1146,8 +1171,8 @@
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
-\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 MinionPro-Regular;}
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fnil\fcharset0 MyriadPro-Regular;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
@@ -1162,7 +1187,7 @@
 			<key>FontInfo</key>
 			<dict>
 				<key>Font</key>
-				<string>MinionPro-Bold</string>
+				<string>MyriadPro-Bold</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -1224,8 +1249,8 @@
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
-\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 MinionPro-Regular;}
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fnil\fcharset0 MyriadPro-Regular;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
@@ -1240,7 +1265,7 @@
 			<key>FontInfo</key>
 			<dict>
 				<key>Font</key>
-				<string>MinionPro-Regular</string>
+				<string>MyriadPro-Regular</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -1302,8 +1327,8 @@
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
-\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 MinionPro-Regular;}
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fnil\fcharset0 MyriadPro-Regular;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
@@ -1318,7 +1343,7 @@
 			<key>FontInfo</key>
 			<dict>
 				<key>Font</key>
-				<string>MinionPro-Regular</string>
+				<string>MyriadPro-Regular</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -1380,8 +1405,8 @@
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
-\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 MinionPro-Regular;}
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fnil\fcharset0 MyriadPro-Regular;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
@@ -1396,7 +1421,7 @@
 			<key>FontInfo</key>
 			<dict>
 				<key>Font</key>
-				<string>MinionPro-Bold</string>
+				<string>MyriadPro-Bold</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -1458,8 +1483,8 @@
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
-\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 MinionPro-Regular;}
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fnil\fcharset0 MyriadPro-Regular;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
@@ -1474,7 +1499,7 @@
 			<key>FontInfo</key>
 			<dict>
 				<key>Font</key>
-				<string>MinionPro-Bold</string>
+				<string>MyriadPro-Bold</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -1536,8 +1561,8 @@
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
-\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 MinionPro-Regular;}
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fnil\fcharset0 MyriadPro-Regular;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
@@ -1552,7 +1577,7 @@
 			<key>FontInfo</key>
 			<dict>
 				<key>Font</key>
-				<string>MinionPro-Bold</string>
+				<string>MyriadPro-Bold</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -1614,8 +1639,8 @@
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
-\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 MinionPro-Regular;}
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fnil\fcharset0 MyriadPro-Regular;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
@@ -1630,7 +1655,7 @@
 			<key>FontInfo</key>
 			<dict>
 				<key>Font</key>
-				<string>MinionPro-Regular</string>
+				<string>MyriadPro-Regular</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -1689,8 +1714,8 @@
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
-\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 MinionPro-Regular;}
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fnil\fcharset0 MyriadPro-Regular;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
@@ -1705,7 +1730,7 @@
 			<key>FontInfo</key>
 			<dict>
 				<key>Font</key>
-				<string>MinionPro-Regular</string>
+				<string>MyriadPro-Regular</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -1767,8 +1792,8 @@
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
-\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 MinionPro-Regular;}
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fnil\fcharset0 MyriadPro-Regular;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
@@ -1783,7 +1808,7 @@
 			<key>FontInfo</key>
 			<dict>
 				<key>Font</key>
-				<string>MinionPro-Regular</string>
+				<string>MyriadPro-Regular</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -1845,8 +1870,8 @@
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
-\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 MinionPro-Regular;}
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fnil\fcharset0 MyriadPro-Regular;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
@@ -1861,7 +1886,7 @@
 			<key>FontInfo</key>
 			<dict>
 				<key>Font</key>
-				<string>MinionPro-Bold</string>
+				<string>MyriadPro-Bold</string>
 				<key>Size</key>
 				<real>13</real>
 			</dict>
@@ -1923,8 +1948,8 @@
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
-\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 MinionPro-Regular;}
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fnil\fcharset0 MyriadPro-Regular;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
@@ -1967,6 +1992,8 @@
 		<real>0.0</real>
 		<key>layoutEngine</key>
 		<string>dot</string>
+		<key>neatoLineLength</key>
+		<real>0.20000000298023224</real>
 		<key>neatoSeparation</key>
 		<real>0.0</real>
 		<key>twopiSeparation</key>
@@ -1979,7 +2006,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-09-26 15:41:22 +0000</string>
+	<string>2013-11-11 11:26:03 +0000</string>
 	<key>Modifier</key>
 	<string>Francisco Pinto</string>
 	<key>NotesVisible</key>
@@ -2014,8 +2041,8 @@
 		</array>
 		<key>NSPrintReverseOrientation</key>
 		<array>
-			<string>int</string>
-			<string>0</string>
+			<string>coded</string>
+			<string>BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU051bWJlcgCEhAdOU1ZhbHVlAISECE5TT2JqZWN0AIWEASqEhAFxlwCG</string>
 		</array>
 		<key>NSRightMargin</key>
 		<array>
@@ -2050,31 +2077,24 @@
 	<integer>1</integer>
 	<key>WindowInfo</key>
 	<dict>
+		<key>BottomSlabHeight</key>
+		<real>534</real>
 		<key>CurrentSheet</key>
 		<integer>0</integer>
-		<key>ExpandedCanvases</key>
-		<array>
-			<dict>
-				<key>name</key>
-				<string>Canvas 1</string>
-			</dict>
-		</array>
+		<key>Expanded_Canvases</key>
+		<array/>
 		<key>Frame</key>
-		<string>{{495, -1}, {694, 878}}</string>
-		<key>ListView</key>
+		<string>{{446, 0}, {994, 878}}</string>
+		<key>ShowInfo</key>
 		<true/>
-		<key>OutlineWidth</key>
-		<integer>142</integer>
-		<key>RightSidebar</key>
-		<false/>
 		<key>ShowRuler</key>
 		<true/>
 		<key>Sidebar</key>
 		<false/>
 		<key>SidebarWidth</key>
-		<integer>107</integer>
+		<integer>0</integer>
 		<key>VisibleRegion</key>
-		<string>{{-60, 0}, {680, 739}}</string>
+		<string>{{-59, 0}, {678, 736}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>

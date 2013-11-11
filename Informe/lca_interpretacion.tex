@@ -26,7 +26,7 @@ La figura \ref{fig:sensibilidad_ia_puntuacionunica} y la tabla \ref{sensibilidad
 \centering
 \begin{tabular}{p{6cm}rrrr}
 \toprule
-\multicolumn{5}{c}{Categorías de daño ReCiPe I/A}\\
+\multicolumn{5}{c}{Categorías de daño puntuación única ReCiPe I/A}\\
 \midrule
 Etapa & Salud hum. & Ecosistema & Recursos & Total\\
  & (Pt) & (Pt) & (Pt) & (Pt)\\
@@ -55,7 +55,7 @@ Por otro lado, la figura \ref{fig:sensibilidad_ea_puntuacionunica} y la tabla \r
 \centering
 \begin{tabular}{p{6cm}rrrr}
 \toprule
-\multicolumn{5}{c}{Categorías de daño ReCiPe E/A}\\
+\multicolumn{5}{c}{Categorías de daño puntuación única ReCiPe E/A}\\
 \midrule
 Etapa & Salud hum. & Ecosistema & Recursos & Total\\
  & (Pt) & (Pt) & (Pt) & (Pt)\\
@@ -139,18 +139,53 @@ En este ACV no se realizan comparaciones entre diferentes opciones por lo que no
 
 \section{Consideraciones}
 
-El estudio del Análisis de Ciclo de Vida del adoquín indica que la etapa más influyente en el perfil medioambiental —usando el método ReCiPe—, la que mayor energía consume —con el método de Demanda de Energía Acumulada— y la que emite mayor cantidad de \ce{CO2} equivalente —por el método IPCC— es la de \textbf{extracción de materias primas, fabricación e instalación}.
+El estudio del Análisis de Ciclo de Vida del adoquín indica que la etapa más influyente en el perfil medioambiental —usando el método ReCiPe—, la que mayor energía consume —con el método de Demanda de Energía Acumulada— y la que emite mayor cantidad de \ce{CO2} equivalente —por el método IPCC— es la de \textbf{extracción de materias primas, fabricación e instalación} (ver tabla \ref{perfil_medioambiental}).
 
-Para mejorar esta fase, habrá que centrarse en los tres procesos que se destacaron en la tabla \ref{categoriasimpactofabricacion}:
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{6cm}r}
+\toprule
+\multicolumn{2}{c}{Perfil medioambiental}\\
+\midrule
+\si{MJ} energía consumida & 1350\\
+\si{kg} \ce{CO2} eq. & 58.1\\
+\bottomrule
+\end{tabular}
+\caption{Perfil medioambiental de 1 \si{m^2} adoquín.}
+\label{perfil_medioambiental}
+\end{table}
 
+\subsection{Fase de extracción de materias primas, fabricación e instalación}
+Para mejorar esta fase, habrá que centrarse en los tres procesos con mayor carga ambiental que se destacaron en la tabla \ref{categoriasimpactofabricacion}.
+
+En primer lugar, la \textbf{capa bituminosa para base granular} se compone principalmente de dos procesos:
 \begin{itemize}
-  \item Capa bituminosas para base granular: el tiempo de proceso está altamente optimizado, ya que el volumen de producción depende de la velocidad del prensado. Si se reduce cantidad de materias primas —en este caso, principalmente acero— también afectará al volumen de fabricación de la empresa.
-  \item Árido grueso para base granular: al igual que con el proceso de prensado, los tiempos y la cantidad de materias primas utilizadas —también acero— afectan directamente al volumen de producción.
-  \item Cemento Portland CEM I 52.5Z gris: sobre este proceso sí es posible realizar alguna mejora directa, ya que el transportador de rodillos recorre una distancia muy larga para servir los pallets al toro de almacén. Si se acortara la distancia se consumiría menos energía y se utilizarían menor cantidad de materias primas para la fabricación del transportador.
+  \item Obtención del material bituminoso: 99.73\%.
+  \item Transporte: 0.27\%.
 \end{itemize}
 
-Además, para los tres procesos anteriores de esta fase puede actuarse de forma indirecta modificando el mix eléctrico, disminuyendo la dependencia de las energía fósil y aumentando el uso de energías renovables.
+El problema principal de los materiales bituminosos es su extracción y su refinado son altamente complejos a nivel técnico y ambiental. La extracción suele realizarse mediante minería a cielo abierto, excavando la superficie y procesando la materia prima con calor y químicos in situ para decantar el betún y permitir que este fluya a través de oleoductos. El mayor inconveniente es que el 80\% de las arenas petrolíferas se encuentran a demasiada profundidad para poder extraerlas de esta forma lo que requiere operaciones aún más complejas bajo tierra \cite{eurobitume}.
 
-La etapa de \textbf{uso y mantenimiento} se puede considerar despreciable debido a la poca aportación a la carga ambiental, y se puede eliminar del estudio.
+Por tanto, la única forma de poder mejorar este proceso es disminuir la distancia de transporte desde la planta de fabricación del material bituminoso hasta la zona de instalación del pavimento, lo cual no aporta una mejora cuantiosa.
 
-La etapa de \textbf{fin de vida} produce un pequeño beneficio en comparación con la primera fase, por lo que debería ser eliminada. Sin embargo, al ser un beneficio se deberá seguir manteniendo el alto porcentaje de reciclaje de adoquines.
+En segundo lugar, el \textbf{árido grueso para base granular} se compone de dos procesos:
+\begin{itemize}
+  \item Obtención de la arena caliza: 67.31\%.
+  \item Transporte: 32.68\%
+\end{itemize}
+
+La base granular sobre la que van el resto de capas componentes del pavimento de adoquines es la más gruesa. Sobre el proceso de obtención es difícil poder actuar ya que es proporcionada por terceros. Sin embargo, a diferencia de la capa bituminosa, sí que se puede actuar sobre la distancia de recorrido del transporte, acercando el origen donde se fabrica y la zona de instalación.
+
+En tercer lugar, el \textbf{cemento Portland CEM I 52.5Z gris} tiene la misma problemática que los dos procesos anteriores. La distancia de transporte es muy reducida —tan sólo 8 \si{km}— y el material es proporcionado por terceros.
+
+Por último, en referencia a todos los procesos de la etapa de extracción de materia prima, fabricación e instalación se puede actuar de forma indirecta modificando el mix eléctrico, disminuyendo la dependencia de las energías de origen fósil —que suponen un 88\% del total de la fase— y aumentando el uso de energías renovables. Debido a que las instalaciones disponen de una gran superficie, podría optarse por la instalación de paneles con células de tercera generación que permiten eficiencias de conversión eléctrica teóricas mucho mayores que las anteriores.
+
+Desde el punto de vista ambiental, el mayor impacto se produce en las categorías de \textbf{agotamiento de recursos fósiles} y \textbf{cambio climático}, debido principalmente a los tres procesos anteriormente mencionados. La \textbf{formación de partículas} y la \textbf{ocupación de tierras agrícolas} se deben también fundamentalmente a esta fase.
+
+\subsection{Fase de uso y mantenimiento}
+Respecto a la fase de \textbf{uso y mantenimiento}, el proceso de \textbf{sellado y vibrado del pavimento} es el objetivo a mejorar. El motivo principal es el uso de combustible fósil de tipo diesel para la alimentación de la máquina de planchas vibradoras. Se puede mejorar este proceso eligiendo una máquina con el menor consumo de combustible que ofrezca el mercado.
+
+Desde el punto de vista ambiental, el mayor impacto se produce también en las categorías de \textbf{agotamiento de recursos fósiles} y \textbf{cambio climático}, debido principalmente a sellado y vibrado del pavimento.
+
+\subsection{Fase de fin de vida}
+La etapa de \textbf{fin de vida} produce un pequeño beneficio en comparación con la primera fase, que sirve como compensación de un 61\% de la carga ambiental de la segunda fase.
