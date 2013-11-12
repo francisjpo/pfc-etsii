@@ -1,9 +1,8 @@
 %!TEX root = informe.tex
-\chapter{Análisis de Ciclo de Vida de un adoquín: Inventario del Ciclo de Vida}\label{cap:acv_inventario}
+\chapter{Análisis de Ciclo de Vida de un adoquín: inventario del ciclo de vida}\label{cap:acv_inventario}
 
 \section{Introducción}\label{sec:intro_icv}
 Como se ha mencionado en la sección \ref{sec:etapaslca}, el Inventario del Ciclo de Vida (ICV) implica la recopilación de los datos y los procedimientos de cálculo para cuantificar las entradas y salidas pertinentes del sistema del producto. Es un proceso iterativo, ya que a medida que se recopilan datos, se aprende más sobre el sistema y se pueden identificar nuevos requisitos o limitaciones que requieran cambios en los procedimientos de recopilación de datos \cite{iso14040}. Los datos pueden clasificarse como:
-
 \begin{itemize}
   \item las entradas de energía, materias primas, entradas auxiliares y otras entradas físicas;
   \item los productos, coproductos y residuos;
@@ -28,8 +27,8 @@ Existen cinco etapas principales, de las cuales las tres primeras se agrupan en 
 Cada adoquín mide 200x100x60 \si{mm} y tiene una masa de 3 \si{kg}. Cada bandeja está formada por 25 adoquines, por lo que son necesarias 2 bandejas para tener la \textit{Unidad funcional} de 1 \si{m^2}, con un total de 50 adoquines/\si{m^2} (ecuación \ref{eq:masa}):
 
 \begin{gather}
-200 mm \times 100 mm \times 25\ ud/bandeja \times 2\ bandejas = 1 m^2\\
-3 kg/ud \times 50 ud/m^2 = 150 kg/m^2 \text{ de masa para adoquín}\label{eq:masa}
+\mathrm{200\ mm \times 100\ mm \times 25\ ud/bandeja \times 2\ bandejas = 1\ m^2}\\
+\mathrm{3\ kg/ud \times 50\ ud/m^2 = 150\ kg/m^2 \text{ de masa para adoquín}}\label{eq:masa}
 \end{gather}
 
 Para disponer de 150 \si{kg/m^2} de masa para adoquín se aplican los porcentajes de materias primas sobre la fórmula base para adoquín ``Holanda 6'' proporcionada por el fabricante para obtener las masas de cada materia prima reflejadas en la tabla \ref{desglosemateriasprimas}.
@@ -48,7 +47,7 @@ Cemento Portland 52.5N & 10.06 & 15.09 & Málaga-El Palo & 30\\
 Agua & 5.03 & 7.54 & Red & -\\
 \bottomrule
 \end{tabular}
-\caption{Desglose de materias primas por \si{m^2} de adoquín fabricado.}
+\caption[Desglose de materias primas por \si{m^2} de adoquín fabricado.]{Desglose de materias primas por \si{m^2} de adoquín fabricado. Fuente: elaboración propia.}
 \label{desglosemateriasprimas}
 \end{table}
 
@@ -57,7 +56,7 @@ En el Anexo \ref{apend:catalogo} también se especifica un diagrama de Gantt de 
 A la hora de realizar el inventario de esta fase es necesario tener en cuenta la vida útil de las instalaciones donde se realiza el proceso de fabricación. El fabricante estima esta vida útil en 15 años con una fabricación media anual de 12000 \si{m^2}. Por tanto, los modelados se dividirán entre un factor de proporcionalidad FF de 180000 (ver ecuación \ref{ec:ff}).
 
 \begin{equation}\label{ec:ff}
-FF = 12000\ m^2/a \times 15\ a = 180000 m^2 \text{ en 15 años}\\
+\mathrm{FF = 12000\ m^2/a \times 15\ a = 180000 m^2 \text{ en 15 años}}\\
 \end{equation}
 
 \subsection{Cemento}
@@ -66,16 +65,16 @@ El cemento se transporta a granel en camiones con tanques a presión hasta la f�
 Las unidades para el modelado del camión (lorry) vienen expresadas en \si{kg\times km}, mientras que el uso del silo se proporciona en \si{m^3}, dada una densidad media del cemento Portland de 1250 \si{kg/m3} \cite{website:cement}.
 
 \begin{gather}
-15.09 kg \times 30 km = 453 kg\times km\\
-15,09 kg / 1250 kg/m^3 = 0.0121 m^3
+\mathrm{15.09\ kg \times 30\ km = 453\ kg\times km}\\
+\mathrm{15,09\ kg / 1250\ kg/m^3 = 0.0121\ m^3}
 \end{gather}
 
 El mix eléctrico se obtiene del consumo del compresor del silo proporcional a una cantidad de 15.09 \si{kg}, si la potencia del compresor son 30kW, velocidad de carga del silo es 35 \si{\tonne/h} para un tiempo de llenado de 35 minutos.
 
 \begin{gather}
-30 kW \times 1 h \times \frac{35 min}{60 min} = 17.5 kWh = 63 MJ \text{ para 20 toneladas}\\
-35 t/h \times \frac{35 min}{60 min} = 20 t \text{ de cemento con el silo cargado}\\
-15.09 kg \times \frac{63 MJ}{20 t} = 4.79 kJ
+\mathrm{30\ kW \times 1\ h \times \frac{35\ min}{60\ min} = 17.5\ kWh = 63\ MJ \text{ para 20 toneladas}}\\
+\mathrm{35\ t/h \times \frac{35\ min}{60\ min} = 20\ t \text{ de cemento con el silo cargado}}\\
+\mathrm{15.09\ kg \times \frac{63\ MJ}{20\ t} = 4.79\ kJ}
 \end{gather}
 
 \begin{table}[!htb]
@@ -90,12 +89,12 @@ Portland cement, strength class Z 52.5, at plant/CH U & 15.09 & \si{kg}\\
 \midrule
 Procesos & Cantidad & Unidad\\
 \midrule
-Transport, lorry 16-32t, EURO4/RER U & 453 & \si{kg*km}\\
+Transport, lorry 16-32t, EURO4/RER U & 453 & \si{kg\times km}\\
 Tower silo, plastic/CH/I U & 0.0121 & \si{m^3}\\
 Electricity mix 2013/ES U & 4.79 & \si{kJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del cemento.}
+\caption{Modelado del cemento. Fuente: elaboración propia.}
 \label{modeladodelcemento}
 \end{table}
 
@@ -111,7 +110,7 @@ Technical purpose of product or process: Standard mineral product used as natura
 Las unidades para el modelado del camión (lorry) vienen expresadas en \si{kg\times km}.
 
 \begin{equation}
-70.74 kg \times 8 km = 566 kg\times km
+\mathrm{70.74\ kg \times 8\ km = 566\ kg\times km}
 \end{equation}
 
 \begin{table}[!htb]
@@ -126,10 +125,10 @@ Sand 0/2, wet and dry quarry, production mix, at plant, undried/RER S & 70.74 & 
 \midrule
 Procesos & Cantidad & Unidad\\
 \midrule
-Transport, lorry 16-32t, EURO4/RER U & 566 & \si{kg*km}\\
+Transport, lorry 16-32t, EURO4/RER U & 566 & \si{kg\times km}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de la arena.}
+\caption[Modelado de la arena.]{Modelado de la arena. Fuente: elaboración propia.}
 \label{modeladodelaarena}
 \end{table}
 
@@ -140,7 +139,7 @@ El tipo de árido utilizado en planta es de granulometría 5/7 —en milímetros
 Las unidades para el modelado del camión (lorry) vienen expresadas en \si{kg\times km}.
 
 \begin{equation}
-56.63 kg \times 8 km = 566 kg\times km
+\mathrm{56.63\ kg \times 8\ km = 566\ kg\times km}
 \end{equation}
 
 \begin{table}[!htb]
@@ -155,10 +154,10 @@ Gravel, crushed, at mine/CH U & 56.63 & \si{kg}\\
 \midrule
 Procesos & Cantidad & Unidad\\
 \midrule
-Transport, lorry 16-32t, EURO4/RER U & 453 & \si{kg*km}\\
+Transport, lorry 16-32t, EURO4/RER U & 453 & \si{kg\times km}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del árido.}
+\caption[Modelado del árido.]{Modelado del árido. Fuente: elaboración propia.}
 \label{modeladodearido}
 \end{table}
 
@@ -176,7 +175,7 @@ Materiales/ensamblajes & Cantidad & Unidad\\
 Tap water, at user/RER U & 7.54 & \si{kg}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del agua.}
+\caption[Modelado del agua.]{Modelado del agua. Fuente: elaboración propia.}
 \label{modeladodelagua}
 \end{table}
 
@@ -233,7 +232,7 @@ Electricidad/calor & Cantidad & Unidad\\
 Electricity mix 2013/ES U & 0.0021 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de los dosificadores para arena y áridos.}
+\caption[Modelado de los dosificadores para arena y áridos.]{Modelado de los dosificadores para arena y áridos. Fuente: elaboración propia.}
 \label{modeladodedosificadores}
 \end{table}
 
@@ -260,7 +259,7 @@ Electricidad/calor & Cantidad & Unidad\\
 Electricity mix 2013/ES U & 0.1827 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de la cinta transportadora para arena y áridos.}
+\caption[Modelado de la cinta transportadora para arena y áridos.]{Modelado de la cinta transportadora para arena y áridos. Fuente: elaboración propia.}
 \label{modeladodecintaarena}
 \end{table}
 
@@ -279,7 +278,7 @@ Electricidad/calor & Cantidad & Unidad\\
 Electricity mix 2013/ES U & 0.0975 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de la cinta transportadora para cemento.}
+\caption[Modelado de la cinta transportadora para cemento.]{Modelado de la cinta transportadora para cemento. Fuente: elaboración propia.}
 \label{modeladodecintacemento}
 \end{table}
 
@@ -304,7 +303,7 @@ Electricidad/calor & Cantidad & Unidad\\
 Electricity mix 2013/ES U & 1.71 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del skip y la mezcladora.}
+\caption[Modelado del skip y la mezcladora.]{Modelado del skip y la mezcladora. Fuente: elaboración propia.}
 \label{modeladoskip}
 \end{table}
 
@@ -329,7 +328,7 @@ Electricidad/calor & Cantidad & Unidad\\
 Electricity mix 2013/ES U & 0.088 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de la cinta transportadora para hormigón.}
+\caption[Modelado de la cinta transportadora para hormigón.]{Modelado de la cinta transportadora para hormigón. Fuente: elaboración propia.}
 \label{modeladodecintahormigon}
 \end{table}
 
@@ -352,7 +351,7 @@ Electricidad/calor & Cantidad & Unidad\\
 Electricity mix 2013/ES U & 0.0161 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de la tolva para hormigón.}
+\caption[Modelado de la tolva para hormigón.]{Modelado de la tolva para hormigón. Fuente: elaboración propia.}
 \label{modeladotolvahormigon}
 \end{table}
 
@@ -379,7 +378,7 @@ Electricidad/calor & Cantidad & Unidad\\
 Electricity mix 2013/ES U & 0.437 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del prensado.}
+\caption[Modelado del prensado.]{Modelado del prensado. Fuente: elaboración propia.}
 \label{modeladoprensado}
 \end{table}
 
@@ -409,7 +408,7 @@ Disposal, building, reinforced concrete, to final disposal/CH U & 23 & \si{kg}\\
 Disposal, steel, 0\% water, to municipal incineration/CH U & 29.6 & \si{kg}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de 1 metro de transportador de rodillos.}
+\caption[Modelado de 1 metro de transportador de rodillos.]{Modelado de 1 metro de transportador de rodillos. Fuente: elaboración propia.}
 \label{modeladotransportadorrodillos}
 \end{table}
 
@@ -430,7 +429,7 @@ Electricidad/calor & Cantidad & Unidad\\
 Electricity mix 2013/ES U & 0.077 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del transportador de rodillos para piezas frescas.}
+\caption[Modelado del transportador de rodillos para piezas frescas.]{Modelado del transportador de rodillos para piezas frescas. Fuente: elaboración propia.}
 \label{modeladotransportadorpiezas}
 \end{table}
 
@@ -455,7 +454,7 @@ Electricidad/calor & Cantidad & Unidad\\
 Electricity mix 2013/ES U & 0.126 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del ascensor.}
+\caption[Modelado del ascensor.]{Modelado del ascensor. Fuente: elaboración propia.}
 \label{modeladodelascensor}
 \end{table}
 
@@ -483,7 +482,7 @@ Electricidad/calor & Cantidad & Unidad\\
 Electricity mix 2013/ES U & 0.516 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de la multiforca.}
+\caption[Modelado de la multiforca.]{Modelado de la multiforca. Fuente: elaboración propia.}
 \label{modeladomultiforca}
 \end{table}
 
@@ -505,7 +504,7 @@ Electricidad/calor & Cantidad & Unidad\\
 Electricity mix 2013/ES U & 0.126 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del descensor.}
+\caption[Modelado del descensor.]{Modelado del descensor. Fuente: elaboración propia.}
 \label{modeladodeldescensor}
 \end{table}
 
@@ -531,7 +530,7 @@ Descripción & Cantidad & Unidad\\
 Electricity mix 2013/ES U & 0.021 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del transporte de bandejas hasta paletizadora.}
+\caption[Modelado del transporte de bandejas hasta paletizadora.]{Modelado del transporte de bandejas hasta paletizadora. Fuente: elaboración propia.}
 \label{modeladobandejaspalet}
 \end{table}
 
@@ -558,7 +557,7 @@ Electricidad/calor & Cantidad & Unidad\\
 Electricity mix 2013/ES U & 0.065 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del flejado y paletizado.}
+\caption[Modelado del flejado y paletizado.]{Modelado del flejado y paletizado. Fuente: elaboración propia.}
 \label{modeladodelflejadoypaletizado}
 \end{table}
 
@@ -577,7 +576,7 @@ Electricidad/calor & Cantidad & Unidad\\
 Electricity mix 2013/ES U & 0.021 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del transporte de pallets hasta flejadora.}
+\caption[Modelado del transporte de pallets hasta flejadora.]{Modelado del transporte de pallets hasta flejadora. Fuente: elaboración propia.}
 \label{modeladopalletsflejadora}
 \end{table}
 
@@ -600,7 +599,7 @@ Electricidad/calor & Cantidad & Unidad\\
 Electricity mix 2013/ES U & 0.0315 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del transporte de pallets flejados hasta zona de recogida.}
+\caption[Modelado del transporte de pallets flejados hasta zona de recogida.]{Modelado del transporte de pallets flejados hasta zona de recogida. Fuente: elaboración propia.}
 \label{modeladopalletsrecogida}
 \end{table}
 
@@ -627,7 +626,7 @@ Drilling, CNC, steel/RER U & 1250 & \si{kg}\\
 Copper wire, technology mix, consumption mix, at plant, cross section 1 mm² EU-15 S & 50 & \si{kg}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de un toro de almacén (forklift truck).}
+\caption[Modelado de un toro de almacén (forklift truck).]{Modelado de un toro de almacén (forklift truck). Fuente: elaboración propia.}
 \label{modeladoforklift}
 \end{table}
 
@@ -653,7 +652,7 @@ Disposal, road/RER/I U & 0.0067419 & \si{my}\\
 \midrule
 \bottomrule
 \end{tabular}
-\caption{Modelado del transporte con toro de almacén.}
+\caption[Modelado del transporte con toro de almacén.]{Modelado del transporte con toro de almacén. Fuente: elaboración propia.}
 \label{modeladotransporteforklift}
 \end{table}
 
@@ -670,7 +669,7 @@ Materiales/combustibles & Cantidad & Unidad\\
 Transport, forklift truck/RER U & 0.0132 & \si{\tonne\times km}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del transporte de pallets con torito hasta almacén.}
+\caption[Modelado del transporte de pallets con torito hasta almacén.]{Modelado del transporte de pallets con torito hasta almacén. Fuente: elaboración propia.}
 \label{modeladotransportetorito}
 \end{table}
 
@@ -703,7 +702,7 @@ Descripción & Cantidad & Unidad\\
 Electricity mix 2013/ES U & 0.486 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del control informatizado.}
+\caption[Modelado del control informatizado.]{Modelado del control informatizado. Fuente: elaboración propia.}
 \label{modeladodecontrol}
 \end{table}
 
@@ -734,7 +733,7 @@ Electricidad/calor & Cantidad & Unidad\\
 Electricity mix 2013/ES U & 0.972 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de la iluminación.}
+\caption[Modelado de la iluminación.]{Modelado de la iluminación. Fuente: elaboración propia.}
 \label{modeladodeiluminacion}
 \end{table}
 
@@ -753,7 +752,7 @@ Materiales/combustibles & Cantidad & Unidad\\
 Tap water, at user/RER/I U & 100 & \si{kg}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado la limpieza de la mezcladora y molde.}
+\caption[Modelado la limpieza de la mezcladora y molde.]{Modelado la limpieza de la mezcladora y molde. Fuente: elaboración propia.}
 \label{modeladolimpiezamezcladora}
 \end{table}
 
@@ -778,7 +777,7 @@ Explanada & \multicolumn{3}{c}{Aplanar y compactar}\\
 Total & 34 & — & 0.34\\
 \bottomrule
 \end{tabular}
-\caption{Capas componentes para arterías principales C1-E2 con base granular.}
+\caption[Capas componentes para arterías principales C1-E2 con base granular.]{Capas componentes para arterías principales C1-E2 con base granular. Fuente: elaboración propia.}
 \label{cortedelterreno}
 \end{table}
 
@@ -817,7 +816,7 @@ Procesos & Cantidad & Unidad\\
 Transport, lorry 16-32t, EURO4/RER U & 25600 & \si{kg\times km}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de la arena para base granular.}
+\caption[Modelado de la arena para base granular.]{Modelado de la arena para base granular. Fuente: elaboración propia.}
 \label{modeladoarenabase}
 \end{table}
 
@@ -850,7 +849,7 @@ Procesos & Cantidad & Unidad\\
 Transport, lorry 16-32t, EURO4/RER U & 2750 & \si{kg\times km}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de la capa bituminosa para base granular.}
+\caption[Modelado de la capa bituminosa para base granular.]{Modelado de la capa bituminosa para base granular. Fuente: elaboración propia.}
 \label{modeladocapabituminosa}
 \end{table}
 
@@ -889,7 +888,7 @@ Procesos & Cantidad & Unidad\\
 Transport, lorry 16-32t, EURO4/RER U & 3300 & \si{kg\times km}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del árido semi-fino para lecho de arena.}
+\caption[Modelado del árido semi-fino para lecho de arena.]{Modelado del árido semi-fino para lecho de arena. Fuente: elaboración propia.}
 \label{modeladoaridosemifino}
 \end{table}
 
@@ -904,21 +903,21 @@ No se debe usar mortero para el sellado de las juntas, ya que no se podrán reti
 La arena de sílice —\textit{Silica sand}, en inglés— es un material adecuado para esta tarea \cite{website:ecoinvent}. SimaPro pide como parámetro la masa de arena que se empleará para el rellenado. Si se tiene en cuenta que el adoquín mide 10 \si{cm} de altura, 1 \si{cm} quedará enterrado en el lecho, y se añadirá 1 \si{cm} por encima para el vibrado; por otro lado, la junta medirá 5 \si{mm}, se puede obtener el volumen y a partir de él la masa:
 
 \begin{gather}
-1 m^2 = 50 \text{ adoquines} = 10 \times 5\\
-Adoquin = 20 \times 10 \times 6 cm\\
-\delta_{junta} = 0.5cm\\
-Largo = 10 \times 10 + 9 \times 0.5 = 104.5 cm\\
-Ancho = 5 \times 20 + 4 \times 0.5 = 102 cm\\
-\text{Superficie de arena} = 104.5 \times 0.5 + 102 \times 0.5 = 103.25 cm^2\\
-\text{Volumen de arena} = 103.25 \times 10 = 1032.5 cm^3\\
-\rho_{arena}=2.6 g/cm^3\\
-\text{Masa de arena} = 1032.5 \times 2.65 = 2.74 kg
+\mathrm{1\ m^2 = 50 \text{ adoquines} = 10 \times 5}\\
+\mathrm{Adoquín = 20 \times 10 \times 6\ cm}\\
+\mathrm{\delta_{junta} = 0.5\ cm}\\
+\mathrm{Largo = 10 \times 10 + 9 \times 0.5 = 104.5\ cm}\\
+\mathrm{Ancho = 5 \times 20 + 4 \times 0.5 = 102\ cm}\\
+\mathrm{\text{Superficie de arena} = 104.5 \times 0.5 + 102 \times 0.5 = 103.25\ cm^2}\\
+\mathrm{\text{Volumen de arena} = 103.25 \times 10 = 1032.5\ cm^3}\\
+\mathrm{\rho_{arena}=2.6\ g/cm^3}\\
+\mathrm{\text{Masa de arena} = 1032.5 \times 2.65 = 2.74\ kg}
 \end{gather}
 
 Por otro lado, si se supone una distancia de entrega de 50 km hasta el destino de la instalación en un camión de transporte, se tiene:
 
 \begin{equation}
-2.74 kg \times 50 km = 137 kg \times km
+\mathrm{2.74\ kg \times 50\ km = 137\ kg \times km}
 \end{equation}
 
 \begin{table}[!htb]
@@ -936,7 +935,7 @@ Procesos & Cantidad & Unidad\\
 Transport, lorry 16-32t, EURO4/RER U & 137 & \si{kg\times km}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de la arena para sellado.}
+\caption[Modelado de la arena para sellado.]{Modelado de la arena para sellado. Fuente: elaboración propia.}
 \label{modeladoarenasellado}
 \end{table}
 
@@ -955,7 +954,7 @@ Materiales/combustibles & Cantidad & Unidad\\
 Excavation, hydraulic digger/RER U & 0.34 & \si{m^3}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de la excavación del terreno.}
+\caption[Modelado de la excavación del terreno.]{Modelado de la excavación del terreno. Fuente: elaboración propia.}
 \label{modeladoexcavacion}
 \end{table}
 
@@ -974,7 +973,7 @@ Materiales/combustibles & Cantidad & Unidad\\
 Tillage, rolling/CH U & 1 & \si{m^2}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de la compactación de la explanada.}
+\caption[Modelado de la compactación de la explanada.]{Modelado de la compactación de la explanada. Fuente: elaboración propia.}
 \label{modeladoexplanada}
 \end{table}
 
@@ -997,7 +996,7 @@ Materiales/combustibles & Cantidad & Unidad\\
 Tillage, rolling/CH U & 1 & \si{m^2}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de la compactación de la capa base.}
+\caption[Modelado de la compactación de la capa base.]{Modelado de la compactación de la capa base. Fuente: elaboración propia.}
 \label{modeladocapabase}
 \end{table}
 
@@ -1023,7 +1022,7 @@ Materiales/combustibles & Cantidad & Unidad\\
 Tillage, rolling/CH U & 1 & \si{m^2}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de la compactación del lecho de árido.}
+\caption[Modelado de la compactación del lecho de árido.]{Modelado de la compactación del lecho de árido. Fuente: elaboración propia.}
 \label{modeladolecho}
 \end{table}
 
@@ -1042,7 +1041,7 @@ Una vez se realiza la compactación, el pavimento puede ponerse en servicio inme
 El proceso de compactación no aparece reflejado en las librerías que proporciona SimaPro. De acuerdo a \cite{rieradevall}, las placas vibrantes para compactar pueden modelarse mediante su consumo de combustible. En concreto 2.43 \si{MJ} de gasoil para 1 ft$^2$. Por lo que, extrapolando para 1 \si{m^2}, se tendría:
 
 \begin{equation}
-2.43\frac{MJ}{{ft}^2} \times \frac{10.764{ft^2}}{1m^2}=26.16MJ/m^2
+\mathrm{2.43\frac{MJ}{{ft}^2} \times 10.764\frac{ft^2}{m^2}=26.16\ MJ/m^2}
 \end{equation}
 
 \begin{table}[!htb]
@@ -1056,7 +1055,7 @@ Materiales/combustibles & Cantidad & Unidad\\
 Diesel, burned in building machine/GLO U & 26.16 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del vibrado del pavimento.}
+\caption[Modelado del vibrado del pavimento.]{Modelado del vibrado del pavimento. Fuente: elaboración propia.}
 \label{modeladovibrado}
 \end{table}
 
@@ -1092,7 +1091,7 @@ Capa bituminosa para base granular (zahorra) & 1 & p\\
 Arena para sellado de juntas & 1 & p\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de materias primas de la extracción, fabricación e instalación.}
+\caption[Modelado de materias primas de la extracción, fabricación e instalación.]{Modelado de materias primas de la extracción, fabricación e instalación. Fuente: elaboración propia.}
 \label{modeladocompletofabricacionmaterias}
 \end{table}
 
@@ -1130,7 +1129,7 @@ Compactación del lecho de arena & 1 & p\\
 Sellado+vibrado del pavimento & 1 & p\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de los procesos de la extracción, fabricación e instalación.}
+\caption[Modelado de los procesos de la extracción, fabricación e instalación.]{Modelado de los procesos de la extracción, fabricación e instalación. Fuente: elaboración propia.}
 \label{modeladocompletofabricacionprocesos}
 \end{table}
 
@@ -1160,7 +1159,7 @@ Materiales/combustibles & Cantidad & Unidad\\
 Tap water, at user/RER/I U & 5 & \si{kg}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de la limpieza de mensual del pavimento.}
+\caption[Modelado de la limpieza de mensual del pavimento.]{Modelado de la limpieza de mensual del pavimento. Fuente: elaboración propia.}
 \label{modeladoagualimpiezamensual}
 \end{table}
 
@@ -1185,7 +1184,7 @@ Procesos & Cantidad & Unidad\\
 Transport, lorry 16-32t, EURO4/RER U & 68.5 & \si{kg\times km}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado de la arena para sellado para mantenimiento.}
+\caption[Modelado de la arena para sellado para mantenimiento.]{Modelado de la arena para sellado para mantenimiento. Fuente: elaboración propia.}
 \label{modeladoarenaselladomantenimiento}
 \end{table}
 
@@ -1200,7 +1199,7 @@ Materiales/combustibles & Cantidad & Unidad\\
 Diesel, burned in building machine/GLO U & 26.16 & \si{MJ}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del vibrado del pavimento para uso y mantenimiento.}
+\caption[Modelado del vibrado del pavimento para uso y mantenimiento.]{Modelado del vibrado del pavimento para uso y mantenimiento. Fuente: elaboración propia.}
 \label{modeladovibradouso}
 \end{table}
 
@@ -1224,7 +1223,7 @@ Procesos & Cantidad & Unidad\\
 Sellado+vibrado del pavimento & 5 & p\\
 \bottomrule
 \end{tabular}
-\caption{Modelado completo del uso y mantenimiento.}
+\caption[Modelado completo del uso y mantenimiento.]{Modelado completo del uso y mantenimiento. Fuente: elaboración propia.}
 \label{modeladocompletousoymantenimiento}
 \end{table}
 
@@ -1258,13 +1257,13 @@ Procesos & Cantidad & Unidad\\
 Transport, lorry 16-32t, EURO4/RER U & 7130 & \si{kg\times km}\\
 \bottomrule
 \end{tabular}
-\caption{Modelado del desensamblaje de adoquín.}
+\caption[Modelado del desensamblaje de adoquín.]{Modelado del desensamblaje de adoquín. Fuente: elaboración propia.}
 \label{modeladodesensamblaje}
 \end{table}
 
 \subsection{Escenarios de residuos}
 
-Ese 95\% es —del total de 150 \si{kg} que forman el metro cuadrado— retirado de la zona donde fue instalado de forma manual —por lo que no se incorporará al inventario— y transportado hasta una planta de reciclaje de hormigón a una distancia supuesta de 50 \si{km} en un camión de 16—32 \si{\tonne} que cumple una normativa europea de emisiones EURO 4.
+Ese 95\% es —del total de 150 \si{kg} que forman el metro cuadrado— retirado de la zona donde fue instalado de forma manual —por lo que no se incorporará al inventario— y transportado hasta una planta de reciclaje de hormigón a una distancia supuesta de 50 \si{km} en un camión de 16-32 \si{\tonne} que cumple una normativa europea de emisiones EURO 4 (ver tabla \ref{modeladoescenarioresiduos}).
 
 \begin{table}[!htb]
 \centering
@@ -1282,13 +1281,13 @@ Reciclado de adoquín en áridos & 95\% & \\
 Vertedero para adoquín & 5\% & \\
 \bottomrule
 \end{tabular}
-\caption{Modelado del escenario de residuos para adoquín.}
+\caption[Modelado del escenario de residuos para adoquín.]{Modelado del escenario de residuos para adoquín. Fuente: elaboración propia.}
 \label{modeladoescenarioresiduos}
 \end{table}
 
 \subsection{Tratamiento de residuos}
 \subsubsection{Reciclado de adoquín en áridos}
-El proceso de reciclje consiste en la llegada en camión a la planta de reciclaje, donde es introducido en una tolva de recepción, donde se produce un machacado para convertirlo en árido (producto evitado) \cite{monografia,gerd}.
+El proceso de reciclaje consiste en la llegada en camión a la planta de reciclaje, donde es introducido en una tolva de recepción, donde se produce un machacado para convertirlo en árido (producto evitado) \cite{monografia,gerd} (ver tabla \ref{modeladorecicladoenaridos}).
 
 \begin{table}[!htb]
 \centering
@@ -1306,15 +1305,39 @@ Reciclaje de adoquín en áridos & Concrete block, at plant/DE U & 100\%\\
 \midrule
 Escenario de residuo/tratamiento & Porcentaje & \\
 \midrule
-Disposal, building, concrete, not reinforced, to final disposal/CH U & 100\% & \\
+Recycling Concrete & 100\% & \\
 \bottomrule
 \end{tabular}
-\caption{Modelado del reciclado de adoquín en áridos.}
+\caption[Modelado del reciclado de adoquín en áridos.]{Modelado del reciclado de adoquín en áridos. Fuente: elaboración propia.}
 \label{modeladorecicladoenaridos}
 \end{table}
 
+Para el Escenario de residuo/tratamiento de este proceso se ha tenido que crear un nuevo modelo de reciclado de hormigón \cite{nrmca} (ver tabla \ref{modeladoresiduoshormigon}).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{p{8cm}p{2cm}c}
+\toprule
+\multicolumn{3}{c}{Recycling Concrete}\\
+\midrule
+Productos evitados & Cantidad & Ud.\\
+\midrule
+Gravel, crushed, at mine(CH U) & 1 & kg\\
+\midrule
+Entradas tecnosfera (electricidad) & Cantidad & Ud.\\
+\midrule
+Electricity mix 2013/ES U & -0.35 & \si{MJ}\\
+Emisión aire: Carbon dioxide & -0.02 & \si{kg}\\
+Emisión agua: Waste water/m3 & -1.28 & \si{l}\\
+Flujos residuos: Waste, solid & -1.09 & \si{kg}\\
+\bottomrule
+\end{tabular}
+\caption[Modelado del tratamiento de residuos para hormigón.]{Modelado del tratamiento de residuos para hormigón. Fuente: basado en \cite{nsw}.}
+\label{modeladoresiduoshormigon}
+\end{table}
+
 \subsubsection{Vertedero para adoquín}
-El 5\% residual de adoquines que aparece en mezclado con otros residuos urbanos en vertederos. Las causas de su aparición suelen ser excedentes abandonados de obras y pequeñas roturas de pavimentos recogidas por los servicios de limpieza.
+El 5\% residual de adoquines que aparece en mezclado con otros residuos urbanos en vertederos. Las causas de su aparición suelen ser excedentes abandonados de obras y pequeñas roturas de pavimentos recogidas por los servicios de limpieza (ver tabla \ref{modeladovertederoadoquin}).
 
 \begin{table}[!htb]
 \centering
@@ -1335,7 +1358,7 @@ Escenario de residuo/tratamiento & Porcentaje & \\
 Disposal, building, concrete, not reinforced, to final disposal/CH U & 100\% & \\
 \bottomrule
 \end{tabular}
-\caption{Modelado del vertedero para adoquín.}
+\caption[Modelado del vertedero para adoquín.]{Modelado del vertedero para adoquín. Fuente: elaboración propia.}
 \label{modeladovertederoadoquin}
 \end{table}
 
@@ -1358,6 +1381,6 @@ Escenarios de residuos/disposición & & \\
 Escenarios de residuos para adoquín & & \\
 \bottomrule
 \end{tabular}
-\caption{Modelado completo del fin de vida.}
+\caption[Modelado completo del fin de vida.]{Modelado completo del fin de vida. Fuente: elaboración propia.}
 \label{modeladocompletofindevida}
 \end{table}
